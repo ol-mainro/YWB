@@ -11,15 +11,28 @@ Ce dépôt regroupe le site vitrine de la méthode ainsi qu'un ensemble d'outils
 ```
 public/                    # contenu statique servi par Firebase Hosting
   index.html                # page d'accueil / vitrine de la méthode
-  apps/                      # mini-applications autonomes
+  apps/                      # mini-applications autonomes (voir section dédiée ci-dessous)
     calculateur-gains/index.html
     suivi-larmes/index.html
     certificat/index.html
+    seminaire-zenith/index.html
 firebase.json               # configuration Firebase Hosting
 .firebaserc                  # projet Firebase cible
 ```
 
 Chaque mini-app vit dans son propre sous-dossier de `public/apps/` sous forme d'un unique fichier `index.html` autonome (HTML/CSS/JS inline, sans dépendance externe ni étape de build). Ce choix permet à chaque outil d'être copié, partagé ou hébergé indépendamment.
+
+## Mini-apps : emplacement et règles de création
+
+- **Emplacement** : chaque mini-app est un sous-dossier de `public/apps/`, nommé en minuscules avec tirets (kebab-case), reflétant sa fonction (ex. `calculateur-gains`, `suivi-larmes`, `certificat`, `seminaire-zenith`). L'URL publique correspondante est `/apps/<nom-app>/`.
+- **Fichier unique** : le dossier ne contient qu'un seul fichier `index.html`. Pas de fichiers `.css` ou `.js` séparés, pas de dossier `assets/` — tout (styles, scripts, éventuelles données) est inline dans ce fichier.
+- **Autonomie totale** : aucune dépendance à un autre fichier du dépôt (pas d'import de `public/index.html`, pas de fichier CSS partagé). Le fichier doit pouvoir être copié isolément et fonctionner tel quel.
+- **Pas de build, pas de framework** : HTML/CSS/JS natifs uniquement. Pas de React/Vue/etc., pas d'étape de compilation, pas de dépendance CDN sauf nécessité impérieuse (et dans ce cas, à justifier explicitement).
+- **Charte graphique** : reprendre la palette et la typographie de `public/index.html` (vert profond `--ywb-green`, or `--ywb-gold`, fond crème `--ywb-cream`) en redéfinissant les variables/styles directement dans le fichier de la mini-app.
+- **Ton et contenu** : respecter strictement la charte de marque décrite ci-dessous (promesse, vocabulaire, absence de disclaimer).
+- **Persistance des données** : `localStorage` uniquement pour les données utilisateur (suivi, historique, scores). Pas de backend ni de base de données sauf demande explicite.
+- **Accessibilité** : `label` sur tous les champs de formulaire, contrastes suffisants, HTML sémantique.
+- **Référencement depuis l'accueil** : après création d'une mini-app, ajouter une carte de lien vers `/apps/<nom-app>/` dans `public/index.html` pour qu'elle soit découvrable.
 
 ## Charte de marque et ton
 
@@ -30,11 +43,7 @@ Chaque mini-app vit dans son propre sous-dossier de `public/apps/` sous forme d'
 
 ## Conventions techniques
 
-- Nouvelle mini-app : créer un dossier `public/apps/<nom-app>/` contenant un seul `index.html`. CSS et JS restent inline dans le fichier. Pas de framework, pas de bundler, pas de dépendance CDN sauf nécessité impérieuse.
-- Cohérence visuelle : réutiliser la palette et la typographie de la page d'accueil (vert profond, or, fond clair) sans introduire de fichier CSS partagé — chaque mini-app doit rester copiable telle quelle.
-- Persistance : `localStorage` pour toute donnée utilisateur simple (suivi, historique). Pas de backend ni de base de données sauf demande explicite.
-- Accessibilité : formulaires avec `label`, contrastes suffisants, HTML sémantique.
-- Après ajout d'une mini-app, ajouter une carte de lien correspondante depuis `public/index.html`.
+Les règles spécifiques aux mini-apps (emplacement, structure, style, persistance) sont détaillées dans la section « Mini-apps : emplacement et règles de création » ci-dessus. Elles s'appliquent à toute nouvelle mini-app comme aux modifications des mini-apps existantes.
 
 ## Déploiement (Firebase Hosting)
 
