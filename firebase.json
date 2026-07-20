@@ -1,0 +1,24 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/apps/calculateur-gains",
+        "destination": "/apps/calculateur-gains/index.html"
+      },
+      {
+        "source": "/apps/suivi-larmes",
+        "destination": "/apps/suivi-larmes/index.html"
+      },
+      {
+        "source": "/apps/certificat",
+        "destination": "/apps/certificat/index.html"
+      }
+    ]
+  }
+}
