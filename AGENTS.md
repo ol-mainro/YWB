@@ -45,14 +45,18 @@ Chaque mini-app vit dans son propre sous-dossier de `public/apps/` sous forme d'
 
 Les règles spécifiques aux mini-apps (emplacement, structure, style, persistance) sont détaillées dans la section « Mini-apps : emplacement et règles de création » ci-dessus. Elles s'appliquent à toute nouvelle mini-app comme aux modifications des mini-apps existantes.
 
-## Déploiement (Firebase Hosting)
+## Déploiement et hébergement
 
-- Le dossier `public/` est servi tel quel par Firebase Hosting (`firebase.json` → `"public": "public"`).
-- Avant tout déploiement, renseigner l'ID du projet Firebase réel dans `.firebaserc` (remplacer `REPLACE_WITH_FIREBASE_PROJECT_ID`).
-- Commandes usuelles :
-  - `firebase login`
-  - `firebase use --add`
-  - `firebase deploy --only hosting`
+- **Solution actuelle : GitHub Pages.** Tant que le setup Firebase complet (projet réel, domaine, etc.) n'est pas en place, GitHub Pages reste la solution de déploiement et d'hébergement du site.
+  - Déploiement automatique via `.github/workflows/deploy.yml`, qui publie le contenu de `public/` sur push vers la branche `claude/yoga-with-balls-project-aei54b`.
+  - URL de base : `https://ol-mainro.github.io/YWB/` (ex. une mini-app est accessible sur `https://ol-mainro.github.io/YWB/apps/<nom-app>/`).
+  - Prérequis côté dépôt : GitHub Pages activé dans Settings → Pages avec la source « GitHub Actions ».
+- **Firebase Hosting (cible à terme)** : `firebase.json` sert déjà le dossier `public/` tel quel, mais `.firebaserc` contient encore un ID de projet placeholder (`REPLACE_WITH_FIREBASE_PROJECT_ID`) — ce canal n'est donc pas encore opérationnel.
+  - Avant tout déploiement Firebase, renseigner l'ID du projet Firebase réel dans `.firebaserc`.
+  - Commandes usuelles :
+    - `firebase login`
+    - `firebase use --add`
+    - `firebase deploy --only hosting`
 
 ## Pour les agents
 
