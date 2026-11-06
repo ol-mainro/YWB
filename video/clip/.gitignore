@@ -2,3 +2,9 @@
 node_modules/
 renders/*.mov
 .env
+
+# Fichiers générés par le studio Hyperframes
+.thumbnails/
+.waveform-cache/
+assets/*.transcript.json
+renders/*.meta.json
