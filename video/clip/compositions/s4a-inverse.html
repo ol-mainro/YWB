@@ -1,0 +1,90 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "InterVar";
+      src: url("assets/fonts/inter-var-latin.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #0f3d2e; /* fond */
+      font-family: "InterVar", sans-serif;
+      color: #faf6ec;
+      overflow: hidden;
+    }
+    /* Textes (220 → 1220 px) */
+    .s4a-stage {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      top: 220px;
+      height: 1000px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .s4a-w { display: inline-block; }
+    .s4a-small { font-size: 64px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; }
+    .s4a-big { font-size: 190px; font-weight: 900; letter-spacing: -0.05em; line-height: 1; }
+    #s4a-40 { margin-top: 30px; }
+    #s4a-neq { color: #d4af37; margin: 10px 0; }
+    #s4a-exact { margin-top: 30px; font-size: 140px; }
+    #s4a-inv { font-size: 140px; color: #d4af37; }
+  </style>
+
+  <div id="root" data-composition-id="s4a" data-width="1080" data-height="1920">
+    <!-- « Pourtant, le corps des plus de 40 ans ne fonctionne plus comme à 20. » -->
+    <div id="s4a-a" class="clip s4a-stage" data-start="0" data-duration="3.55" data-track-index="1">
+      <div>
+        <div class="s4a-small">
+          <span class="s4a-w s4a-aw">Pourtant,</span> <span class="s4a-w s4a-aw">le</span> <span class="s4a-w s4a-aw">corps</span><br />
+          <span class="s4a-w s4a-aw">des</span> <span class="s4a-w s4a-aw">plus</span> <span class="s4a-w s4a-aw">de</span>
+        </div>
+        <div class="s4a-big" id="s4a-40">40 ANS</div>
+        <div class="s4a-big" id="s4a-neq">≠</div>
+        <div class="s4a-big" id="s4a-20">20 ANS</div>
+      </div>
+    </div>
+
+    <!-- « En vrai, c'est exactement l'inverse. » -->
+    <div id="s4a-b" class="clip s4a-stage" data-start="3.55" data-duration="2.786" data-track-index="1">
+      <div>
+        <div class="s4a-small">
+          <span class="s4a-w s4a-bw">En</span> <span class="s4a-w s4a-bw">vrai,</span> <span class="s4a-w s4a-bw">c'est</span>
+        </div>
+        <div class="s4a-big" id="s4a-exact">EXACTEMENT</div>
+        <div class="s4a-big" id="s4a-inv">L'INVERSE.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const OFF = 24.6;
+    const T = (g) => +(g - OFF).toFixed(3);
+    const tl = gsap.timeline({ paused: true });
+    const wordsIn = (sel, times) => document.querySelectorAll(sel).forEach((el, i) =>
+      tl.fromTo(el, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, T(times[i])));
+    const out = (sel, g) => tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, T(g));
+    const thick = (sel, g) => tl.fromTo(sel, { opacity: 0, fontWeight: 200, scale: 1.06, transformOrigin: "0% 50%" },
+      { opacity: 1, fontWeight: 900, scale: 1, duration: 0.6, ease: "expo.out" }, T(g));
+
+    // « 40 ANS ≠ 20 ANS »
+    wordsIn(".s4a-aw", [25.086, 25.449, 25.562, 25.749, 25.863, 26.019]);
+    thick("#s4a-40", 26.196);
+    tl.fromTo("#s4a-neq", { opacity: 0, scale: 0.4, transformOrigin: "0% 50%" },
+      { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2)" }, T(26.828));
+    thick("#s4a-20", 27.688);
+    out("#s4a-a > div", 28.05);
+
+    // « EXACTEMENT L'INVERSE. » : le mot se retourne à 180°
+    wordsIn(".s4a-bw", [28.289, 28.507, 28.994]);
+    thick("#s4a-exact", 29.254);
+    tl.fromTo("#s4a-inv", { opacity: 0, rotation: 180, transformOrigin: "50% 50%" },
+      { opacity: 1, rotation: 0, duration: 0.7, ease: "expo.out" }, T(29.813));
+    out("#s4a-b > div", 30.75);
+
+    window.__timelines["s4a"] = tl;
+  </script>
+</template>

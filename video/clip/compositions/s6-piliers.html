@@ -73,26 +73,26 @@
   </div>
 
   <script>
-    const OFF = 39.4;
+    const OFF = 45.736;
     const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
     const blurIn = (sel, g) => tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, T(g));
     const thick = (sel, g) => tl.fromTo(sel, { opacity: 0, fontWeight: 200 }, { opacity: 1, fontWeight: 900, duration: 0.5, ease: "expo.out" }, T(g));
 
-    blurIn("#s6-head", 39.64);
-    thick("#s6-marche", 40.69);
-    thick("#s6-taichi", 40.94);
+    blurIn("#s6-head", 45.976);
+    thick("#s6-marche", 47.026);
+    thick("#s6-taichi", 47.276);
     document.querySelectorAll(".s6-step").forEach((el, i) =>
-      tl.fromTo(el, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, T(40.9) + i * 0.3));
+      tl.fromTo(el, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, T(47.236) + i * 0.3));
 
-    thick("#s6-pleurs", 42.75);
-    thick("#s6-sacres", 43.06);
-    tl.fromTo("#s6-drop-fall", { opacity: 0, y: -30, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "expo.out" }, T(42.75));
+    thick("#s6-pleurs", 49.086);
+    thick("#s6-sacres", 49.396);
+    tl.fromTo("#s6-drop-fall", { opacity: 0, y: -30, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "expo.out" }, T(49.086));
     // La goutte tombe dans l'emplacement image et crée une onde
-    tl.to("#s6-drop-fall", { y: 375, x: -312, scale: 0.5, duration: 0.3, ease: "power3.in" }, T(43.1));
-    tl.to("#s6-drop-fall", { opacity: 0, duration: 0.05 }, T(43.4));
-    tl.fromTo("#s6-ring", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.08 }, T(43.4));
-    tl.to("#s6-ring", { scale: 2.2, opacity: 0.6, duration: 0.22, ease: "expo.out" }, T(43.46));
+    tl.to("#s6-drop-fall", { y: 375, x: -312, scale: 0.5, duration: 0.3, ease: "power3.in" }, T(49.436));
+    tl.to("#s6-drop-fall", { opacity: 0, duration: 0.05 }, T(49.736));
+    tl.fromTo("#s6-ring", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.08 }, T(49.736));
+    tl.to("#s6-ring", { scale: 2.2, opacity: 0.6, duration: 0.22, ease: "expo.out" }, T(49.796));
 
     window.__timelines["s6"] = tl;
   </script>

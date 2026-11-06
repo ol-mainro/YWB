@@ -94,7 +94,7 @@
         <div>
           <div><span class="s3-label" id="s3-l1">PLUS D'ÂGE.</span></div>
           <div><span class="s3-label" id="s3-l2">PLUS D'EFFORTS.</span></div>
-          <div><span class="s3-label red" id="s3-l3">POUR MOINS.</span></div>
+          <div><span class="s3-label red" id="s3-l3">POUR MOINS D'EFFETS.</span></div>
         </div>
       </div>
     </div>
@@ -139,7 +139,7 @@
     out("#s3-c > div", 20.4);
     const slam = (sel, g) => tl.fromTo(sel, { opacity: 0, scale: 1.25, transformOrigin: "0% 50%" },
       { opacity: 1, scale: 1, duration: 0.22, ease: "expo.out" }, T(g));
-    slam("#s3-l1", 20.64); slam("#s3-l2", 21.87); slam("#s3-l3", 23.27);
+    slam("#s3-l1", 20.55); slam("#s3-l2", 21.47); slam("#s3-l3", 23.0);
 
     // Glitch de sortie (24,2 → 24,6 s)
     const jumps = [[-34, 4], [26, -3], [-14, 2], [40, -6], [-8, 1], [0, 0]];

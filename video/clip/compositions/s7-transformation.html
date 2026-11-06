@@ -78,7 +78,7 @@
   </div>
 
   <script>
-    const OFF = 43.7;
+    const OFF = 50.036;
     const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
     const thick = (sel, g, from = 200) => tl.fromTo(sel, { opacity: 0, fontWeight: from }, { opacity: 1, fontWeight: 900, duration: 0.5, ease: "expo.out" }, T(g));
@@ -87,23 +87,23 @@
     // L'onde de la goutte (scène 6) se prolonge puis s'efface
     tl.fromTo("#s7-r0", { opacity: 0.6, scale: 2.2 }, { opacity: 0, scale: 3.4, duration: 0.6, ease: "expo.out" }, 0);
 
-    blurIn("#s7-perf1", 43.96);
-    thick("#s7-spi", 44.51);
-    tl.fromTo("#s7-arrow-path", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.35, ease: "power2.inOut" }, T(45.14));
-    blurIn("#s7-perf2", 45.61);
-    thick("#s7-phy", 46.12);
-    tl.to("#s7-a > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, T(46.5));
+    blurIn("#s7-perf1", 50.296);
+    thick("#s7-spi", 50.846);
+    tl.fromTo("#s7-arrow-path", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.35, ease: "power2.inOut" }, T(51.476));
+    blurIn("#s7-perf2", 51.946);
+    thick("#s7-phy", 52.456);
+    tl.to("#s7-a > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, T(52.836));
 
-    document.querySelectorAll(".s7-bw").forEach((el, i) => blurIn(el, [46.75, 46.96, 47.1][i]));
+    document.querySelectorAll(".s7-bw").forEach((el, i) => blurIn(el, [53.086, 53.296, 53.436][i]));
     // MUSCULAIRES gonfle en trois pulsations, calées sur les syllabes
     tl.fromTo("#s7-muscu", { opacity: 0, fontWeight: 150, scale: 0.94, transformOrigin: "0% 50%" },
-      { opacity: 1, fontWeight: 450, scale: 0.97, duration: 0.18, ease: "expo.out" }, T(47.28));
-    tl.to("#s7-muscu", { fontWeight: 700, scale: 0.99, duration: 0.18, ease: "expo.out" }, T(47.48));
-    tl.to("#s7-muscu", { fontWeight: 900, scale: 1, duration: 0.3, ease: "expo.out" }, T(47.68));
-    tl.fromTo("#s7-extra", { opacity: 0, scaleX: 1.15, filter: "blur(8px)", transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, T(48.01));
+      { opacity: 1, fontWeight: 450, scale: 0.97, duration: 0.18, ease: "expo.out" }, T(53.616));
+    tl.to("#s7-muscu", { fontWeight: 700, scale: 0.99, duration: 0.18, ease: "expo.out" }, T(53.816));
+    tl.to("#s7-muscu", { fontWeight: 900, scale: 1, duration: 0.3, ease: "expo.out" }, T(54.016));
+    tl.fromTo("#s7-extra", { opacity: 0, scaleX: 1.15, filter: "blur(8px)", transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, T(54.346));
 
     // Ondes dorées à chaque pulsation
-    [["#s7-r1", 47.28], ["#s7-r2", 47.68], ["#s7-r3", 48.01]].forEach(([sel, g]) =>
+    [["#s7-r1", 53.616], ["#s7-r2", 54.016], ["#s7-r3", 54.346]].forEach(([sel, g]) =>
       tl.fromTo(sel, { opacity: 0.8, scale: 0.4 }, { opacity: 0, scale: 3, duration: 0.9, ease: "expo.out", immediateRender: false }, T(g)));
 
     window.__timelines["s7"] = tl;

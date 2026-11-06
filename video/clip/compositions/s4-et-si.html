@@ -77,32 +77,32 @@
   </div>
 
   <script>
-    const OFF = 24.6;
+    const OFF = 30.936;
     const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
     const wordsIn = (sel, times) => document.querySelectorAll(sel).forEach((el, i) =>
       tl.fromTo(el, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, T(times[i])));
     const out = (sel, g) => tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, T(g));
 
-    wordsIn(".s4-aw", [24.77, 25.09, 25.44, 25.65, 26.25, 26.47, 26.71, 27.05]);
+    wordsIn(".s4-aw", [31.106, 31.426, 31.776, 31.986, 32.586, 32.806, 33.046, 33.386]);
     tl.fromTo("#s4-som", { opacity: 0, fontWeight: 200, scale: 1.06, transformOrigin: "0% 50%" },
-      { opacity: 1, fontWeight: 900, scale: 1, duration: 0.7, ease: "expo.out" }, T(27.17));
-    out("#s4-a > div", 28.25);
+      { opacity: 1, fontWeight: 900, scale: 1, duration: 0.7, ease: "expo.out" }, T(33.506));
+    out("#s4-a > div", 34.586);
 
     // Arrêt net, puis « ET SI, »
-    tl.fromTo("#s4-et", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, T(28.52));
-    tl.fromTo("#s4-si", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, T(28.7));
-    wordsIn(".s4-bw", [29.08, 29.25, 29.37, 29.59]);
-    out("#s4-b > div", 30.45);
+    tl.fromTo("#s4-et", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, T(34.856));
+    tl.fromTo("#s4-si", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, T(35.036));
+    wordsIn(".s4-bw", [35.416, 35.586, 35.706, 35.926]);
+    out("#s4-b > div", 36.786);
 
     // Le « + » doré apparaît, puis perd sa barre verticale : il devient « − »
-    tl.fromTo("#s4-sym", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: "expo.out" }, T(28.52));
-    tl.fromTo("#s4-v", { scaleY: 1 }, { scaleY: 0, duration: 0.45, ease: "power3.inOut" }, T(31.6));
-    tl.fromTo("#s4-h", { scaleX: 1 }, { scaleX: 1.25, duration: 0.5, ease: "expo.out" }, T(31.9));
+    tl.fromTo("#s4-sym", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: "expo.out" }, T(34.856));
+    tl.fromTo("#s4-v", { scaleY: 1 }, { scaleY: 0, duration: 0.45, ease: "power3.inOut" }, T(37.936));
+    tl.fromTo("#s4-h", { scaleX: 1 }, { scaleX: 1.25, duration: 0.5, ease: "expo.out" }, T(38.236));
 
-    wordsIn(".s4-cw", [30.93, 31.13, 31.41, 31.49]);
+    wordsIn(".s4-cw", [37.266, 37.466, 37.746, 37.826]);
     tl.fromTo("#s4-moins", { opacity: 0, fontWeight: 900, scale: 1.1, transformOrigin: "0% 50%" },
-      { opacity: 1, fontWeight: 200, scale: 1, duration: 0.6, ease: "expo.out" }, T(31.67));
+      { opacity: 1, fontWeight: 200, scale: 1, duration: 0.6, ease: "expo.out" }, T(38.006));
 
     window.__timelines["s4"] = tl;
   </script>

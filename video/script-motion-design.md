@@ -2,8 +2,8 @@
 
 > Document de travail itératif. Le script est dicté par Romain, puis structuré scène par scène pour une production en motion design avec **Hyperframes** (compositions HTML + animations), générées avec Opus 5.5.
 
-- **Version :** v0.6 — clip complet 60 s
-- **Statut :** 8 scènes rendues (MP4 + version titres sur fond transparent), en attente de retours
+- **Version :** v0.7 — ajout « 40 ans ≠ 20 ans », phrase de l'acte 1 reformulée, clip 66 s
+- **Statut :** 8 scènes rendues (MP4 + version titres sur fond transparent), en attente de retours. Durée passée à 66,4 s avec la nouvelle phrase (voir questions ouvertes)
 
 ---
 
@@ -14,7 +14,7 @@
 | Objectif | Renverser le dogme du « toujours plus » et faire connaître l'application Yoga With Balls |
 | Public cible | Hommes de 40 ans et plus |
 | Format | **9:16 vertical** — 1080 × 1920 px (Reels, TikTok, Shorts) |
-| Durée | **60 s** |
+| Durée | **66,4 s** (cible initiale 60 s) |
 | Parti pris visuel | **Clip 100 % typographique** : titres et symboles uniquement, aucune image (incrustations ajoutées ensuite par Romain) |
 | Voix off | **Voix de synthèse** — idéalement grave, homme mûr, posée, assurée (voir 5 ter) |
 | Musique / ambiance | Pas de piste choisie. Animation calée sur une grille de 120 BPM ; musique ajoutée au montage. Intention : montée rythmique (acte 1), coupure nette (acte 2), nappe ample et triomphante (acte 3) |
@@ -68,7 +68,7 @@
 
 Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette société, on explique que pour être fort et avoir l'air fort, il faut en faire beaucoup. Et il faut en faire toujours plus. Que pour avoir de la masse, pour avoir du muscle, il faut faire beaucoup d'efforts. Toujours plus d'efforts. Toujours plus de performance. Or, l'âge avançant, on nous explique aussi que notre corps a besoin qu'on en fasse toujours plus pour en avoir autant. Et l'âge avance toujours plus et on nous incite à faire toujours plus pour avoir plus ou autant. Nous, chez Yoga with Balls et notre équipe, on a besoin, on a voulu disrupter, on a voulu changer de state of mind et on s'est dit, et si pour en avoir plus, il fallait plutôt en faire moins. On a déplacé le truc, on a craqué le fonctionnement du corps humain et on s'est aperçu que passé 40 ans, on avait plus avantage à en faire moins qu'à en faire plus. Que c'est en accent sur la performance spirituelle qu'on obtenait des performances physiques et des gains musculaires extraordinaires. Alors, on invite tout le monde à essayer sans attendre et à télécharger l'application Yoga with Balls.
 
-### Voix off (v2, ~150 mots ≈ 60 s)
+### Voix off (v3, ~170 mots ≈ 64 s)
 
 > **[Acte 1 — Le dogme]**
 > Depuis l'enfance, on nous répète la même chose.
@@ -76,9 +76,10 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 > Pour prendre de la masse, il faut des efforts. Toujours plus d'efforts. Toujours plus de performance.
 >
 > Puis les années passent. Et le corps en demande encore plus… juste pour garder ce qu'il a.
-> Plus d'âge. Plus d'efforts. Pour moins.
+> L'âge augmente. On augmente les efforts. Pour toujours moins d'effets.
 >
 > **[Acte 2 — La rupture]**
+> Pourtant, le corps des plus de 40 ans ne fonctionne plus comme à 20. En vrai, c'est exactement l'inverse.
 > Chez Yoga With Balls, nous avons changé de *mindset*.
 > Et si, pour en avoir plus… il fallait en faire moins ?
 >
@@ -96,18 +97,18 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 
 ## 4. Découpage en scènes
 
-8 scènes = 8 compositions Hyperframes. Structure : le dogme → la rupture → la méthode.
+8 scènes = 9 compositions Hyperframes (la scène 4 en compte deux : `s4a-inverse` et `s4-et-si`). Structure : le dogme → la rupture → la méthode.
 
 | # | Timecode | Voix off (extrait) | Texte à l'écran | Symboles / animation | Transition |
 |---|---|---|---|---|---|
 | 1 | 00:00 – 00:06 | « Depuis l'enfance… en faire beaucoup. » | **POUR ÊTRE FORT** | Graisse du texte qui passe de fin à extra-gras | Cut sec |
 | 2 | 00:06 – 00:15 | « Toujours plus d'efforts. Toujours plus de performance. » | **PLUS** ×∞ | Les `+` se multiplient jusqu'à saturer l'écran, passage au rouge | Saturation → écran plein rouge |
-| 3 | 00:15 – 00:24 | « Puis les années passent… Pour moins. » | **20 · 30 · 40 · 50** | Graphique en ciseaux : courbe EFFORTS ↑, courbe MUSCLE ↓ | Glitch |
-| 4 | 00:24 – 00:31 | « …mindset. Et si… en faire moins ? » | **ET SI… ?** → **−** | Tout s'arrête, fond vert, le `+` perd sa barre verticale et devient `−` | Silence, respiration |
-| 5 | 00:31 – 00:39 | « Craqué le code… en faire moins rapporte plus. » | **40+** · **MOINS = PLUS** | Cadenas doré qui s'ouvre, les courbes s'inversent | Zoom dans le cadenas |
-| 6 | 00:39 – 00:46 | « Deux piliers. La marche tai-chi. Les pleurs sacrés. » | **MARCHE TAI-CHI** / **PLEURS SACRÉS** | Empreintes de pas lentes + goutte dorée qui tombe | Onde partant de la goutte |
-| 7 | 00:46 – 00:53 | « La performance spirituelle… gains musculaires extraordinaires. » | **SPIRITUEL → PHYSIQUE** · **MUSCLE** | Le mot MUSCLE gonfle (graisse + échelle) à chaque pulsation | Flash or |
-| 8 | 00:53 – 01:00 | « Yoga With Balls. En faire moins. En avoir plus. L'application est disponible. » | **YOGA WITH BALLS** · signature · « Application disponible » | Logo typographique qui se pose, signature mot par mot | Fondu au vert |
+| 3 | 00:15 – 00:24 | « Puis les années passent… Pour toujours moins d'effets. » | **20 · 30 · 40 · 50** | Graphique en ciseaux : courbe EFFORTS ↑, courbe MUSCLE ↓ | Glitch |
+| 4 | 00:24 – 00:39 | « Pourtant, le corps des plus de 40 ans… exactement l'inverse. …mindset. Et si… en faire moins ? » | **40 ≠ 20** · **L'INVERSE.** · **ET SI… ?** → **−** | Tout s'arrête, fond vert, le `+` perd sa barre verticale et devient `−` | Silence, respiration |
+| 5 | 00:39 – 00:46 | « Craqué le code… en faire moins rapporte plus. » | **40+** · **MOINS = PLUS** | Cadenas doré qui s'ouvre, les courbes s'inversent | Zoom dans le cadenas |
+| 6 | 00:46 – 00:50 | « Deux piliers. La marche tai-chi. Les pleurs sacrés. » | **MARCHE TAI-CHI** / **PLEURS SACRÉS** | Empreintes de pas lentes + goutte dorée qui tombe | Onde partant de la goutte |
+| 7 | 00:50 – 00:56 | « La performance spirituelle… gains musculaires extraordinaires. » | **SPIRITUEL → PHYSIQUE** · **MUSCLE** | Le mot MUSCLE gonfle (graisse + échelle) à chaque pulsation | Flash or |
+| 8 | 00:56 – 01:06 | « Yoga With Balls. En faire moins. En avoir plus. L'application est disponible. » | **YOGA WITH BALLS** · signature · « Application disponible » | Logo typographique qui se pose, signature mot par mot | Fondu au vert |
 
 ### Détail des scènes
 
@@ -124,43 +125,43 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 - **Son :** rythme qui accélère, bruit de compteur.
 
 #### Scène 3 — L'âge (00:15 – 00:24)
-- **Texte :** compteur d'âge 20 → 30 → 40 → 50 en haut. En bas : « PLUS D'ÂGE. PLUS D'EFFORTS. POUR MOINS. »
+- **Texte :** compteur d'âge 20 → 30 → 40 → 50 en haut. En bas : « PLUS D'ÂGE. PLUS D'EFFORTS. POUR MOINS D'EFFETS. »
 - **Symboles :** graphique minimaliste à deux courbes. EFFORTS (rouge) monte, MUSCLE (gris) stagne puis baisse.
 - **Animation :** le tracé des courbes suit le compteur d'âge.
 - **Transition :** glitch vers le noir.
 
-#### Scène 4 — Et si ? (00:24 – 00:31)
+#### Scène 4 — L'inverse, et si ? (00:24 – 00:39)
 - **Fond :** bascule sur le vert profond `#0f3d2e`.
-- **Texte :** « MINDSET. » en or, puis « ET SI… ? » en grand, crème.
+- **Texte :** « 40 ANS ≠ 20 ANS » (le `≠` en or), puis « EXACTEMENT L'INVERSE. » qui se retourne à 180°. Ensuite « MINDSET. » en or, puis « ET SI… ? » en grand, crème.
 - **Symbole :** un grand `+` doré au centre. Sa barre verticale s'efface : il devient `−`.
 - **Son :** coupure musicale, une seule note tenue.
 
-#### Scène 5 — Le code craqué (00:31 – 00:39)
+#### Scène 5 — Le code craqué (00:39 – 00:46)
 - **Symbole :** cadenas doré avec un compteur « 40+ ». Il s'ouvre.
 - **Texte :** « MOINS = PLUS », le `=` en or.
 - **Animation :** les courbes de la scène 3 reviennent et s'inversent. EFFORTS ↓, MUSCLE ↑.
 
-#### Scène 6 — Les deux piliers (00:39 – 00:46)
+#### Scène 6 — Les deux piliers (00:46 – 00:50)
 - **Écran partagé vertical :**
   - en haut, « MARCHE TAI-CHI » avec des empreintes de pas qui avancent lentement ;
   - en bas, « PLEURS SACRÉS » avec une goutte dorée qui tombe.
 - **Animation :** l'impact de la goutte crée une onde concentrique qui sert de transition.
 
-#### Scène 7 — La transformation (00:46 – 00:53)
+#### Scène 7 — La transformation (00:50 – 00:56)
 - **Texte :** « PERFORMANCE SPIRITUELLE → PERFORMANCE PHYSIQUE ». La flèche dorée se trace.
 - **Puis :** le mot « MUSCLE » plein écran. Il gonfle à chaque pulsation (graisse + échelle), avec des particules dorées.
 - **Texte final :** « GAINS EXTRAORDINAIRES ».
 - **Son :** montée triomphale.
 
-#### Scène 8 — Signature (00:53 – 01:00)
+#### Scène 8 — Signature (00:56 – 01:06)
 - **Texte :** « YOGA WITH BALLS » (logo typographique or), puis « EN FAIRE MOINS. EN AVOIR PLUS. » mot par mot.
 - **Mention :** « Application disponible » en petit, crème, sous la signature.
 - **Fin :** tenue 2 s, puis fondu au vert.
 
 ## 5. Notes de production Hyperframes
 
-- **Résolution :** 1080 × 1920, 30 fps, 60 s.
-- **Structure :** une composition par scène (8), assemblées dans une composition maître.
+- **Résolution :** 1080 × 1920, 30 fps, 66,4 s.
+- **Structure :** une composition par scène (9 fichiers pour 8 scènes), assemblées dans une composition maître.
 - **Assets :** une police variable embarquée en local, symboles en SVG dessinés en code. Aucune image.
 - **Voix off :** idéalement enregistrée avant l'animation, pour caler les apparitions de texte sur les mots.
 - **Incrustations :** emplacements réservés dans les scènes 1, 6 et 7 ✅ (voir ci-dessous).
@@ -206,7 +207,7 @@ Prérequis pour travailler en local : Node.js 22 ou plus récent, et une copie �
 
 Voix retenue : **Paul K** ✅
 
-- Fichier : `video/clip/assets/voix-off.mp3` (58,3 s, accélérée ×1,12 sans changement de hauteur). La phrase « …changé de mindset » a été régénérée et insérée à la place de « state of mind ». `voix-off-brut.mp3` = première prise (65 s, avec « state of mind »).
+- Fichier : `video/clip/assets/voix-off.mp3` (64,6 s, accélérée ×1,12 sans changement de hauteur). La phrase « …changé de mindset » a été régénérée et insérée à la place de « state of mind ». En v0.7, « L'âge augmente… moins d'effets » et « Pourtant… exactement l'inverse » ont été générés d'un seul tenant (même voix, volume ajusté de −1,4 dB) et insérés à 20,55 s, à la place de « Plus d'âge. Plus d'efforts. Pour moins. ». `voix-off-brut.mp3` = première prise (65 s, avec « state of mind »).
 - Minutage mot par mot : `video/clip/assets/voix-off-mots.json` (sert à caler chaque apparition de texte).
 
 ## 5 quater. Projet Hyperframes
@@ -214,7 +215,7 @@ Voix retenue : **Paul K** ✅
 ```
 video/clip/
   index.html                       # composition maître (scènes + voix off)
-  compositions/s1-dogme.html … s8-signature.html   # les 8 scènes
+  compositions/s1-dogme.html … s8-signature.html   # les 8 scènes (+ s4a-inverse.html)
   scripts/render-alpha.py          # rendu titres seuls, fond transparent
   assets/voix-off.mp3, voix-off-mots.json
   assets/fonts/inter-var-latin.woff2   # Inter variable (graisse animable 100 → 900)
@@ -225,11 +226,13 @@ video/clip/
 Commandes (depuis `video/clip/`) : `npm run dev` (aperçu), `npm run check`, `npm run render`, `python3 scripts/render-alpha.py` (version transparente).
 
 Rendus :
-- `renders/ywb-clip-60s.mp4` — clip complet avec voix (versionné) ;
+- `renders/ywb-clip.mp4` — clip complet avec voix (versionné) ;
 - `renders/ywb-titres-alpha.webm` — titres seuls, fond transparent, léger (versionné) ;
 - `renders/ywb-titres-alpha.mov` — titres seuls, ProRes 4444 (≈ 400 Mo, non versionné : à régénérer avec le script).
 
 ## 6. Questions ouvertes
+
+- **Durée :** la nouvelle phrase porte le clip à 66,4 s. On garde, ou on revient à 60 s (resserrer les pauses de la voix, accélérer légèrement, ou couper une phrase) ?
 
 - **Retours sur le clip complet :** rythme, textes, symboles, scène par scène.
 - **Version transparente :** WebM suffisant pour ton logiciel de montage, ou besoin du ProRes .mov ?
@@ -244,3 +247,4 @@ Rendus :
 - **v0.4.1** — passage à ElevenLabs, 4 échantillons de voix masculines françaises.
 - **v0.5** — voix Paul K générée et minutée, projet Hyperframes créé, scènes 1 et 2 codées et rendues en test.
 - **v0.6** — scènes 3 à 8 codées, « state of mind » remplacé par « mindset » (texte + voix), rendu complet 60 s et version titres sur fond transparent.
+- **v0.7** — acte 1 : « L'âge augmente. On augmente les efforts. Pour toujours moins d'effets. » ; ouverture de l'acte 2 : « Pourtant, le corps des plus de 40 ans ne fonctionne plus comme à 20. En vrai, c'est exactement l'inverse. » (voix, scènes 3 et 4, minutage).
