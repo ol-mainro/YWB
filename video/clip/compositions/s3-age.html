@@ -1,0 +1,153 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "InterVar";
+      src: url("assets/fonts/inter-var-latin.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #faf6ec; /* fond */
+      font-family: "InterVar", sans-serif;
+      color: #141414;
+      overflow: hidden;
+    }
+    #s3-all { position: absolute; inset: 0; }
+    /* Compteur d'âge (200 → 420 px) */
+    #s3-age {
+      position: absolute;
+      left: 90px;
+      top: 190px;
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+    }
+    #s3-num { font-size: 230px; font-weight: 900; letter-spacing: -0.06em; line-height: 1; font-variant-numeric: tabular-nums; }
+    #s3-ans { font-size: 72px; font-weight: 800; color: #6b6b5a; }
+    /* Graphique (450 → 960 px) */
+    #s3-graph { position: absolute; left: 90px; top: 450px; width: 900px; height: 510px; }
+    #s3-graph text { font-family: "InterVar", sans-serif; font-weight: 800; font-size: 40px; }
+    /* Textes (1000 → 1320 px) */
+    .s3-stage {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      top: 1000px;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .s3-line { font-size: 70px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; }
+    .s3-w { display: inline-block; }
+    .s3-label {
+      display: inline-block;
+      background: #141414;
+      color: #faf6ec;
+      font-size: 64px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      padding: 8px 22px 12px;
+      margin: 6px 0;
+    }
+    .s3-label.red { background: #a4321f; }
+    .s3-bar { position: absolute; left: 0; right: 0; height: 60px; background: #141414; opacity: 0; }
+  </style>
+
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div id="s3-all">
+      <div id="s3-age-clip" class="clip" data-start="0" data-duration="10.5" data-track-index="1">
+        <div id="s3-age"><span id="s3-num">20</span><span id="s3-ans">ANS</span></div>
+      </div>
+
+      <div id="s3-graph-clip" class="clip" data-start="0" data-duration="10.5" data-track-index="2" data-layout-ignore>
+        <svg id="s3-graph" viewBox="0 0 900 510">
+          <line x1="0" y1="500" x2="900" y2="500" stroke="#141414" stroke-width="4" />
+          <line x1="2" y1="0" x2="2" y2="500" stroke="#141414" stroke-width="4" />
+          <path id="s3-effort" d="M 0 430 C 220 420 380 330 520 230 S 760 40 880 20" fill="none" stroke="#a4321f" stroke-width="16" stroke-linecap="butt" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" />
+          <path id="s3-muscle" d="M 0 300 C 200 280 360 270 480 290 S 740 420 880 455" fill="none" stroke="#6b6b5a" stroke-width="16" stroke-linecap="butt" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" />
+          <text id="s3-t-effort" x="300" y="60" fill="#a4321f" opacity="0">EFFORTS ↑</text>
+          <text id="s3-t-muscle" x="560" y="430" fill="#6b6b5a" opacity="0">MUSCLE ↓</text>
+        </svg>
+      </div>
+
+      <div id="s3-a" class="clip s3-stage" data-start="0" data-duration="1.95" data-track-index="3">
+        <div class="s3-line">
+          <span class="s3-w s3-aw">Puis</span> <span class="s3-w s3-aw">les</span> <span class="s3-w s3-aw">années</span> <span class="s3-w s3-aw">passent.</span>
+        </div>
+      </div>
+      <div id="s3-b" class="clip s3-stage" data-start="1.95" data-duration="2.2" data-track-index="3">
+        <div class="s3-line">
+          <span class="s3-w s3-bw">Le</span> <span class="s3-w s3-bw">corps</span> <span class="s3-w s3-bw">en</span> <span class="s3-w s3-bw">demande</span><br />
+          <span class="s3-w s3-bw">encore</span> <span class="s3-w s3-bw" style="color: #a4321f">plus…</span>
+        </div>
+      </div>
+      <div id="s3-c" class="clip s3-stage" data-start="4.15" data-duration="2.3" data-track-index="3">
+        <div class="s3-line">
+          <span class="s3-w s3-cw">juste</span> <span class="s3-w s3-cw">pour</span> <span class="s3-w s3-cw">garder</span><br />
+          <span class="s3-w s3-cw">ce</span> <span class="s3-w s3-cw">qu'il</span> <span class="s3-w s3-cw">a.</span>
+        </div>
+      </div>
+      <div id="s3-d" class="clip s3-stage" data-start="6.45" data-duration="4.05" data-track-index="3">
+        <div>
+          <div><span class="s3-label" id="s3-l1">PLUS D'ÂGE.</span></div>
+          <div><span class="s3-label" id="s3-l2">PLUS D'EFFORTS.</span></div>
+          <div><span class="s3-label red" id="s3-l3">POUR MOINS.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barres de glitch pour la sortie -->
+    <div id="s3-glitch" class="clip" data-start="10.1" data-duration="0.4" data-track-index="4" data-layout-ignore>
+      <div class="s3-bar" id="s3-g1" style="top: 380px"></div>
+      <div class="s3-bar" id="s3-g2" style="top: 820px; height: 120px; background: #a4321f"></div>
+      <div class="s3-bar" id="s3-g3" style="top: 1210px; height: 40px"></div>
+    </div>
+  </div>
+
+  <script>
+    const OFF = 14.1;
+    const T = (g) => +(g - OFF).toFixed(3);
+    const tl = gsap.timeline({ paused: true });
+    const wordsIn = (sel, times) => document.querySelectorAll(sel).forEach((el, i) =>
+      tl.fromTo(el, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, T(times[i])));
+    const out = (sel, g) => tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, T(g));
+
+    // Compteur d'âge : 20 → 50 par paliers, sur la voix
+    const age = { v: 20 };
+    const num = document.getElementById("s3-num");
+    tl.fromTo(age, { v: 20 }, {
+      v: 50, duration: T(20.7) - T(14.25), ease: "none",
+      onUpdate: () => { num.textContent = String(Math.min(50, Math.floor(age.v / 10) * 10)); },
+    }, T(14.25));
+    tl.fromTo("#s3-age", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0);
+
+    // Courbes : les efforts montent, le muscle baisse
+    tl.fromTo("#s3-effort", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: T(23.3) - T(16.1), ease: "power1.inOut" }, T(16.1));
+    tl.fromTo("#s3-muscle", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: T(23.3) - T(16.1), ease: "power1.inOut" }, T(16.1));
+    tl.fromTo("#s3-t-effort", { opacity: 0 }, { opacity: 1, duration: 0.2 }, T(22.08));
+    tl.fromTo("#s3-t-muscle", { opacity: 0 }, { opacity: 1, duration: 0.2 }, T(23.46));
+
+    // Textes
+    wordsIn(".s3-aw", [14.21, 14.48, 14.68, 14.89]);
+    out("#s3-a > div", 15.9);
+    wordsIn(".s3-bw", [16.1, 16.43, 16.79, 17.0, 17.29, 17.58]);
+    out("#s3-b > div", 18.1);
+    wordsIn(".s3-cw", [18.33, 18.71, 18.86, 19.14, 19.26, 19.44]);
+    out("#s3-c > div", 20.4);
+    const slam = (sel, g) => tl.fromTo(sel, { opacity: 0, scale: 1.25, transformOrigin: "0% 50%" },
+      { opacity: 1, scale: 1, duration: 0.22, ease: "expo.out" }, T(g));
+    slam("#s3-l1", 20.64); slam("#s3-l2", 21.87); slam("#s3-l3", 23.27);
+
+    // Glitch de sortie (24,2 → 24,6 s)
+    const jumps = [[-34, 4], [26, -3], [-14, 2], [40, -6], [-8, 1], [0, 0]];
+    jumps.forEach(([x, sk], i) => tl.to("#s3-all", { x, skewX: sk, duration: 0.05, ease: "none" }, T(24.2) + i * 0.05));
+    ["#s3-g1", "#s3-g2", "#s3-g3"].forEach((sel, i) => {
+      tl.fromTo(sel, { opacity: 0, x: 0 }, { opacity: 1, x: (i % 2 ? -60 : 60), duration: 0.05, ease: "none" }, T(24.22) + i * 0.06);
+    });
+
+    window.__timelines["s3"] = tl;
+  </script>
+</template>

@@ -1,0 +1,109 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "InterVar";
+      src: url("assets/fonts/inter-var-latin.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #0f3d2e; /* fond */
+      font-family: "InterVar", sans-serif;
+      color: #faf6ec;
+      overflow: hidden;
+    }
+    .s4-stage {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      top: 200px;
+      height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .s4-w { display: inline-block; }
+    .s4-small { font-size: 64px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; }
+    .s4-big { margin-top: 14px; font-size: 176px; font-weight: 900; letter-spacing: -0.05em; line-height: 0.95; color: #d4af37; }
+    #s4-etsi { font-size: 190px; font-weight: 900; letter-spacing: -0.05em; line-height: 1; }
+    #s4-moins { font-size: 190px; }
+    /* Symbole + → − (800 → 1300 px) */
+    #s4-sym { position: absolute; left: 50%; top: 1050px; width: 0; height: 0; }
+    .s4-barh, .s4-barv { position: absolute; background: #d4af37; border-radius: 10px; }
+    .s4-barh { width: 440px; height: 84px; left: -220px; top: -42px; }
+    .s4-barv { width: 84px; height: 440px; left: -42px; top: -220px; }
+  </style>
+
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <!-- « Chez Yoga With Balls, nous avons changé de mindset. » -->
+    <div id="s4-a" class="clip s4-stage" data-start="0" data-duration="3.8" data-track-index="1">
+      <div>
+        <div class="s4-small">
+          <span class="s4-w s4-aw">Chez</span> <span class="s4-w s4-aw">Yoga</span> <span class="s4-w s4-aw">With</span> <span class="s4-w s4-aw">Balls,</span><br />
+          <span class="s4-w s4-aw">nous</span> <span class="s4-w s4-aw">avons</span> <span class="s4-w s4-aw">changé</span> <span class="s4-w s4-aw">de</span>
+        </div>
+        <div class="s4-big" id="s4-som">MINDSET.</div>
+      </div>
+    </div>
+
+    <!-- « Et si, pour en avoir plus… » -->
+    <div id="s4-b" class="clip s4-stage" data-start="3.8" data-duration="2.2" data-track-index="1">
+      <div>
+        <div id="s4-etsi"><span class="s4-w" id="s4-et">ET</span> <span class="s4-w" id="s4-si">SI,</span></div>
+        <div class="s4-small" style="margin-top: 20px">
+          <span class="s4-w s4-bw">pour</span> <span class="s4-w s4-bw">en</span> <span class="s4-w s4-bw">avoir</span> <span class="s4-w s4-bw">plus…</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- « il fallait en faire moins ? » -->
+    <div id="s4-c" class="clip s4-stage" data-start="6.0" data-duration="2.0" data-track-index="1">
+      <div>
+        <div class="s4-small">
+          <span class="s4-w s4-cw">il</span> <span class="s4-w s4-cw">fallait</span> <span class="s4-w s4-cw">en</span> <span class="s4-w s4-cw">faire</span>
+        </div>
+        <div class="s4-big" id="s4-moins">MOINS ?</div>
+      </div>
+    </div>
+
+    <div id="s4-sym-clip" class="clip" data-start="3.8" data-duration="4.2" data-track-index="2" data-layout-ignore>
+      <div id="s4-sym">
+        <div class="s4-barh" id="s4-h"></div>
+        <div class="s4-barv" id="s4-v"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const OFF = 24.6;
+    const T = (g) => +(g - OFF).toFixed(3);
+    const tl = gsap.timeline({ paused: true });
+    const wordsIn = (sel, times) => document.querySelectorAll(sel).forEach((el, i) =>
+      tl.fromTo(el, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, T(times[i])));
+    const out = (sel, g) => tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, T(g));
+
+    wordsIn(".s4-aw", [24.77, 25.09, 25.44, 25.65, 26.25, 26.47, 26.71, 27.05]);
+    tl.fromTo("#s4-som", { opacity: 0, fontWeight: 200, scale: 1.06, transformOrigin: "0% 50%" },
+      { opacity: 1, fontWeight: 900, scale: 1, duration: 0.7, ease: "expo.out" }, T(27.17));
+    out("#s4-a > div", 28.25);
+
+    // Arrêt net, puis « ET SI, »
+    tl.fromTo("#s4-et", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, T(28.52));
+    tl.fromTo("#s4-si", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, T(28.7));
+    wordsIn(".s4-bw", [29.08, 29.25, 29.37, 29.59]);
+    out("#s4-b > div", 30.45);
+
+    // Le « + » doré apparaît, puis perd sa barre verticale : il devient « − »
+    tl.fromTo("#s4-sym", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: "expo.out" }, T(28.52));
+    tl.fromTo("#s4-v", { scaleY: 1 }, { scaleY: 0, duration: 0.45, ease: "power3.inOut" }, T(31.6));
+    tl.fromTo("#s4-h", { scaleX: 1 }, { scaleX: 1.25, duration: 0.5, ease: "expo.out" }, T(31.9));
+
+    wordsIn(".s4-cw", [30.93, 31.13, 31.41, 31.49]);
+    tl.fromTo("#s4-moins", { opacity: 0, fontWeight: 900, scale: 1.1, transformOrigin: "0% 50%" },
+      { opacity: 1, fontWeight: 200, scale: 1, duration: 0.6, ease: "expo.out" }, T(31.67));
+
+    window.__timelines["s4"] = tl;
+  </script>
+</template>

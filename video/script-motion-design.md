@@ -2,8 +2,8 @@
 
 > Document de travail itératif. Le script est dicté par Romain, puis structuré scène par scène pour une production en motion design avec **Hyperframes** (compositions HTML + animations), générées avec Opus 5.5.
 
-- **Version :** v0.5 — voix off Paul K + test scènes 1-2
-- **Statut :** test des scènes 1 et 2 rendu, en attente de validation du style
+- **Version :** v0.6 — clip complet 60 s
+- **Statut :** 8 scènes rendues (MP4 + version titres sur fond transparent), en attente de retours
 
 ---
 
@@ -79,7 +79,7 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 > Plus d'âge. Plus d'efforts. Pour moins.
 >
 > **[Acte 2 — La rupture]**
-> Chez Yoga With Balls, nous avons changé de *state of mind*.
+> Chez Yoga With Balls, nous avons changé de *mindset*.
 > Et si, pour en avoir plus… il fallait en faire moins ?
 >
 > Nous avons craqué le code du corps humain.
@@ -103,7 +103,7 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 | 1 | 00:00 – 00:06 | « Depuis l'enfance… en faire beaucoup. » | **POUR ÊTRE FORT** | Graisse du texte qui passe de fin à extra-gras | Cut sec |
 | 2 | 00:06 – 00:15 | « Toujours plus d'efforts. Toujours plus de performance. » | **PLUS** ×∞ | Les `+` se multiplient jusqu'à saturer l'écran, passage au rouge | Saturation → écran plein rouge |
 | 3 | 00:15 – 00:24 | « Puis les années passent… Pour moins. » | **20 · 30 · 40 · 50** | Graphique en ciseaux : courbe EFFORTS ↑, courbe MUSCLE ↓ | Glitch |
-| 4 | 00:24 – 00:31 | « …state of mind. Et si… en faire moins ? » | **ET SI… ?** → **−** | Tout s'arrête, fond vert, le `+` perd sa barre verticale et devient `−` | Silence, respiration |
+| 4 | 00:24 – 00:31 | « …mindset. Et si… en faire moins ? » | **ET SI… ?** → **−** | Tout s'arrête, fond vert, le `+` perd sa barre verticale et devient `−` | Silence, respiration |
 | 5 | 00:31 – 00:39 | « Craqué le code… en faire moins rapporte plus. » | **40+** · **MOINS = PLUS** | Cadenas doré qui s'ouvre, les courbes s'inversent | Zoom dans le cadenas |
 | 6 | 00:39 – 00:46 | « Deux piliers. La marche tai-chi. Les pleurs sacrés. » | **MARCHE TAI-CHI** / **PLEURS SACRÉS** | Empreintes de pas lentes + goutte dorée qui tombe | Onde partant de la goutte |
 | 7 | 00:46 – 00:53 | « La performance spirituelle… gains musculaires extraordinaires. » | **SPIRITUEL → PHYSIQUE** · **MUSCLE** | Le mot MUSCLE gonfle (graisse + échelle) à chaque pulsation | Flash or |
@@ -131,7 +131,7 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 
 #### Scène 4 — Et si ? (00:24 – 00:31)
 - **Fond :** bascule sur le vert profond `#0f3d2e`.
-- **Texte :** « STATE OF MIND » en petit, puis « ET SI… ? » en grand, crème.
+- **Texte :** « MINDSET. » en or, puis « ET SI… ? » en grand, crème.
 - **Symbole :** un grand `+` doré au centre. Sa barre verticale s'efface : il devient `−`.
 - **Son :** coupure musicale, une seule note tenue.
 
@@ -206,7 +206,7 @@ Prérequis pour travailler en local : Node.js 22 ou plus récent, et une copie �
 
 Voix retenue : **Paul K** ✅
 
-- Fichier : `video/clip/assets/voix-off.mp3` (58,3 s, accélérée ×1,12 sans changement de hauteur ; brut 65 s dans `voix-off-brut.mp3`).
+- Fichier : `video/clip/assets/voix-off.mp3` (58,3 s, accélérée ×1,12 sans changement de hauteur). La phrase « …changé de mindset » a été régénérée et insérée à la place de « state of mind ». `voix-off-brut.mp3` = première prise (65 s, avec « state of mind »).
 - Minutage mot par mot : `video/clip/assets/voix-off-mots.json` (sert à caler chaque apparition de texte).
 
 ## 5 quater. Projet Hyperframes
@@ -214,19 +214,25 @@ Voix retenue : **Paul K** ✅
 ```
 video/clip/
   index.html                       # composition maître (scènes + voix off)
-  compositions/s1-dogme.html       # scène 1
-  compositions/s2-toujours-plus.html  # scène 2
+  compositions/s1-dogme.html … s8-signature.html   # les 8 scènes
+  scripts/render-alpha.py          # rendu titres seuls, fond transparent
   assets/voix-off.mp3, voix-off-mots.json
   assets/fonts/inter-var-latin.woff2   # Inter variable (graisse animable 100 → 900)
   assets/vendor/gsap.min.js            # bibliothèque d'animation embarquée
   renders/                         # vidéos rendues
 ```
 
-Commandes (depuis `video/clip/`) : `npm run dev` (aperçu), `npm run check`, `npm run render`.
+Commandes (depuis `video/clip/`) : `npm run dev` (aperçu), `npm run check`, `npm run render`, `python3 scripts/render-alpha.py` (version transparente).
+
+Rendus :
+- `renders/ywb-clip-60s.mp4` — clip complet avec voix (versionné) ;
+- `renders/ywb-titres-alpha.webm` — titres seuls, fond transparent, léger (versionné) ;
+- `renders/ywb-titres-alpha.mov` — titres seuls, ProRes 4444 (≈ 400 Mo, non versionné : à régénérer avec le script).
 
 ## 6. Questions ouvertes
 
-- **Style du test (scènes 1-2) :** police, tailles, couleurs, rythme validés ?
+- **Retours sur le clip complet :** rythme, textes, symboles, scène par scène.
+- **Version transparente :** WebM suffisant pour ton logiciel de montage, ou besoin du ProRes .mov ?
 
 ## 7. Journal des versions
 
@@ -237,3 +243,4 @@ Commandes (depuis `video/clip/`) : `npm run dev` (aperçu), `npm run check`, `np
 - **v0.4** — emplacements d'incrustation (scènes 1, 6, 7), export fond transparent, voix de synthèse, musique au montage, échantillons de voix.
 - **v0.4.1** — passage à ElevenLabs, 4 échantillons de voix masculines françaises.
 - **v0.5** — voix Paul K générée et minutée, projet Hyperframes créé, scènes 1 et 2 codées et rendues en test.
+- **v0.6** — scènes 3 à 8 codées, « state of mind » remplacé par « mindset » (texte + voix), rendu complet 60 s et version titres sur fond transparent.

@@ -1,0 +1,99 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "InterVar";
+      src: url("assets/fonts/inter-var-latin.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #0f3d2e; /* fond */
+      font-family: "InterVar", sans-serif;
+      color: #faf6ec;
+      overflow: hidden;
+    }
+    #s6-head { position: absolute; left: 90px; top: 210px; font-size: 60px; font-weight: 800; color: #d4af37; letter-spacing: 0.04em; }
+    .s6-block { position: absolute; left: 90px; right: 90px; height: 240px; display: flex; align-items: center; justify-content: space-between; }
+    #s6-b1 { top: 300px; }
+    #s6-b2 { top: 560px; }
+    .s6-title { font-size: 112px; font-weight: 900; letter-spacing: -0.04em; line-height: 1.12; }
+    .s6-w { display: inline-block; }
+    .s6-icon { width: 260px; height: 240px; }
+    /* Emplacement image (840 → 1310 px) */
+    #s6-slot { position: absolute; left: 90px; right: 90px; top: 840px; height: 470px; }
+    #s6-ring {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 200px;
+      height: 200px;
+      margin: -100px 0 0 -100px;
+      border: 6px solid #d4af37;
+      border-radius: 50%;
+      opacity: 0;
+    }
+    #s6-drop-fall { position: absolute; left: 792px; top: 620px; width: 120px; height: 160px; }
+  </style>
+
+  <div id="root" data-composition-id="s6" data-width="1080" data-height="1920">
+    <div id="s6-head-clip" class="clip" data-start="0" data-duration="4.3" data-track-index="1">
+      <div id="s6-head">DEUX PILIERS.</div>
+    </div>
+
+    <!-- Marche tai-chi -->
+    <div id="s6-b1" class="clip s6-block" data-start="0" data-duration="4.3" data-track-index="2">
+      <div class="s6-title"><span class="s6-w" id="s6-marche">MARCHE</span><br /><span class="s6-w" id="s6-taichi">TAI-CHI.</span></div>
+      <svg class="s6-icon" viewBox="0 0 260 240" data-layout-ignore>
+        <g fill="#d4af37">
+          <ellipse class="s6-step" cx="80" cy="200" rx="26" ry="38" />
+          <ellipse class="s6-step" cx="170" cy="150" rx="26" ry="38" />
+          <ellipse class="s6-step" cx="80" cy="95" rx="26" ry="38" />
+          <ellipse class="s6-step" cx="170" cy="40" rx="26" ry="38" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Pleurs sacrés -->
+    <div id="s6-b2" class="clip s6-block" data-start="0" data-duration="4.3" data-track-index="3">
+      <div class="s6-title"><span class="s6-w" id="s6-pleurs">PLEURS</span><br /><span class="s6-w" id="s6-sacres">SACRÉS.</span></div>
+      <div class="s6-icon"></div>
+    </div>
+
+    <!-- Goutte : apparaît à côté du titre, puis tombe dans l'emplacement image -->
+    <div id="s6-drop-clip" class="clip" data-start="0" data-duration="4.3" data-track-index="4" data-layout-ignore>
+      <svg id="s6-drop-fall" viewBox="0 0 120 160">
+        <path d="M 60 6 C 60 6 12 74 12 104 A 48 48 0 0 0 108 104 C 108 74 60 6 60 6 Z" fill="#d4af37" />
+      </svg>
+    </div>
+
+    <div id="s6-slot" class="clip" data-start="0" data-duration="4.3" data-track-index="5" data-layout-ignore>
+      <div id="s6-ring"></div>
+    </div>
+  </div>
+
+  <script>
+    const OFF = 39.4;
+    const T = (g) => +(g - OFF).toFixed(3);
+    const tl = gsap.timeline({ paused: true });
+    const blurIn = (sel, g) => tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, T(g));
+    const thick = (sel, g) => tl.fromTo(sel, { opacity: 0, fontWeight: 200 }, { opacity: 1, fontWeight: 900, duration: 0.5, ease: "expo.out" }, T(g));
+
+    blurIn("#s6-head", 39.64);
+    thick("#s6-marche", 40.69);
+    thick("#s6-taichi", 40.94);
+    document.querySelectorAll(".s6-step").forEach((el, i) =>
+      tl.fromTo(el, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, T(40.9) + i * 0.3));
+
+    thick("#s6-pleurs", 42.75);
+    thick("#s6-sacres", 43.06);
+    tl.fromTo("#s6-drop-fall", { opacity: 0, y: -30, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "expo.out" }, T(42.75));
+    // La goutte tombe dans l'emplacement image et crée une onde
+    tl.to("#s6-drop-fall", { y: 375, x: -312, scale: 0.5, duration: 0.3, ease: "power3.in" }, T(43.1));
+    tl.to("#s6-drop-fall", { opacity: 0, duration: 0.05 }, T(43.4));
+    tl.fromTo("#s6-ring", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.08 }, T(43.4));
+    tl.to("#s6-ring", { scale: 2.2, opacity: 0.6, duration: 0.22, ease: "expo.out" }, T(43.46));
+
+    window.__timelines["s6"] = tl;
+  </script>
+</template>
