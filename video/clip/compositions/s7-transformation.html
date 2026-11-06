@@ -31,16 +31,10 @@
     #s7-arrow { width: 90px; height: 110px; margin: 14px 0 10px 10px; }
     #s7-muscu { font-size: 132px; letter-spacing: -0.05em; }
     #s7-extra { font-size: 82px; font-weight: 900; letter-spacing: -0.03em; color: #d4af37; margin-top: 10px; }
-    /* Emplacement image (840 → 1310 px) : ondes dorées en décor */
+    /* Emplacement vidéo (840 → 1310 px), ondes dorées par-dessus */
     #s7-slot { position: absolute; left: 90px; right: 90px; top: 840px; height: 470px; }
-    .s7-frame {
-      position: absolute;
-      inset: 0;
-      border-radius: 28px;
-      overflow: hidden;
-    }
-    .s7-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    #s7-f-boost { opacity: 0; }
+    .s7-frame { position: absolute; left: 90px; top: 840px; width: 900px; height: 470px; border-radius: 28px; overflow: hidden; background: #141414; }
+    .s7-frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
     .s7-ring {
       position: absolute;
       left: 50%;
@@ -77,9 +71,14 @@
       </div>
     </div>
 
+    <!-- Vidéo de pratique (cadre non minuté : chaque <video> porte son propre timing) -->
+    <div data-hf-id="hf-x29r" id="s7-frame" class="s7-frame" data-layout-allow-overflow>
+      <video data-hf-id="hf-ywz1" id="s7-v-pleurs-a" src="assets/videos/s7-pleurs-a.mp4" data-start="0" data-duration="0.75" data-track-index="3" muted playsinline></video>
+      <video data-hf-id="hf-2q3f" id="s7-v-pleurs-b" src="assets/videos/s7-pleurs-b.mp4" data-start="0.75" data-duration="1.67" data-track-index="3" muted playsinline></video>
+      <video data-hf-id="hf-q2j4" id="s7-v-muscles" src="assets/videos/s7-muscles.mp4" data-start="2.42" data-duration="2.9" data-track-index="3" muted playsinline></video>
+      <video data-hf-id="hf-8tke" id="s7-v-rires" src="assets/videos/s7-rires.mp4" data-start="5.32" data-duration="0.78" data-track-index="3" muted playsinline></video>
+    </div>
     <div data-hf-id="hf-gj9h" id="s7-slot" class="clip" data-start="0" data-duration="6.1" data-track-index="2" data-layout-ignore>
-      <div data-hf-id="hf-38qo" class="s7-frame" data-layout-allow-overflow id="s7-f-pleurs"><img data-hf-id="hf-w3mi" id="s7-img-pleurs" src="assets/images/homme-qui-pleure.jpg" alt="Pratiquant en pleurs sacrés" /></div>
-      <div data-hf-id="hf-7tus" class="s7-frame" data-layout-allow-overflow id="s7-f-boost"><img data-hf-id="hf-uxzc" id="s7-img-boost" src="assets/images/testosterone-booster.jpg" alt="Pratiquant, testostérone au maximum" /></div>
       <div data-hf-id="hf-185k" class="s7-ring" id="s7-r0"></div>
       <div data-hf-id="hf-1ztd" class="s7-ring" id="s7-r1"></div>
       <div data-hf-id="hf-5xxe" class="s7-ring" id="s7-r2"></div>
@@ -88,7 +87,7 @@
   </div>
 
   <script>
-    const OFF = 50.036;
+    const OFF = 50.836;
     const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
     const thick = (sel, g, from = 200) => tl.fromTo(sel, { opacity: 0, fontWeight: from }, { opacity: 1, fontWeight: 900, duration: 0.5, ease: "expo.out" }, T(g));
@@ -97,33 +96,32 @@
     // L'onde de la goutte (scène 6) se prolonge puis s'efface
     tl.fromTo("#s7-r0", { opacity: 0.6, scale: 2.2 }, { opacity: 0, scale: 3.4, duration: 0.6, ease: "expo.out" }, 0);
 
-    // Images : les pleurs (spirituel) continuent depuis la scène 6…
-    tl.fromTo("#s7-img-pleurs", { scale: 1.06 }, { scale: 1, duration: 2.42, ease: "none" }, 0);
-    // … puis explosion physique sur « PHYSIQUE »
-    tl.fromTo("#s7-f-boost", { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.45, ease: "expo.out" }, T(52.456));
-    tl.to("#s7-f-pleurs", { opacity: 0, duration: 0.01 }, T(52.92));
-    tl.fromTo("#s7-img-boost", { scale: 1.1 }, { scale: 1, duration: 3.6, ease: "none" }, T(52.456));
-    // L'image gonfle avec MUSCULAIRES
-    [53.616, 54.016, 54.346].forEach((g) =>
-      tl.fromTo("#s7-f-boost", { scale: 1.045 }, { scale: 1, duration: 0.3, ease: "expo.out", immediateRender: false }, T(g)));
+    blurIn("#s7-perf1", 51.096);
+    thick("#s7-spi", 51.646);
+    tl.fromTo("#s7-arrow-path", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.35, ease: "power2.inOut" }, T(52.276));
+    blurIn("#s7-perf2", 52.746);
+    thick("#s7-phy", 53.256);
+    tl.to("#s7-a > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, T(53.636));
 
-    blurIn("#s7-perf1", 50.296);
-    thick("#s7-spi", 50.846);
-    tl.fromTo("#s7-arrow-path", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.35, ease: "power2.inOut" }, T(51.476));
-    blurIn("#s7-perf2", 51.946);
-    thick("#s7-phy", 52.456);
-    tl.to("#s7-a > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, T(52.836));
-
-    document.querySelectorAll(".s7-bw").forEach((el, i) => blurIn(el, [53.086, 53.296, 53.436][i]));
+    document.querySelectorAll(".s7-bw").forEach((el, i) => blurIn(el, [53.886, 54.096, 54.236][i]));
     // MUSCULAIRES gonfle en trois pulsations, calées sur les syllabes
     tl.fromTo("#s7-muscu", { opacity: 0, fontWeight: 150, scale: 0.94, transformOrigin: "0% 50%" },
-      { opacity: 1, fontWeight: 450, scale: 0.97, duration: 0.18, ease: "expo.out" }, T(53.616));
-    tl.to("#s7-muscu", { fontWeight: 700, scale: 0.99, duration: 0.18, ease: "expo.out" }, T(53.816));
-    tl.to("#s7-muscu", { fontWeight: 900, scale: 1, duration: 0.3, ease: "expo.out" }, T(54.016));
-    tl.fromTo("#s7-extra", { opacity: 0, scaleX: 1.15, filter: "blur(8px)", transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, T(54.346));
+      { opacity: 1, fontWeight: 450, scale: 0.97, duration: 0.18, ease: "expo.out" }, T(54.416));
+    tl.to("#s7-muscu", { fontWeight: 700, scale: 0.99, duration: 0.18, ease: "expo.out" }, T(54.616));
+    tl.to("#s7-muscu", { fontWeight: 900, scale: 1, duration: 0.3, ease: "expo.out" }, T(54.816));
+    tl.fromTo("#s7-extra", { opacity: 0, scaleX: 1.15, filter: "blur(8px)", transformOrigin: "0% 50%" }, { opacity: 1, scaleX: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, T(55.146));
+
+    // Vidéos : les pleurs (spirituel) continuent depuis la scène 6, coupe sur « physique »
+    tl.fromTo("#s7-v-pleurs-a", { scale: 1.04 }, { scale: 1.02, duration: 0.75, ease: "none" }, 0);
+    tl.fromTo("#s7-v-pleurs-b", { scale: 1.06 }, { scale: 1, duration: 1.67, ease: "none" }, 0.75);
+    tl.fromTo("#s7-v-muscles", { scale: 1.1 }, { scale: 1, duration: 1.16, ease: "none" }, T(53.256));
+    // La vidéo gonfle avec MUSCULAIRES
+    [[54.416, 1.03], [54.616, 1.06], [54.816, 1.1]].forEach(([g, sc]) =>
+      tl.to("#s7-v-muscles", { scale: sc, duration: 0.18, ease: "expo.out" }, T(g)));
+    tl.fromTo("#s7-v-rires", { scale: 1.1 }, { scale: 1.04, duration: 0.78, ease: "none" }, T(56.156));
 
     // Ondes dorées à chaque pulsation
-    [["#s7-r1", 53.616], ["#s7-r2", 54.016], ["#s7-r3", 54.346]].forEach(([sel, g]) =>
+    [["#s7-r1", 54.416], ["#s7-r2", 54.816], ["#s7-r3", 55.146]].forEach(([sel, g]) =>
       tl.fromTo(sel, { opacity: 0.8, scale: 0.4 }, { opacity: 0, scale: 3, duration: 0.9, ease: "expo.out", immediateRender: false }, T(g)));
 
     window.__timelines["s7"] = tl;

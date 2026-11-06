@@ -20,16 +20,10 @@
     .s6-title { font-size: 112px; font-weight: 900; letter-spacing: -0.04em; line-height: 1.12; }
     .s6-w { display: inline-block; }
     .s6-icon { width: 260px; height: 240px; }
-    /* Emplacement image (840 → 1310 px) */
+    /* Emplacement vidéo (840 → 1310 px) */
     #s6-slot { position: absolute; left: 90px; right: 90px; top: 840px; height: 470px; }
-    .s6-frame {
-      position: absolute;
-      inset: 0;
-      border-radius: 28px;
-      overflow: hidden;
-      opacity: 0;
-    }
-    .s6-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .s6-frame { position: absolute; left: 90px; top: 840px; width: 900px; height: 470px; border-radius: 28px; overflow: hidden; background: #141414; }
+    .s6-frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
     #s6-ring {
       position: absolute;
       left: 50%;
@@ -68,47 +62,49 @@
       <div data-hf-id="hf-9jyz" class="s6-icon"></div>
     </div>
 
-    <!-- Goutte : apparaît à côté du titre, puis tombe dans l'emplacement image -->
+    <!-- Goutte : apparaît à côté du titre, puis tombe dans la vidéo -->
     <div data-hf-id="hf-zw3i" id="s6-drop-clip" class="clip" data-start="0" data-duration="4.3" data-track-index="4" data-layout-ignore>
       <svg data-hf-id="hf-vox0" id="s6-drop-fall" viewBox="0 0 120 160">
         <path data-hf-id="hf-hc9g" d="M 60 6 C 60 6 12 74 12 104 A 48 48 0 0 0 108 104 C 108 74 60 6 60 6 Z" fill="#d4af37" />
       </svg>
     </div>
 
+    <!-- Vidéo de pratique (cadre non minuté : chaque <video> porte son propre timing) -->
+    <div data-hf-id="hf-vub7" id="s6-frame" class="s6-frame" data-layout-allow-overflow>
+      <video data-hf-id="hf-utl5" id="s6-v-marche" src="assets/videos/s6-marche.mp4" data-start="0" data-duration="3.35" data-track-index="6" muted playsinline></video>
+      <video data-hf-id="hf-eev9" id="s6-v-pleurs" src="assets/videos/s6-pleurs.mp4" data-start="3.35" data-duration="0.95" data-track-index="6" muted playsinline></video>
+    </div>
     <div data-hf-id="hf-ciuz" id="s6-slot" class="clip" data-start="0" data-duration="4.3" data-track-index="5" data-layout-ignore>
-      <div data-hf-id="hf-qz7v" class="s6-frame" data-layout-allow-overflow id="s6-f-taichi"><img data-hf-id="hf-yh0c" id="s6-img-taichi" src="assets/images/danse-mystique.jpg" alt="Pratiquant en marche tai-chi" /></div>
-      <div data-hf-id="hf-tw9o" class="s6-frame" data-layout-allow-overflow id="s6-f-pleurs"><img data-hf-id="hf-56wf" id="s6-img-pleurs" src="assets/images/homme-qui-pleure.jpg" alt="Pratiquant en pleurs sacrés" /></div>
       <div data-hf-id="hf-1dz1" id="s6-ring"></div>
     </div>
   </div>
 
   <script>
-    const OFF = 45.736;
+    const OFF = 46.536;
     const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
     const blurIn = (sel, g) => tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, T(g));
     const thick = (sel, g) => tl.fromTo(sel, { opacity: 0, fontWeight: 200 }, { opacity: 1, fontWeight: 900, duration: 0.5, ease: "expo.out" }, T(g));
 
-    blurIn("#s6-head", 45.976);
-    thick("#s6-marche", 47.026);
-    thick("#s6-taichi", 47.276);
+    blurIn("#s6-head", 46.776);
+    thick("#s6-marche", 47.826);
+    thick("#s6-taichi", 48.076);
     document.querySelectorAll(".s6-step").forEach((el, i) =>
-      tl.fromTo(el, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, T(47.236) + i * 0.3));
+      tl.fromTo(el, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, T(48.036) + i * 0.3));
 
-    // Images : marche tai-chi, puis pleurs sacrés
-    tl.fromTo("#s6-f-taichi", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, T(47.026));
-    tl.fromTo("#s6-img-taichi", { scale: 1.14 }, { scale: 1.02, duration: 2.4, ease: "none" }, T(47.026));
-    tl.fromTo("#s6-f-pleurs", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, T(49.086));
-    tl.fromTo("#s6-img-pleurs", { scale: 1.12 }, { scale: 1.06, duration: 1.2, ease: "none" }, T(49.086));
+    // Vidéos : la marche tai-chi, puis les pleurs sacrés (coupe sur « pleurs »)
+    tl.fromTo("#s6-frame", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#s6-v-marche", { scale: 1.1 }, { scale: 1.02, duration: 3.35, ease: "none" }, 0);
+    tl.fromTo("#s6-v-pleurs", { scale: 1.08 }, { scale: 1.04, duration: 0.95, ease: "none" }, T(49.886));
 
-    thick("#s6-pleurs", 49.086);
-    thick("#s6-sacres", 49.396);
-    tl.fromTo("#s6-drop-fall", { opacity: 0, y: -30, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "expo.out" }, T(49.086));
-    // La goutte tombe dans l'emplacement image et crée une onde
-    tl.to("#s6-drop-fall", { y: 375, x: -312, scale: 0.5, duration: 0.3, ease: "power3.in" }, T(49.436));
-    tl.to("#s6-drop-fall", { opacity: 0, duration: 0.05 }, T(49.736));
-    tl.fromTo("#s6-ring", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.08 }, T(49.736));
-    tl.to("#s6-ring", { scale: 2.2, opacity: 0.6, duration: 0.22, ease: "expo.out" }, T(49.796));
+    thick("#s6-pleurs", 49.886);
+    thick("#s6-sacres", 50.196);
+    tl.fromTo("#s6-drop-fall", { opacity: 0, y: -30, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "expo.out" }, T(49.886));
+    // La goutte tombe dans la vidéo et crée une onde
+    tl.to("#s6-drop-fall", { y: 375, x: -312, scale: 0.5, duration: 0.3, ease: "power3.in" }, T(50.236));
+    tl.to("#s6-drop-fall", { opacity: 0, duration: 0.05 }, T(50.536));
+    tl.fromTo("#s6-ring", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.08 }, T(50.536));
+    tl.to("#s6-ring", { scale: 2.2, opacity: 0.6, duration: 0.22, ease: "expo.out" }, T(50.596));
 
     window.__timelines["s6"] = tl;
   </script>

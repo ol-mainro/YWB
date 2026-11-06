@@ -58,12 +58,12 @@
     }
     .s1-frame {
       position: absolute;
-      inset: 0;
+      left: 90px; top: 820px; width: 900px; height: 490px;
       border-radius: 28px;
       overflow: hidden;
       background: #141414;
     }
-    .s1-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .s1-frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
     #s1-plus {
       position: relative;
       font-size: 520px;
@@ -111,9 +111,13 @@
       </div>
     </div>
 
-    <!-- Emplacement image (calque vide : l'image s'incruste ici au montage) -->
+    <!-- Vidéo : le quadra épuisé par le « toujours plus » (cadre non minuté : chaque <video> porte son propre timing) -->
+    <div data-hf-id="hf-rqjn" id="s1-frame" class="s1-frame" data-layout-allow-overflow>
+      <video data-hf-id="hf-pahy" id="s1-v-a" src="assets/videos/s1-cuisine-a.mp4" data-start="0" data-duration="3.55" data-track-index="4" muted playsinline></video>
+      <video data-hf-id="hf-6k6u" id="s1-v-b" src="assets/videos/s1-cuisine-b.mp4" data-start="3.55" data-duration="3.05" data-track-index="4" muted playsinline></video>
+    </div>
+    <!-- Le « + » s'imprime par-dessus la vidéo -->
     <div data-hf-id="hf-wkf1" id="s1-slot" class="clip" data-start="0" data-duration="6.6" data-track-index="3" data-layout-ignore>
-      <div data-hf-id="hf-nv45" class="s1-frame" data-layout-allow-overflow><img data-hf-id="hf-6vsu" id="s1-img" src="assets/images/formule-ancestrale.jpg" alt="Chasseur préhistorique, lance à la main" /></div>
       <div data-hf-id="hf-x0lz" id="s1-plus">+</div>
     </div>
   </div>
@@ -135,11 +139,11 @@
     tl.fromTo("#s1-fort", { opacity: 0, fontWeight: 100 }, { opacity: 1, fontWeight: 900, duration: 0.55, ease: "expo.out" }, 4.18);
     tl.to("#s1-b > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, 4.68);
 
-    // Image : le chasseur, déjà là à la frame 0, lent zoom avant
-    tl.fromTo("#s1-img", { scale: 1.12, filter: "saturate(1) brightness(1)" }, { scale: 1, duration: 6.6, ease: "none" }, 0);
-    tl.to("#s1-img", { filter: "saturate(0.3) brightness(0.45)", duration: 0.7, ease: "power2.out" }, 4.9);
+    // Vidéo : lent zoom avant, puis assombrie pour laisser place au « + »
+    tl.fromTo("#s1-frame video", { scale: 1.08 }, { scale: 1, duration: 6.6, ease: "none" }, 0);
+    tl.to("#s1-frame video", { filter: "saturate(0.3) brightness(0.45)", duration: 0.7, ease: "power2.out" }, 4.9);
 
-    // Le « + » s'imprime sur l'image et annonce la scène suivante
+    // Le « + » s'imprime sur la vidéo et annonce la scène suivante
     tl.fromTo("#s1-plus", { opacity: 0, fontWeight: 100, color: "#faf6ec" }, { opacity: 0.9, duration: 0.3 }, 4.2);
     tl.to("#s1-plus", { fontWeight: 900, duration: 1.6, ease: "power2.inOut" }, 4.9);
     tl.to("#s1-plus", { color: "#a4321f", duration: 0.5 }, 5.6);

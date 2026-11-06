@@ -85,7 +85,7 @@
   </div>
 
   <script>
-    const OFF = 38.936;
+    const OFF = 39.736;
     const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
     const wordsIn = (sel, times) => document.querySelectorAll(sel).forEach((el, i) =>
@@ -93,26 +93,26 @@
     const out = (sel, g) => tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, T(g));
 
     // Cadenas : arrive, tremble sur « craqué », s'ouvre sur « humain »
-    tl.fromTo("#s5-lock", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, T(39.036));
+    tl.fromTo("#s5-lock", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, T(39.836));
     [[-14, -4], [12, 3], [-9, -2], [6, 1], [0, 0]].forEach(([x, r], i) =>
-      tl.to("#s5-lock", { x, rotation: r, duration: 0.06, ease: "none" }, T(39.786) + i * 0.06));
+      tl.to("#s5-lock", { x, rotation: r, duration: 0.06, ease: "none" }, T(40.586) + i * 0.06));
     tl.fromTo("#s5-shackle", { y: 0, rotation: 0, transformOrigin: "380px 250px" },
-      { y: -20, rotation: 24, duration: 0.5, ease: "back.out(1.6)" }, T(40.736));
+      { y: -20, rotation: 24, duration: 0.5, ease: "back.out(1.6)" }, T(41.536));
 
     // Le trou de serrure laisse place à « 40+ »
-    tl.to("#s5-keyhole", { opacity: 0, duration: 0.15 }, T(42.286));
-    tl.fromTo("#s5-40", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.45, ease: "expo.out" }, T(42.356));
+    tl.to("#s5-keyhole", { opacity: 0, duration: 0.15 }, T(43.086));
+    tl.fromTo("#s5-40", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.45, ease: "expo.out" }, T(43.156));
 
     // Textes
-    wordsIn(".s5-aw", [39.346, 39.536, 39.746, 40.066, 40.186, 40.376, 40.506, 40.716]);
-    out("#s5-a > div", 41.636);
-    tl.fromTo("#s5-pw1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, T(41.936));
-    tl.fromTo("#s5-pw2", { opacity: 0, fontWeight: 200 }, { opacity: 1, fontWeight: 900, duration: 0.5, ease: "expo.out" }, T(42.356));
-    out("#s5-b > div", 42.996);
+    wordsIn(".s5-aw", [40.146, 40.336, 40.546, 40.866, 40.986, 41.176, 41.306, 41.516]);
+    out("#s5-a > div", 42.436);
+    tl.fromTo("#s5-pw1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, T(42.736));
+    tl.fromTo("#s5-pw2", { opacity: 0, fontWeight: 200 }, { opacity: 1, fontWeight: 900, duration: 0.5, ease: "expo.out" }, T(43.156));
+    out("#s5-b > div", 43.796);
 
-    tl.fromTo("#s5-moins", { opacity: 0, fontWeight: 900 }, { opacity: 1, fontWeight: 200, duration: 0.55, ease: "expo.out" }, T(43.526));
-    tl.fromTo("#s5-egal", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }, T(43.946));
-    tl.fromTo("#s5-plus", { opacity: 0, fontWeight: 200 }, { opacity: 1, fontWeight: 900, duration: 0.6, ease: "expo.out" }, T(44.376));
+    tl.fromTo("#s5-moins", { opacity: 0, fontWeight: 900 }, { opacity: 1, fontWeight: 200, duration: 0.55, ease: "expo.out" }, T(44.326));
+    tl.fromTo("#s5-egal", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }, T(44.746));
+    tl.fromTo("#s5-plus", { opacity: 0, fontWeight: 200 }, { opacity: 1, fontWeight: 900, duration: 0.6, ease: "expo.out" }, T(45.176));
 
     window.__timelines["s5"] = tl;
   </script>

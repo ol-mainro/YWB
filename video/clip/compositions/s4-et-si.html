@@ -29,11 +29,9 @@
     .s4-big { margin-top: 14px; font-size: 176px; font-weight: 900; letter-spacing: -0.05em; line-height: 0.95; color: #d4af37; }
     #s4-etsi { font-size: 190px; font-weight: 900; letter-spacing: -0.05em; line-height: 1; }
     #s4-moins { font-size: 190px; }
-    /* Symbole + → − (800 → 1300 px) */
-    #s4-sym { position: absolute; left: 50%; top: 1050px; width: 0; height: 0; }
-    .s4-barh, .s4-barv { position: absolute; background: #d4af37; border-radius: 10px; }
-    .s4-barh { width: 440px; height: 84px; left: -220px; top: -42px; }
-    .s4-barv { width: 84px; height: 440px; left: -42px; top: -220px; }
+    /* Flèche dorée : vers le haut sur « plus », se retourne vers le bas pour « moins » */
+    #s4-sym { position: absolute; left: 50%; top: 1270px; width: 0; height: 0; }
+    #s4-arrow { position: absolute; left: -200px; top: -250px; width: 400px; height: 500px; overflow: visible; }
   </style>
 
   <div data-hf-id="hf-q5j8" id="root" data-composition-id="s4" data-width="1080" data-height="1920">
@@ -59,7 +57,7 @@
     </div>
 
     <!-- « il fallait en faire moins ? » -->
-    <div data-hf-id="hf-skh4" id="s4-c" class="clip s4-stage" data-start="6.0" data-duration="2.0" data-track-index="1">
+    <div data-hf-id="hf-skh4" id="s4-c" class="clip s4-stage" data-start="6.0" data-duration="2.8" data-track-index="1">
       <div data-hf-id="hf-x11t">
         <div data-hf-id="hf-jtg7" class="s4-small">
           <span data-hf-id="hf-vz6d" class="s4-w s4-cw">il</span> <span data-hf-id="hf-puw5" class="s4-w s4-cw">fallait</span> <span data-hf-id="hf-unzn" class="s4-w s4-cw">en</span> <span data-hf-id="hf-ksu1" class="s4-w s4-cw">faire</span>
@@ -68,10 +66,11 @@
       </div>
     </div>
 
-    <div data-hf-id="hf-b366" id="s4-sym-clip" class="clip" data-start="3.8" data-duration="4.2" data-track-index="2" data-layout-ignore>
+    <div data-hf-id="hf-b366" id="s4-sym-clip" class="clip" data-start="3.8" data-duration="5.0" data-track-index="2" data-layout-ignore>
       <div data-hf-id="hf-9jkq" id="s4-sym">
-        <div data-hf-id="hf-arff" class="s4-barh" id="s4-h"></div>
-        <div data-hf-id="hf-6fk7" class="s4-barv" id="s4-v"></div>
+        <svg data-hf-id="hf-arff" id="s4-arrow" viewBox="0 0 400 500" overflow="visible">
+          <path data-hf-id="hf-6fk7" d="M 200 20 L 380 220 L 258 220 L 258 480 L 142 480 L 142 220 L 20 220 Z" fill="#d4af37" stroke="#d4af37" stroke-width="24" stroke-linejoin="round" />
+        </svg>
       </div>
     </div>
   </div>
@@ -95,14 +94,15 @@
     wordsIn(".s4-bw", [35.416, 35.586, 35.706, 35.926]);
     out("#s4-b > div", 36.786);
 
-    // Le « + » doré apparaît, puis perd sa barre verticale : il devient « − »
-    tl.fromTo("#s4-sym", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: "expo.out" }, T(34.856));
-    tl.fromTo("#s4-v", { scaleY: 1 }, { scaleY: 0, duration: 0.45, ease: "power3.inOut" }, T(37.936));
-    tl.fromTo("#s4-h", { scaleX: 1 }, { scaleX: 1.25, duration: 0.5, ease: "expo.out" }, T(38.236));
+    // La flèche dorée monte (« plus »), puis se retourne pendant la pause après « faire » :
+    // elle pointe vers le bas quand la voix dit « moins » (38,804 s)
+    tl.fromTo("#s4-sym", { scale: 0.6, opacity: 0, y: 60 }, { scale: 1, opacity: 1, y: 0, duration: 0.7, ease: "expo.out" }, T(34.856));
+    tl.to("#s4-sym", { y: -30, duration: 0.5, ease: "power2.out" }, T(35.931));
+    tl.fromTo("#s4-sym", { rotation: 0 }, { rotation: 180, y: 30, duration: 0.75, ease: "back.inOut(1.4)" }, T(37.986));
 
     wordsIn(".s4-cw", [37.266, 37.466, 37.746, 37.826]);
     tl.fromTo("#s4-moins", { opacity: 0, fontWeight: 900, scale: 1.1, transformOrigin: "0% 50%" },
-      { opacity: 1, fontWeight: 200, scale: 1, duration: 0.6, ease: "expo.out" }, T(38.006));
+      { opacity: 1, fontWeight: 200, scale: 1, duration: 0.6, ease: "expo.out" }, T(38.806));
 
     window.__timelines["s4"] = tl;
   </script>

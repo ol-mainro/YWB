@@ -13,18 +13,18 @@
       color: #faf6ec;
       overflow: hidden;
     }
-    /* Logo image 16:9 (230 → 736 px) */
     #s8-logo {
       position: absolute;
       left: 90px;
       right: 90px;
       top: 230px;
-      height: 506px;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 0 0 6px #d4af37;
+      font-size: 196px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      line-height: 0.92;
+      color: #d4af37;
     }
-    #s8-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .s8-w { display: block; }
     #s8-rule { position: absolute; left: 96px; top: 860px; width: 300px; height: 8px; background: #d4af37; transform-origin: 0% 50%; }
     #s8-sig {
       position: absolute;
@@ -54,7 +54,11 @@
 
   <div data-hf-id="hf-iyfs" id="root" data-composition-id="s8" data-width="1080" data-height="1920">
     <div data-hf-id="hf-vntm" id="s8-logo-clip" class="clip" data-start="0" data-duration="10.264" data-track-index="1">
-      <div data-hf-id="hf-c3j3" id="s8-logo" data-layout-allow-overflow><img data-hf-id="hf-wfqc" id="s8-logo-img" src="assets/images/logo.jpg" alt="Yoga With Balls" /></div>
+      <div data-hf-id="hf-ts10" id="s8-logo">
+        <span data-hf-id="hf-wtvk" class="s8-w" id="s8-yoga">YOGA</span>
+        <span data-hf-id="hf-yrio" class="s8-w" id="s8-with">WITH</span>
+        <span data-hf-id="hf-rkj8" class="s8-w" id="s8-balls">BALLS</span>
+      </div>
     </div>
     <div data-hf-id="hf-ze3t" id="s8-rule-clip" class="clip" data-start="0" data-duration="10.264" data-track-index="2" data-layout-ignore>
       <div data-hf-id="hf-epw7" id="s8-rule"></div>
@@ -77,25 +81,23 @@
   </div>
 
   <script>
-    const OFF = 56.136;
+    const OFF = 56.936;
     const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
     const thick = (sel, g) => tl.fromTo(sel, { opacity: 0, fontWeight: 100 }, { opacity: 1, fontWeight: 900, duration: 0.6, ease: "expo.out" }, T(g));
     const blurIn = (sel, g) => tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, T(g));
 
-    // Logo : se pose sur « Yoga », rebondit sur « With » et « Balls »
-    tl.fromTo("#s8-logo", { opacity: 0, scale: 0.6, rotation: -4 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.55, ease: "back.out(1.7)" }, T(56.336));
-    [56.916, 57.126].forEach((g) =>
-      tl.fromTo("#s8-logo", { scale: 1.05 }, { scale: 1, duration: 0.25, ease: "expo.out", immediateRender: false }, T(g)));
-    tl.fromTo("#s8-logo-img", { scale: 1 }, { scale: 1.06, duration: 9.5, ease: "none" }, T(56.636));
-    tl.fromTo("#s8-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, T(57.836));
+    thick("#s8-yoga", 57.136);
+    thick("#s8-with", 57.716);
+    thick("#s8-balls", 57.926);
+    tl.fromTo("#s8-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, T(58.636));
 
-    document.querySelectorAll(".s8-a").forEach((el, i) => blurIn(el, [58.746, 58.976, 59.246][i]));
-    tl.to("#s8-moins", { fontWeight: 200, duration: 0.5, ease: "expo.out" }, T(59.436));
-    document.querySelectorAll(".s8-b").forEach((el, i) => blurIn(el, [60.316, 60.566, 60.856][i]));
-    tl.to("#s8-plus", { color: "#d4af37", duration: 0.3 }, T(60.936));
+    document.querySelectorAll(".s8-a").forEach((el, i) => blurIn(el, [59.546, 59.776, 60.046][i]));
+    tl.to("#s8-moins", { fontWeight: 200, duration: 0.5, ease: "expo.out" }, T(60.236));
+    document.querySelectorAll(".s8-b").forEach((el, i) => blurIn(el, [61.116, 61.366, 61.656][i]));
+    tl.to("#s8-plus", { color: "#d4af37", duration: 0.3 }, T(61.736));
 
-    tl.fromTo("#s8-app", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, T(62.356));
+    tl.fromTo("#s8-app", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, T(63.156));
 
     window.__timelines["s8"] = tl;
   </script>
