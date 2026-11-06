@@ -2,7 +2,7 @@
 
 > Document de travail itératif. Le script est dicté par Romain, puis structuré scène par scène pour une production en motion design avec **Hyperframes** (compositions HTML + animations), générées avec Opus 5.5.
 
-- **Version :** v0.4 — décisions de production
+- **Version :** v0.4.1 — échantillons ElevenLabs
 - **Statut :** brief validé, choix de la voix de synthèse en cours
 
 ---
@@ -193,20 +193,22 @@ Prérequis pour travailler en local : Node.js 22 ou plus récent, et une copie �
 
 ## 5 ter. Voix de synthèse
 
-Hyperframes intègre un moteur de voix local et gratuit (Kokoro, commande `npx hyperframes tts`). Limite : **une seule voix française, et elle est féminine** (Siwis).
+**Choix : ElevenLabs** (modèle `eleven_multilingual_v2`). La clé d'API est enregistrée de façon sécurisée dans l'environnement cloud « ywb ».
 
-Échantillons générés dans `video/voix-tests/` :
-- `siwis.wav` — voix française native, féminine ;
-- `george-fr.wav` — voix masculine anglaise qui lit le français (accent marqué).
+Échantillons dans `video/voix-tests/` (même phrase test) :
 
-Options :
-1. **Siwis** comme voix définitive (change le parti pris « voix grave d'homme mûr »).
-2. **Siwis provisoire** pour caler le timing, puis remplacement par une voix masculine au montage.
-3. **Service payant** (ElevenLabs ou voix HeyGen) : voix masculine française grave et réaliste. Nécessite une clé d'API, saisie dans les réglages sécurisés de l'environnement.
+| Fichier | Voix | Profil |
+|---|---|---|
+| `alain2.mp3` | Alain 2 | Français, profond, narration à suspense |
+| `adrien.mp3` | Adrien | Français, grave, calme, rassurant |
+| `paul-k.mp3` | Paul K | Français, voix de pub et de bande-annonce |
+| `david-tyserre.mp3` | David Tyserre | Français, documentaire, posé |
+
+Voix retenue : _à choisir_.
 
 ## 6. Questions ouvertes
 
-- **Voix de synthèse :** option 1, 2 ou 3 (voir 5 ter) ?
+- **Voix :** laquelle des 4 voix ElevenLabs (voir 5 ter) ?
 
 ## 7. Journal des versions
 
@@ -215,3 +217,4 @@ Options :
 - **v0.3** — 9:16 / 60 s, clip 100 % typographique, signature validée, ajout de la scène « Les deux piliers » (marche tai-chi, pleurs sacrés), CTA sans lien, détail des 8 scènes, notes Hyperframes.
 - **v0.3.1** — ajout du processus de production Hyperframes.
 - **v0.4** — emplacements d'incrustation (scènes 1, 6, 7), export fond transparent, voix de synthèse, musique au montage, échantillons de voix.
+- **v0.4.1** — passage à ElevenLabs, 4 échantillons de voix masculines françaises.
