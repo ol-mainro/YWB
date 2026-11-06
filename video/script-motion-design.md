@@ -173,6 +173,20 @@ Recommandation : **pas les images, mais leur place**.
 - Dans ces scènes, le texte reste dans la **moitié haute** de la zone de sécurité, et on laisse un **calque vide nommé** (ex. `#slot-image`). Tu pourras y poser ton image sans toucher à la mise en page.
 - On peut aussi exporter une version avec **fond transparent** (ProRes 4444 ou WebM alpha) pour superposer les titres à tes images au montage.
 
+## 5 bis. Processus de production
+
+Hyperframes est un outil open source de HeyGen qui fabrique une vidéo à partir de pages HTML animées. Chaque scène est une page web, et l'outil la filme image par image (Chrome + FFmpeg) pour sortir un MP4. On ne travaille pas sur une timeline : c'est Claude qui écrit le code, et Romain fait ses retours sur l'aperçu.
+
+1. **Script** : valider ce document (scènes, textes, timing).
+2. **Voix off** : enregistrer la voix, ou utiliser une voix de synthèse provisoire. Elle fixe le timing exact de chaque apparition.
+3. **Code** : Claude écrit les 8 scènes en HTML/CSS + animations dans `video/clip/`.
+4. **Aperçu** : `npx hyperframes preview` ouvre le lecteur dans le navigateur.
+5. **Itérations** : retours scène par scène, Claude ajuste le code.
+6. **Rendu** : `npx hyperframes render` produit le MP4 1080 × 1920.
+7. **Finitions** : incrustation des images et mixage dans le logiciel de montage de Romain.
+
+Prérequis pour travailler en local : Node.js 22 ou plus récent, et une copie à jour du dépôt (`git pull`).
+
 ## 6. Questions ouvertes
 
 - **Incrustations :** on réserve les zones dans les scènes 1, 6 et 7, ou le clip reste 100 % autonome ?
@@ -185,3 +199,4 @@ Recommandation : **pas les images, mais leur place**.
 - **v0.1** — création du squelette.
 - **v0.2** — script de base intégré, voix off v1, découpage en 7 scènes.
 - **v0.3** — 9:16 / 60 s, clip 100 % typographique, signature validée, ajout de la scène « Les deux piliers » (marche tai-chi, pleurs sacrés), CTA sans lien, détail des 8 scènes, notes Hyperframes.
+- **v0.3.1** — ajout du processus de production Hyperframes.
