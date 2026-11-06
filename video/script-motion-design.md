@@ -2,8 +2,8 @@
 
 > Document de travail itératif. Le script est dicté par Romain, puis structuré scène par scène pour une production en motion design avec **Hyperframes** (compositions HTML + animations), générées avec Opus 5.5.
 
-- **Version :** v0.3 — clip typographique 9:16
-- **Statut :** brief validé, détail des scènes proposé, à valider
+- **Version :** v0.4 — décisions de production
+- **Statut :** brief validé, choix de la voix de synthèse en cours
 
 ---
 
@@ -16,8 +16,8 @@
 | Format | **9:16 vertical** — 1080 × 1920 px (Reels, TikTok, Shorts) |
 | Durée | **60 s** |
 | Parti pris visuel | **Clip 100 % typographique** : titres et symboles uniquement, aucune image (incrustations ajoutées ensuite par Romain) |
-| Voix off | Voix grave d'homme mûr, posée, assurée |
-| Musique / ambiance | _à définir_ — montée rythmique (actes 1), coupure nette (acte 2), nappe ample et triomphante (acte 3) |
+| Voix off | **Voix de synthèse** — idéalement grave, homme mûr, posée, assurée (voir 5 ter) |
+| Musique / ambiance | Pas de piste choisie. Animation calée sur une grille de 120 BPM ; musique ajoutée au montage. Intention : montée rythmique (acte 1), coupure nette (acte 2), nappe ample et triomphante (acte 3) |
 | Signature | **En faire moins. En avoir plus.** ✅ |
 | Appel à l'action | Mention « Application disponible » — **sans lien ni store** pour l'instant |
 
@@ -163,7 +163,11 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 - **Structure :** une composition par scène (8), assemblées dans une composition maître.
 - **Assets :** une police variable embarquée en local, symboles en SVG dessinés en code. Aucune image.
 - **Voix off :** idéalement enregistrée avant l'animation, pour caler les apparitions de texte sur les mots.
-- **Incrustations futures :** voir ci-dessous.
+- **Incrustations :** emplacements réservés dans les scènes 1, 6 et 7 ✅ (voir ci-dessous).
+- **Exports :**
+  - `final.mp4` — version complète, fond vert, voix off incluse ;
+  - `titres-alpha.mov` — titres et symboles seuls sur **fond transparent** (ProRes 4444, `--format mov`), sans voix, pour superposition au montage ✅ ;
+  - `voix-off.wav` — piste voix séparée.
 
 ### Faut-il prévoir les images dès maintenant ?
 
@@ -187,12 +191,22 @@ Hyperframes est un outil open source de HeyGen qui fabrique une vidéo à partir
 
 Prérequis pour travailler en local : Node.js 22 ou plus récent, et une copie à jour du dépôt (`git pull`).
 
+## 5 ter. Voix de synthèse
+
+Hyperframes intègre un moteur de voix local et gratuit (Kokoro, commande `npx hyperframes tts`). Limite : **une seule voix française, et elle est féminine** (Siwis).
+
+Échantillons générés dans `video/voix-tests/` :
+- `siwis.wav` — voix française native, féminine ;
+- `george-fr.wav` — voix masculine anglaise qui lit le français (accent marqué).
+
+Options :
+1. **Siwis** comme voix définitive (change le parti pris « voix grave d'homme mûr »).
+2. **Siwis provisoire** pour caler le timing, puis remplacement par une voix masculine au montage.
+3. **Service payant** (ElevenLabs ou voix HeyGen) : voix masculine française grave et réaliste. Nécessite une clé d'API, saisie dans les réglages sécurisés de l'environnement.
+
 ## 6. Questions ouvertes
 
-- **Incrustations :** on réserve les zones dans les scènes 1, 6 et 7, ou le clip reste 100 % autonome ?
-- **Fond transparent :** besoin d'un export alpha en plus de la version finale ?
-- **Voix off :** tu l'enregistres toi-même, ou on prévoit une voix de synthèse pour caler le timing ?
-- **Musique :** une piste en tête, ou on cale d'abord sur un rythme à 120 BPM ?
+- **Voix de synthèse :** option 1, 2 ou 3 (voir 5 ter) ?
 
 ## 7. Journal des versions
 
@@ -200,3 +214,4 @@ Prérequis pour travailler en local : Node.js 22 ou plus récent, et une copie �
 - **v0.2** — script de base intégré, voix off v1, découpage en 7 scènes.
 - **v0.3** — 9:16 / 60 s, clip 100 % typographique, signature validée, ajout de la scène « Les deux piliers » (marche tai-chi, pleurs sacrés), CTA sans lien, détail des 8 scènes, notes Hyperframes.
 - **v0.3.1** — ajout du processus de production Hyperframes.
+- **v0.4** — emplacements d'incrustation (scènes 1, 6, 7), export fond transparent, voix de synthèse, musique au montage, échantillons de voix.
