@@ -2,7 +2,7 @@
 
 > Document de travail itératif. Le script est dicté par Romain, puis structuré scène par scène pour une production en motion design avec **Hyperframes** (compositions HTML + animations), générées avec Opus 5.5.
 
-- **Version :** v0.7 — ajout « 40 ans ≠ 20 ans », phrase de l'acte 1 reformulée, clip 66 s
+- **Version :** v0.8 — images incrustées dans les scènes 1, 6, 7 et 8
 - **Statut :** 8 scènes rendues (MP4 + version titres sur fond transparent), en attente de retours. Durée passée à 66,4 s avec la nouvelle phrase (voir questions ouvertes)
 
 ---
@@ -162,9 +162,13 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 
 - **Résolution :** 1080 × 1920, 30 fps, 66,4 s.
 - **Structure :** une composition par scène (9 fichiers pour 8 scènes), assemblées dans une composition maître.
-- **Assets :** une police variable embarquée en local, symboles en SVG dessinés en code. Aucune image.
+- **Assets :** une police variable embarquée en local, symboles en SVG dessinés en code, 5 images (`assets/images/`, JPEG 1800 px tirés de `images-sources/`).
 - **Voix off :** idéalement enregistrée avant l'animation, pour caler les apparitions de texte sur les mots.
-- **Incrustations :** emplacements réservés dans les scènes 1, 6 et 7 ✅ (voir ci-dessous).
+- **Incrustations :** images posées directement dans le clip ✅ :
+  - scène 1 (« Depuis l'enfance… beaucoup ») → `formule-ancestrale` ; elle s'assombrit quand le `+` rouge s'imprime dessus ;
+  - scène 6 → `danse-mystique` sur « Marche tai-chi », puis `homme-qui-pleure` sur « Pleurs sacrés » (la goutte tombe dessus) ;
+  - scène 7 → `homme-qui-pleure` continue sur « Performance spirituelle », `testosterone-booster` surgit sur « physique » et gonfle avec « musculaires » ;
+  - scène 8 → `logo` à la place du logo typographique, il se pose sur « Yoga » et rebondit sur « With » et « Balls ».
 - **Exports :**
   - `final.mp4` — version complète, fond vert, voix off incluse ;
   - `titres-alpha.mov` — titres et symboles seuls sur **fond transparent** (ProRes 4444, `--format mov`), sans voix, pour superposition au montage ✅ ;
@@ -248,3 +252,4 @@ Rendus :
 - **v0.5** — voix Paul K générée et minutée, projet Hyperframes créé, scènes 1 et 2 codées et rendues en test.
 - **v0.6** — scènes 3 à 8 codées, « state of mind » remplacé par « mindset » (texte + voix), rendu complet 60 s et version titres sur fond transparent.
 - **v0.7** — acte 1 : « L'âge augmente. On augmente les efforts. Pour toujours moins d'effets. » ; ouverture de l'acte 2 : « Pourtant, le corps des plus de 40 ans ne fonctionne plus comme à 20. En vrai, c'est exactement l'inverse. » (voix, scènes 3 et 4, minutage).
+- **v0.8** — images de `images-sources/` incrustées : scène 1 (formule ancestrale), scène 6 (danse mystique, homme qui pleure), scène 7 (homme qui pleure, testostérone booster), scène 8 (logo illustré à la place du logo typographique). Rendu complet régénéré.

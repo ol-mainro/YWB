@@ -33,6 +33,14 @@
     #s7-extra { font-size: 82px; font-weight: 900; letter-spacing: -0.03em; color: #d4af37; margin-top: 10px; }
     /* Emplacement image (840 → 1310 px) : ondes dorées en décor */
     #s7-slot { position: absolute; left: 90px; right: 90px; top: 840px; height: 470px; }
+    .s7-frame {
+      position: absolute;
+      inset: 0;
+      border-radius: 28px;
+      overflow: hidden;
+    }
+    .s7-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    #s7-f-boost { opacity: 0; }
     .s7-ring {
       position: absolute;
       left: 50%;
@@ -46,34 +54,36 @@
     }
   </style>
 
-  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920">
+  <div data-hf-id="hf-4arl" id="root" data-composition-id="s7" data-width="1080" data-height="1920">
     <!-- « La performance spirituelle déclenche la performance physique. » -->
-    <div id="s7-a" class="clip s7-stage" data-start="0" data-duration="2.95" data-track-index="1">
-      <div>
-        <div class="s7-small"><span class="s7-w" id="s7-perf1">PERFORMANCE</span></div>
-        <div class="s7-big s7-gold"><span class="s7-w" id="s7-spi">SPIRITUELLE</span></div>
-        <svg id="s7-arrow" viewBox="0 0 90 110">
-          <path id="s7-arrow-path" d="M 45 4 L 45 96 M 10 62 L 45 98 L 80 62" fill="none" stroke="#d4af37" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" />
+    <div data-hf-id="hf-m0kq" id="s7-a" class="clip s7-stage" data-start="0" data-duration="2.95" data-track-index="1">
+      <div data-hf-id="hf-yeow">
+        <div data-hf-id="hf-k3yc" class="s7-small"><span data-hf-id="hf-bywg" class="s7-w" id="s7-perf1">PERFORMANCE</span></div>
+        <div data-hf-id="hf-x6iq" class="s7-big s7-gold"><span data-hf-id="hf-cgk4" class="s7-w" id="s7-spi">SPIRITUELLE</span></div>
+        <svg data-hf-id="hf-zkly" id="s7-arrow" viewBox="0 0 90 110">
+          <path data-hf-id="hf-rexa" id="s7-arrow-path" d="M 45 4 L 45 96 M 10 62 L 45 98 L 80 62" fill="none" stroke="#d4af37" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" />
         </svg>
-        <div class="s7-small"><span class="s7-w" id="s7-perf2">PERFORMANCE</span></div>
-        <div class="s7-big"><span class="s7-w" id="s7-phy">PHYSIQUE.</span></div>
+        <div data-hf-id="hf-a530" class="s7-small"><span data-hf-id="hf-dmqt" class="s7-w" id="s7-perf2">PERFORMANCE</span></div>
+        <div data-hf-id="hf-v5nn" class="s7-big"><span data-hf-id="hf-wx6l" class="s7-w" id="s7-phy">PHYSIQUE.</span></div>
       </div>
     </div>
 
     <!-- « Et des gains musculaires extraordinaires. » -->
-    <div id="s7-b" class="clip s7-stage" data-start="2.95" data-duration="3.15" data-track-index="1">
-      <div>
-        <div class="s7-small"><span class="s7-w s7-bw">ET</span> <span class="s7-w s7-bw">DES</span> <span class="s7-w s7-bw">GAINS</span></div>
-        <div class="s7-big" id="s7-muscu">MUSCULAIRES</div>
-        <div id="s7-extra">EXTRAORDINAIRES.</div>
+    <div data-hf-id="hf-uv9c" id="s7-b" class="clip s7-stage" data-start="2.95" data-duration="3.15" data-track-index="1">
+      <div data-hf-id="hf-y7yw">
+        <div data-hf-id="hf-8y5x" class="s7-small"><span data-hf-id="hf-j82g" class="s7-w s7-bw">ET</span> <span data-hf-id="hf-mrp3" class="s7-w s7-bw">DES</span> <span data-hf-id="hf-n11n" class="s7-w s7-bw">GAINS</span></div>
+        <div data-hf-id="hf-pqac" class="s7-big" id="s7-muscu">MUSCULAIRES</div>
+        <div data-hf-id="hf-t5e6" id="s7-extra">EXTRAORDINAIRES.</div>
       </div>
     </div>
 
-    <div id="s7-slot" class="clip" data-start="0" data-duration="6.1" data-track-index="2" data-layout-ignore>
-      <div class="s7-ring" id="s7-r0"></div>
-      <div class="s7-ring" id="s7-r1"></div>
-      <div class="s7-ring" id="s7-r2"></div>
-      <div class="s7-ring" id="s7-r3"></div>
+    <div data-hf-id="hf-gj9h" id="s7-slot" class="clip" data-start="0" data-duration="6.1" data-track-index="2" data-layout-ignore>
+      <div data-hf-id="hf-38qo" class="s7-frame" data-layout-allow-overflow id="s7-f-pleurs"><img data-hf-id="hf-w3mi" id="s7-img-pleurs" src="assets/images/homme-qui-pleure.jpg" alt="Pratiquant en pleurs sacrés" /></div>
+      <div data-hf-id="hf-7tus" class="s7-frame" data-layout-allow-overflow id="s7-f-boost"><img data-hf-id="hf-uxzc" id="s7-img-boost" src="assets/images/testosterone-booster.jpg" alt="Pratiquant, testostérone au maximum" /></div>
+      <div data-hf-id="hf-185k" class="s7-ring" id="s7-r0"></div>
+      <div data-hf-id="hf-1ztd" class="s7-ring" id="s7-r1"></div>
+      <div data-hf-id="hf-5xxe" class="s7-ring" id="s7-r2"></div>
+      <div data-hf-id="hf-9w1f" class="s7-ring" id="s7-r3"></div>
     </div>
   </div>
 
@@ -86,6 +96,16 @@
 
     // L'onde de la goutte (scène 6) se prolonge puis s'efface
     tl.fromTo("#s7-r0", { opacity: 0.6, scale: 2.2 }, { opacity: 0, scale: 3.4, duration: 0.6, ease: "expo.out" }, 0);
+
+    // Images : les pleurs (spirituel) continuent depuis la scène 6…
+    tl.fromTo("#s7-img-pleurs", { scale: 1.06 }, { scale: 1, duration: 2.42, ease: "none" }, 0);
+    // … puis explosion physique sur « PHYSIQUE »
+    tl.fromTo("#s7-f-boost", { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.45, ease: "expo.out" }, T(52.456));
+    tl.to("#s7-f-pleurs", { opacity: 0, duration: 0.01 }, T(52.92));
+    tl.fromTo("#s7-img-boost", { scale: 1.1 }, { scale: 1, duration: 3.6, ease: "none" }, T(52.456));
+    // L'image gonfle avec MUSCULAIRES
+    [53.616, 54.016, 54.346].forEach((g) =>
+      tl.fromTo("#s7-f-boost", { scale: 1.045 }, { scale: 1, duration: 0.3, ease: "expo.out", immediateRender: false }, T(g)));
 
     blurIn("#s7-perf1", 50.296);
     thick("#s7-spi", 50.846);

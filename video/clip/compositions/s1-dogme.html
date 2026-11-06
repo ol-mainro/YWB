@@ -56,7 +56,16 @@
       align-items: center;
       justify-content: center;
     }
+    .s1-frame {
+      position: absolute;
+      inset: 0;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #141414;
+    }
+    .s1-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
     #s1-plus {
+      position: relative;
       font-size: 520px;
       font-weight: 100;
       line-height: 1;
@@ -65,46 +74,47 @@
     }
   </style>
 
-  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+  <div data-hf-id="hf-qmpn" id="root" data-composition-id="s1" data-width="1080" data-height="1920">
     <!-- Phase A : « Depuis l'enfance, on nous répète la même chose. » -->
-    <div id="s1-a" class="clip s1-stage" data-start="0" data-duration="3.75" data-track-index="1" data-layout-allow-overlap>
-      <div>
-        <div id="s1-enfance">DEPUIS L'ENFANCE,</div>
-        <div id="s1-repete">
-          <span class="s1-word s1-rw">on</span>
-          <span class="s1-word s1-rw">nous</span>
-          <span class="s1-word s1-rw">répète</span>
-          <span class="s1-word s1-rw">la</span>
-          <span class="s1-word s1-rw">même</span>
-          <span class="s1-word s1-rw">chose.</span>
+    <div data-hf-id="hf-u9nl" id="s1-a" class="clip s1-stage" data-start="0" data-duration="3.75" data-track-index="1" data-layout-allow-overlap>
+      <div data-hf-id="hf-yeow">
+        <div data-hf-id="hf-lqsz" id="s1-enfance">DEPUIS L'ENFANCE,</div>
+        <div data-hf-id="hf-faph" id="s1-repete">
+          <span data-hf-id="hf-z6rv" class="s1-word s1-rw">on</span>
+          <span data-hf-id="hf-6e0t" class="s1-word s1-rw">nous</span>
+          <span data-hf-id="hf-w120" class="s1-word s1-rw">répète</span>
+          <span data-hf-id="hf-nmxt" class="s1-word s1-rw">la</span>
+          <span data-hf-id="hf-nw87" class="s1-word s1-rw">même</span>
+          <span data-hf-id="hf-6bd8" class="s1-word s1-rw">chose.</span>
         </div>
       </div>
     </div>
 
     <!-- Phase B : « Pour être fort, » -->
-    <div id="s1-b" class="clip s1-stage" data-start="3.75" data-duration="1.1" data-track-index="1">
-      <div>
-        <div id="s1-pour"><span class="s1-word" id="s1-w-pour">POUR</span> <span class="s1-word" id="s1-w-etre">ÊTRE</span></div>
-        <div id="s1-fort">FORT</div>
+    <div data-hf-id="hf-qxok" id="s1-b" class="clip s1-stage" data-start="3.75" data-duration="1.1" data-track-index="1">
+      <div data-hf-id="hf-y7yw">
+        <div data-hf-id="hf-yv5w" id="s1-pour"><span data-hf-id="hf-wg55" class="s1-word" id="s1-w-pour">POUR</span> <span data-hf-id="hf-kxci" class="s1-word" id="s1-w-etre">ÊTRE</span></div>
+        <div data-hf-id="hf-zgs0" id="s1-fort">FORT</div>
       </div>
     </div>
 
     <!-- Phase C : « il faut en faire beaucoup. » -->
-    <div id="s1-c" class="clip s1-stage" data-start="4.85" data-duration="1.75" data-track-index="1">
-      <div>
-        <div id="s1-ilfaut">
-          <span class="s1-word s1-iw">IL</span>
-          <span class="s1-word s1-iw">FAUT</span>
-          <span class="s1-word s1-iw">EN</span>
-          <span class="s1-word s1-iw">FAIRE</span>
+    <div data-hf-id="hf-zd2e" id="s1-c" class="clip s1-stage" data-start="4.85" data-duration="1.75" data-track-index="1">
+      <div data-hf-id="hf-x11t">
+        <div data-hf-id="hf-vj1l" id="s1-ilfaut">
+          <span data-hf-id="hf-exye" class="s1-word s1-iw">IL</span>
+          <span data-hf-id="hf-tfwb" class="s1-word s1-iw">FAUT</span>
+          <span data-hf-id="hf-0wys" class="s1-word s1-iw">EN</span>
+          <span data-hf-id="hf-au7w" class="s1-word s1-iw">FAIRE</span>
         </div>
-        <div id="s1-beaucoup">BEAUCOUP.</div>
+        <div data-hf-id="hf-of50" id="s1-beaucoup">BEAUCOUP.</div>
       </div>
     </div>
 
     <!-- Emplacement image (calque vide : l'image s'incruste ici au montage) -->
-    <div id="s1-slot" class="clip" data-start="0" data-duration="6.6" data-track-index="3" data-layout-ignore>
-      <div id="s1-plus">+</div>
+    <div data-hf-id="hf-wkf1" id="s1-slot" class="clip" data-start="0" data-duration="6.6" data-track-index="3" data-layout-ignore>
+      <div data-hf-id="hf-nv45" class="s1-frame" data-layout-allow-overflow><img data-hf-id="hf-6vsu" id="s1-img" src="assets/images/formule-ancestrale.jpg" alt="Chasseur préhistorique, lance à la main" /></div>
+      <div data-hf-id="hf-x0lz" id="s1-plus">+</div>
     </div>
   </div>
 
@@ -125,10 +135,14 @@
     tl.fromTo("#s1-fort", { opacity: 0, fontWeight: 100 }, { opacity: 1, fontWeight: 900, duration: 0.55, ease: "expo.out" }, 4.18);
     tl.to("#s1-b > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, 4.68);
 
-    // Le « + » de l'emplacement image annonce la scène suivante
-    tl.fromTo("#s1-plus", { opacity: 0, fontWeight: 100 }, { opacity: 0.12, duration: 0.3 }, 4.2);
+    // Image : le chasseur, déjà là à la frame 0, lent zoom avant
+    tl.fromTo("#s1-img", { scale: 1.12, filter: "saturate(1) brightness(1)" }, { scale: 1, duration: 6.6, ease: "none" }, 0);
+    tl.to("#s1-img", { filter: "saturate(0.3) brightness(0.45)", duration: 0.7, ease: "power2.out" }, 4.9);
+
+    // Le « + » s'imprime sur l'image et annonce la scène suivante
+    tl.fromTo("#s1-plus", { opacity: 0, fontWeight: 100, color: "#faf6ec" }, { opacity: 0.9, duration: 0.3 }, 4.2);
     tl.to("#s1-plus", { fontWeight: 900, duration: 1.6, ease: "power2.inOut" }, 4.9);
-    tl.to("#s1-plus", { opacity: 0.22, color: "#a4321f", duration: 0.5 }, 5.6);
+    tl.to("#s1-plus", { color: "#a4321f", duration: 0.5 }, 5.6);
 
     // Phase C — IL FAUT EN FAIRE / BEAUCOUP
     const ilf = [4.87, 5.11, 5.29, 5.4];
