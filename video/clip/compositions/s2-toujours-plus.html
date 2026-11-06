@@ -1,0 +1,190 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "InterVar";
+      src: url("assets/fonts/inter-var-latin.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #faf6ec;
+      font-family: "InterVar", sans-serif;
+      color: #141414;
+      overflow: hidden;
+    }
+    #s2-shake { position: absolute; inset: 0; }
+    /* Champ de « + » : décor plein cadre */
+    #s2-field { position: absolute; inset: -40px; }
+    .s2-p {
+      position: absolute;
+      width: 108px;
+      height: 108px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 104px;
+      font-weight: 900;
+      line-height: 1;
+      opacity: 0;
+    }
+    #s2-flood {
+      position: absolute;
+      inset: 0;
+      background: #a4321f;
+      clip-path: circle(0% at 50% 50%);
+    }
+    /* Textes : bande lisible 300 → 1200 px */
+    .s2-stage {
+      position: absolute;
+      left: 80px;
+      right: 80px;
+      top: 300px;
+      height: 900px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .s2-small { font-size: 72px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+    .s2-big { margin-top: 16px; font-size: 200px; font-weight: 900; letter-spacing: -0.05em; line-height: 0.95; }
+    .s2-label {
+      display: inline-block;
+      background: #141414;
+      color: #faf6ec;
+      padding: 14px 26px 18px;
+    }
+    .s2-label.red { background: #a4321f; }
+    .s2-word { display: inline-block; }
+    #s2-masse { font-weight: 200; }
+    #s2-perf { font-size: 118px; letter-spacing: -0.04em; }
+  </style>
+
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div id="s2-shake">
+      <div id="s2-field-clip" class="clip" data-start="0" data-duration="7.5" data-track-index="1" data-layout-ignore>
+        <div id="s2-field"></div>
+      </div>
+      <div id="s2-flood-clip" class="clip" data-start="0" data-duration="7.5" data-track-index="2" data-layout-ignore>
+        <div id="s2-flood"></div>
+      </div>
+
+      <!-- « Pour prendre de la masse, » -->
+      <div id="s2-a" class="clip s2-stage" data-start="0" data-duration="1.5" data-track-index="3">
+        <div>
+          <div class="s2-small">
+            <span class="s2-word s2-aw">POUR</span>
+            <span class="s2-word s2-aw">PRENDRE</span>
+            <span class="s2-word s2-aw">DE</span>
+            <span class="s2-word s2-aw">LA</span>
+          </div>
+          <div class="s2-big" id="s2-masse">MASSE</div>
+        </div>
+      </div>
+
+      <!-- « il faut des efforts. » -->
+      <div id="s2-b" class="clip s2-stage" data-start="1.5" data-duration="1.75" data-track-index="3">
+        <div>
+          <div class="s2-small">
+            <span class="s2-word s2-bw">IL</span>
+            <span class="s2-word s2-bw">FAUT</span>
+            <span class="s2-word s2-bw">DES</span>
+          </div>
+          <div class="s2-big" id="s2-efforts1">EFFORTS.</div>
+        </div>
+      </div>
+
+      <!-- « Toujours plus d'efforts. » -->
+      <div id="s2-c" class="clip s2-stage" data-start="3.25" data-duration="1.95" data-track-index="3">
+        <div>
+          <div class="s2-small">
+            <span class="s2-label" id="s2-c-tj">TOUJOURS</span>
+            <span class="s2-label red" id="s2-c-plus">PLUS</span>
+          </div>
+          <div class="s2-big"><span class="s2-label" id="s2-c-eff">D'EFFORTS.</span></div>
+        </div>
+      </div>
+
+      <!-- « Toujours plus de performance. » -->
+      <div id="s2-d" class="clip s2-stage" data-start="5.2" data-duration="2.3" data-track-index="3">
+        <div>
+          <div class="s2-small">
+            <span class="s2-label" id="s2-d-tj">TOUJOURS</span>
+            <span class="s2-label red" id="s2-d-plus">PLUS</span>
+          </div>
+          <div class="s2-big" id="s2-perf"><span class="s2-label" id="s2-d-de">DE</span><br /><span class="s2-label" id="s2-d-perf">PERFORMANCE.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    // --- Champ de « + » : grille 10 × 18, ordre d'apparition pseudo-aléatoire (graine fixe), cadence qui accélère
+    const field = document.getElementById("s2-field");
+    const COLS = 10, ROWS = 18, N = COLS * ROWS;
+    let seed = 40;
+    const rand = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+    const order = Array.from({ length: N }, (_, i) => i);
+    for (let i = N - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+    const cells = [];
+    for (let i = 0; i < N; i++) {
+      const p = document.createElement("div");
+      p.className = "s2-p";
+      p.textContent = "+";
+      p.style.left = (i % COLS) * 116 + "px";
+      p.style.top = Math.floor(i / COLS) * 112 + "px";
+      field.appendChild(p);
+      cells.push(p);
+    }
+    order.forEach((cellIndex, rank) => {
+      const r = rank / N;
+      const t = 2.1 + 4.6 * Math.sqrt(r);
+      const color = r < 0.4 ? "#141414" : "#a4321f";
+      tl.fromTo(cells[cellIndex], { opacity: 0, scale: 0.3, color },
+        { opacity: r < 0.4 ? 0.16 : 0.32, scale: 1, color, duration: 0.14, ease: "back.out(2)" }, t);
+    });
+
+    // --- Tremblement qui s'amplifie (5,3 → 6,9 s), déterministe
+    for (let k = 0; k < 40; k++) {
+      const t = 5.3 + k * 0.04;
+      const amp = 2 + (k / 40) * 12;
+      tl.to("#s2-shake", { x: Math.sin(k * 2.3) * amp, y: Math.cos(k * 3.1) * amp * 0.6, duration: 0.039, ease: "none" }, t);
+    }
+    tl.to("#s2-shake", { x: 0, y: 0, duration: 0.06, ease: "none" }, 6.9);
+
+    // --- Saturation : l'écran vire au rouge
+    tl.fromTo("#s2-flood", { clipPath: "circle(0% at 50% 50%)" },
+      { clipPath: "circle(120% at 50% 50%)", duration: 0.45, ease: "power2.inOut" }, 6.6);
+    tl.to("#s2-d-plus", { backgroundColor: "#141414", duration: 0.2 }, 6.75);
+
+    // --- Phase A : POUR PRENDRE DE LA / MASSE
+    [0.15, 0.35, 0.66, 0.78].forEach((t, i) => {
+      tl.fromTo(document.querySelectorAll(".s2-aw")[i], { opacity: 0, filter: "blur(6px)" },
+        { opacity: 1, filter: "blur(0px)", duration: 0.13 }, t);
+    });
+    tl.fromTo("#s2-masse", { opacity: 0, fontWeight: 200, scale: 0.9, transformOrigin: "0% 50%" },
+      { opacity: 1, fontWeight: 900, scale: 1, duration: 0.5, ease: "expo.out" }, 0.9);
+    tl.to("#s2-a > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, 1.33);
+
+    // --- Phase B : IL FAUT DES / EFFORTS.
+    [1.59, 1.8, 1.94].forEach((t, i) => {
+      tl.fromTo(document.querySelectorAll(".s2-bw")[i], { opacity: 0, filter: "blur(6px)" },
+        { opacity: 1, filter: "blur(0px)", duration: 0.13 }, t);
+    });
+    tl.fromTo("#s2-efforts1", { opacity: 0, fontWeight: 300 }, { opacity: 1, fontWeight: 900, duration: 0.45, ease: "expo.out" }, 2.11);
+    tl.to("#s2-b > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, 3.08);
+
+    // --- Phase C : TOUJOURS PLUS D'EFFORTS (étiquettes qui claquent)
+    const slam = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 1.25, transformOrigin: "0% 50%" },
+      { opacity: 1, scale: 1, duration: 0.22, ease: "expo.out" }, t);
+    slam("#s2-c-tj", 3.34); slam("#s2-c-plus", 3.84); slam("#s2-c-eff", 4.07);
+    tl.to("#s2-c > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, 5.03);
+
+    // --- Phase D : TOUJOURS PLUS DE PERFORMANCE
+    slam("#s2-d-tj", 5.29); slam("#s2-d-plus", 5.61); slam("#s2-d-de", 5.83); slam("#s2-d-perf", 5.94);
+
+    window.__timelines["s2"] = tl;
+  </script>
+</template>

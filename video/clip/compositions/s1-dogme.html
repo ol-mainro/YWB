@@ -1,0 +1,143 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "InterVar";
+      src: url("assets/fonts/inter-var-latin.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #faf6ec;
+      font-family: "InterVar", sans-serif;
+      color: #141414;
+      overflow: hidden;
+    }
+    /* Scène de texte : moitié haute de la zone sûre (168 → 780 px) */
+    .s1-stage {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      top: 200px;
+      height: 580px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .s1-word { display: inline-block; }
+    #s1-enfance { font-size: 104px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    #s1-repete { margin-top: 34px; font-size: 66px; font-weight: 400; color: #141414; line-height: 1.15; }
+    #s1-pour { font-size: 110px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    #s1-fort {
+      font-size: 330px;
+      font-weight: 100;
+      letter-spacing: -0.05em;
+      line-height: 0.95;
+      margin-left: -12px;
+    }
+    #s1-ilfaut { font-size: 80px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+    #s1-beaucoup {
+      margin-top: 18px;
+      font-size: 168px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: #a4321f;
+    }
+    /* Emplacement réservé à l'image incrustée (820 → 1310 px) */
+    #s1-slot {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      top: 820px;
+      height: 490px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #s1-plus {
+      font-size: 520px;
+      font-weight: 100;
+      line-height: 1;
+      color: #141414;
+      opacity: 0;
+    }
+  </style>
+
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <!-- Phase A : « Depuis l'enfance, on nous répète la même chose. » -->
+    <div id="s1-a" class="clip s1-stage" data-start="0" data-duration="3.75" data-track-index="1" data-layout-allow-overlap>
+      <div>
+        <div id="s1-enfance">DEPUIS L'ENFANCE,</div>
+        <div id="s1-repete">
+          <span class="s1-word s1-rw">on</span>
+          <span class="s1-word s1-rw">nous</span>
+          <span class="s1-word s1-rw">répète</span>
+          <span class="s1-word s1-rw">la</span>
+          <span class="s1-word s1-rw">même</span>
+          <span class="s1-word s1-rw">chose.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase B : « Pour être fort, » -->
+    <div id="s1-b" class="clip s1-stage" data-start="3.75" data-duration="1.1" data-track-index="1">
+      <div>
+        <div id="s1-pour"><span class="s1-word" id="s1-w-pour">POUR</span> <span class="s1-word" id="s1-w-etre">ÊTRE</span></div>
+        <div id="s1-fort">FORT</div>
+      </div>
+    </div>
+
+    <!-- Phase C : « il faut en faire beaucoup. » -->
+    <div id="s1-c" class="clip s1-stage" data-start="4.85" data-duration="1.75" data-track-index="1">
+      <div>
+        <div id="s1-ilfaut">
+          <span class="s1-word s1-iw">IL</span>
+          <span class="s1-word s1-iw">FAUT</span>
+          <span class="s1-word s1-iw">EN</span>
+          <span class="s1-word s1-iw">FAIRE</span>
+        </div>
+        <div id="s1-beaucoup">BEAUCOUP.</div>
+      </div>
+    </div>
+
+    <!-- Emplacement image (calque vide : l'image s'incruste ici au montage) -->
+    <div id="s1-slot" class="clip" data-start="0" data-duration="6.6" data-track-index="3" data-layout-ignore>
+      <div id="s1-plus">+</div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    // Phase A — accroche déjà à l'écran à la frame 0
+    tl.fromTo("#s1-enfance", { opacity: 1 }, { opacity: 1, duration: 0.01 }, 0);
+    const rep = [1.43, 1.59, 1.71, 2.04, 2.15, 2.35];
+    document.querySelectorAll(".s1-rw").forEach((el, i) => {
+      tl.fromTo(el, { color: "#d8d2c0" }, { color: "#141414", duration: 0.12, ease: "none" }, rep[i]);
+    });
+    tl.to("#s1-a > div", { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power3.in" }, 3.55);
+
+    // Phase B — POUR ÊTRE (mot par mot), FORT s'épaissit
+    tl.fromTo("#s1-w-pour", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, 3.77);
+    tl.fromTo("#s1-w-etre", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, 3.96);
+    tl.fromTo("#s1-fort", { opacity: 0, fontWeight: 100 }, { opacity: 1, fontWeight: 900, duration: 0.55, ease: "expo.out" }, 4.18);
+    tl.to("#s1-b > div", { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, 4.68);
+
+    // Le « + » de l'emplacement image annonce la scène suivante
+    tl.fromTo("#s1-plus", { opacity: 0, fontWeight: 100 }, { opacity: 0.12, duration: 0.3 }, 4.2);
+    tl.to("#s1-plus", { fontWeight: 900, duration: 1.6, ease: "power2.inOut" }, 4.9);
+    tl.to("#s1-plus", { opacity: 0.22, color: "#a4321f", duration: 0.5 }, 5.6);
+
+    // Phase C — IL FAUT EN FAIRE / BEAUCOUP
+    const ilf = [4.87, 5.11, 5.29, 5.4];
+    document.querySelectorAll(".s1-iw").forEach((el, i) => {
+      tl.fromTo(el, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, ilf[i]);
+    });
+    tl.fromTo("#s1-beaucoup", { opacity: 0, fontWeight: 300, scale: 0.92, transformOrigin: "0% 50%" },
+      { opacity: 1, fontWeight: 900, scale: 1, duration: 0.45, ease: "expo.out" }, 5.59);
+
+    window.__timelines["s1"] = tl;
+  </script>
+</template>

@@ -2,8 +2,8 @@
 
 > Document de travail itératif. Le script est dicté par Romain, puis structuré scène par scène pour une production en motion design avec **Hyperframes** (compositions HTML + animations), générées avec Opus 5.5.
 
-- **Version :** v0.4.1 — échantillons ElevenLabs
-- **Statut :** brief validé, choix de la voix de synthèse en cours
+- **Version :** v0.5 — voix off Paul K + test scènes 1-2
+- **Statut :** test des scènes 1 et 2 rendu, en attente de validation du style
 
 ---
 
@@ -59,7 +59,7 @@
 
 ### Zones de sécurité 9:16
 
-- Garder **textes et symboles entre 250 px du haut et 400 px du bas** : les interfaces TikTok/Reels recouvrent ces bandes.
+- Garder **tous les textes entre 168 px et 1330 px de haut** (norme Hyperframes pour TikTok/Reels) : au-dessus, la barre d'état ; en dessous, légende, pseudo et boutons. Sous 1330 px : décor uniquement.
 - Marges latérales : 80 px minimum.
 
 ## 3. Script
@@ -204,11 +204,29 @@ Prérequis pour travailler en local : Node.js 22 ou plus récent, et une copie �
 | `paul-k.mp3` | Paul K | Français, voix de pub et de bande-annonce |
 | `david-tyserre.mp3` | David Tyserre | Français, documentaire, posé |
 
-Voix retenue : _à choisir_.
+Voix retenue : **Paul K** ✅
+
+- Fichier : `video/clip/assets/voix-off.mp3` (58,3 s, accélérée ×1,12 sans changement de hauteur ; brut 65 s dans `voix-off-brut.mp3`).
+- Minutage mot par mot : `video/clip/assets/voix-off-mots.json` (sert à caler chaque apparition de texte).
+
+## 5 quater. Projet Hyperframes
+
+```
+video/clip/
+  index.html                       # composition maître (scènes + voix off)
+  compositions/s1-dogme.html       # scène 1
+  compositions/s2-toujours-plus.html  # scène 2
+  assets/voix-off.mp3, voix-off-mots.json
+  assets/fonts/inter-var-latin.woff2   # Inter variable (graisse animable 100 → 900)
+  assets/vendor/gsap.min.js            # bibliothèque d'animation embarquée
+  renders/                         # vidéos rendues
+```
+
+Commandes (depuis `video/clip/`) : `npm run dev` (aperçu), `npm run check`, `npm run render`.
 
 ## 6. Questions ouvertes
 
-- **Voix :** laquelle des 4 voix ElevenLabs (voir 5 ter) ?
+- **Style du test (scènes 1-2) :** police, tailles, couleurs, rythme validés ?
 
 ## 7. Journal des versions
 
@@ -218,3 +236,4 @@ Voix retenue : _à choisir_.
 - **v0.3.1** — ajout du processus de production Hyperframes.
 - **v0.4** — emplacements d'incrustation (scènes 1, 6, 7), export fond transparent, voix de synthèse, musique au montage, échantillons de voix.
 - **v0.4.1** — passage à ElevenLabs, 4 échantillons de voix masculines françaises.
+- **v0.5** — voix Paul K générée et minutée, projet Hyperframes créé, scènes 1 et 2 codées et rendues en test.
