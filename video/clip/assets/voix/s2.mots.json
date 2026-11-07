@@ -1,0 +1,82 @@
+[
+ {
+  "w": "Pour",
+  "start": 0.148,
+  "end": 0.304
+ },
+ {
+  "w": "prendre",
+  "start": 0.346,
+  "end": 0.625
+ },
+ {
+  "w": "de",
+  "start": 0.656,
+  "end": 0.739
+ },
+ {
+  "w": "la",
+  "start": 0.78,
+  "end": 0.843
+ },
+ {
+  "w": "masse,",
+  "start": 0.905,
+  "end": 1.382
+ },
+ {
+  "w": "il",
+  "start": 1.589,
+  "end": 1.734
+ },
+ {
+  "w": "faut",
+  "start": 1.796,
+  "end": 1.911
+ },
+ {
+  "w": "des",
+  "start": 1.942,
+  "end": 2.046
+ },
+ {
+  "w": "efforts.",
+  "start": 2.107,
+  "end": 2.657
+ },
+ {
+  "w": "Toujours",
+  "start": 3.341,
+  "end": 3.807
+ },
+ {
+  "w": "plus",
+  "start": 3.838,
+  "end": 4.036
+ },
+ {
+  "w": "d'efforts.",
+  "start": 4.067,
+  "end": 4.709
+ },
+ {
+  "w": "Toujours",
+  "start": 5.29,
+  "end": 5.59
+ },
+ {
+  "w": "plus",
+  "start": 5.612,
+  "end": 5.787
+ },
+ {
+  "w": "de",
+  "start": 5.829,
+  "end": 5.891
+ },
+ {
+  "w": "performance.",
+  "start": 5.943,
+  "end": 6.813
+ }
+]

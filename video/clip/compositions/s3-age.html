@@ -8,9 +8,9 @@
     #root {
       position: absolute;
       inset: 0;
-      background: #faf6ec; /* fond */
+      background: #e5c262; /* fond */
       font-family: "InterVar", sans-serif;
-      color: #141414;
+      color: #0f2044;
       overflow: hidden;
     }
     #s3-all { position: absolute; inset: 0; }
@@ -24,7 +24,7 @@
       gap: 24px;
     }
     #s3-num { font-size: 230px; font-weight: 900; letter-spacing: -0.06em; line-height: 1; font-variant-numeric: tabular-nums; }
-    #s3-ans { font-size: 72px; font-weight: 800; color: #6b6b5a; }
+    #s3-ans { font-size: 72px; font-weight: 800; color: #2f7bbf; }
     /* Graphique (450 → 960 px) */
     #s3-graph { position: absolute; left: 90px; top: 450px; width: 900px; height: 510px; }
     #s3-graph text { font-family: "InterVar", sans-serif; font-weight: 800; font-size: 40px; }
@@ -44,53 +44,56 @@
     .s3-w { display: inline-block; }
     .s3-label {
       display: inline-block;
-      background: #141414;
-      color: #faf6ec;
+      background: #0f2044;
+      color: #f6eabf;
       font-size: 64px;
       font-weight: 900;
       letter-spacing: -0.02em;
       padding: 8px 22px 12px;
       margin: 6px 0;
     }
-    .s3-label.red { background: #a4321f; }
-    .s3-bar { position: absolute; left: 0; right: 0; height: 60px; background: #141414; opacity: 0; }
+    .s3-label.red { background: #cd5540; }
+    .s3-bar { position: absolute; left: 0; right: 0; height: 60px; background: #0f2044; opacity: 0; }
   </style>
 
   <div data-hf-id="hf-vizh" id="root" data-composition-id="s3" data-width="1080" data-height="1920">
     <div data-hf-id="hf-vd6p" id="s3-all">
-      <div data-hf-id="hf-cqis" id="s3-age-clip" class="clip" data-start="0" data-duration="10.5" data-track-index="1">
+      <div data-hf-id="hf-cqis" id="s3-age-clip" class="clip" data-start="0" data-duration="13.051" data-track-index="1">
         <div data-hf-id="hf-rleh" id="s3-age"><span data-hf-id="hf-fegd" id="s3-num">20</span><span data-hf-id="hf-r4x1" id="s3-ans">ANS</span></div>
       </div>
 
-      <div data-hf-id="hf-vp35" id="s3-graph-clip" class="clip" data-start="0" data-duration="10.5" data-track-index="2" data-layout-ignore>
+      <div data-hf-id="hf-vp35" id="s3-graph-clip" class="clip" data-start="0" data-duration="13.051" data-track-index="2" data-layout-ignore>
         <svg data-hf-id="hf-d81h" id="s3-graph" viewBox="0 0 900 510">
-          <line data-hf-id="hf-cxgi" x1="0" y1="500" x2="900" y2="500" stroke="#141414" stroke-width="4" />
-          <line data-hf-id="hf-8g9k" x1="2" y1="0" x2="2" y2="500" stroke="#141414" stroke-width="4" />
-          <path data-hf-id="hf-uqll" id="s3-effort" d="M 0 430 C 220 420 380 330 520 230 S 760 40 880 20" fill="none" stroke="#a4321f" stroke-width="16" stroke-linecap="butt" />
-          <path data-hf-id="hf-u2ar" id="s3-muscle" d="M 0 300 C 200 280 360 270 480 290 S 740 420 880 455" fill="none" stroke="#6b6b5a" stroke-width="16" stroke-linecap="butt" />
-          <text data-hf-id="hf-0w6z" id="s3-t-effort" x="300" y="60" fill="#a4321f" opacity="0">EFFORTS ↑</text>
-          <text data-hf-id="hf-5na8" id="s3-t-muscle" x="560" y="430" fill="#6b6b5a" opacity="0">MUSCLE ↓</text>
+          <line data-hf-id="hf-cxgi" x1="0" y1="500" x2="900" y2="500" stroke="#0f2044" stroke-width="4" />
+          <line data-hf-id="hf-8g9k" x1="2" y1="0" x2="2" y2="500" stroke="#0f2044" stroke-width="4" />
+          <path data-hf-id="hf-uqll" id="s3-effort" d="M 0 430 C 220 420 380 330 520 230 S 760 40 880 20" fill="none" stroke="#cd5540" stroke-width="16" stroke-linecap="butt" />
+          <path data-hf-id="hf-u2ar" id="s3-muscle" d="M 0 300 C 200 280 360 270 480 290 S 740 420 880 455" fill="none" stroke="#2f7bbf" stroke-width="16" stroke-linecap="butt" />
+          <text data-hf-id="hf-0w6z" id="s3-t-effort" x="300" y="60" fill="#cd5540" opacity="0">EFFORTS ↑</text>
+          <text data-hf-id="hf-5na8" id="s3-t-muscle" x="560" y="430" fill="#2f7bbf" opacity="0">MUSCLE ↓</text>
         </svg>
       </div>
 
-      <div data-hf-id="hf-o1r5" id="s3-a" class="clip s3-stage" data-start="0" data-duration="1.95" data-track-index="3">
+      <div data-hf-id="hf-o1r5" id="s3-a" class="clip s3-stage" data-start="0" data-duration="3.124" data-track-index="3">
         <div data-hf-id="hf-qo8h" class="s3-line">
-          <span data-hf-id="hf-4487" class="s3-w s3-aw">Puis</span> <span data-hf-id="hf-xolg" class="s3-w s3-aw">les</span> <span data-hf-id="hf-i4cy" class="s3-w s3-aw">années</span> <span data-hf-id="hf-r3fg" class="s3-w s3-aw">passent.</span>
+          <span data-hf-id="hf-hb2v" class="s3-w s3-aw">Influenceurs,</span> <span data-hf-id="hf-3o5z" class="s3-w s3-aw">animateurs,</span><br data-hf-id="hf-x5px" />
+          <span data-hf-id="hf-fl0u" class="s3-w s3-aw">médecins</span><br data-hf-id="hf-szow" />
+          <span data-hf-id="hf-m4wb" class="s3-w s3-aw">nous</span> <span data-hf-id="hf-44x7" class="s3-w s3-aw">expliquent</span>
         </div>
       </div>
-      <div data-hf-id="hf-5vm2" id="s3-b" class="clip s3-stage" data-start="1.95" data-duration="2.2" data-track-index="3">
+      <div data-hf-id="hf-5vm2" id="s3-b" class="clip s3-stage" data-start="3.124" data-duration="3.265" data-track-index="3">
         <div data-hf-id="hf-9zxh" class="s3-line">
-          <span data-hf-id="hf-6jvi" class="s3-w s3-bw">Le</span> <span data-hf-id="hf-zmxq" class="s3-w s3-bw">corps</span> <span data-hf-id="hf-qfji" class="s3-w s3-bw">en</span> <span data-hf-id="hf-pj7x" class="s3-w s3-bw">demande</span><br data-hf-id="hf-x5px" />
-          <span data-hf-id="hf-c73l" class="s3-w s3-bw">encore</span> <span data-hf-id="hf-dbvu" class="s3-w s3-bw" style="color: #a4321f">plus…</span>
+          <span data-hf-id="hf-6ck6" class="s3-w s3-bw">que</span> <span data-hf-id="hf-blkn" class="s3-w s3-bw">les</span> <span data-hf-id="hf-oqen" class="s3-w s3-bw">années</span> <span data-hf-id="hf-vqhz" class="s3-w s3-bw">passent,</span><br data-hf-id="hf-sldv" />
+          <span data-hf-id="hf-4thc" class="s3-w s3-bw">et</span> <span data-hf-id="hf-jc3e" class="s3-w s3-bw">que</span> <span data-hf-id="hf-dqo3" class="s3-w s3-bw">notre</span> <span data-hf-id="hf-zmxq" class="s3-w s3-bw">corps</span><br data-hf-id="hf-qluq" />
+          <span data-hf-id="hf-qfji" class="s3-w s3-bw">en</span> <span data-hf-id="hf-pj7x" class="s3-w s3-bw">demande</span> <span data-hf-id="hf-c73l" class="s3-w s3-bw">encore</span> <span data-hf-id="hf-dbvu" class="s3-w s3-bw" style="color: #cd5540">plus…</span>
         </div>
       </div>
-      <div data-hf-id="hf-sif5" id="s3-c" class="clip s3-stage" data-start="4.15" data-duration="2.3" data-track-index="3">
+      <div data-hf-id="hf-sif5" id="s3-c" class="clip s3-stage" data-start="6.389" data-duration="2.05" data-track-index="3">
         <div data-hf-id="hf-b6uk" class="s3-line">
           <span data-hf-id="hf-fvb7" class="s3-w s3-cw">juste</span> <span data-hf-id="hf-q0h0" class="s3-w s3-cw">pour</span> <span data-hf-id="hf-dcxz" class="s3-w s3-cw">garder</span><br data-hf-id="hf-rsrt" />
           <span data-hf-id="hf-jjqe" class="s3-w s3-cw">ce</span> <span data-hf-id="hf-cha8" class="s3-w s3-cw">qu'il</span> <span data-hf-id="hf-irrt" class="s3-w s3-cw">a.</span>
         </div>
       </div>
-      <div data-hf-id="hf-4txv" id="s3-d" class="clip s3-stage" data-start="6.45" data-duration="4.05" data-track-index="3">
+      <div data-hf-id="hf-4txv" id="s3-d" class="clip s3-stage" data-start="8.439" data-duration="4.612" data-track-index="3">
         <div data-hf-id="hf-yeow">
           <div data-hf-id="hf-y7yw"><span data-hf-id="hf-gdtr" class="s3-label" id="s3-l1">PLUS D'ÂGE.</span></div>
           <div data-hf-id="hf-x11t"><span data-hf-id="hf-t1o5" class="s3-label" id="s3-l2">PLUS D'EFFORTS.</span></div>
@@ -100,9 +103,9 @@
     </div>
 
     <!-- Barres de glitch pour la sortie -->
-    <div data-hf-id="hf-zab3" id="s3-glitch" class="clip" data-start="10.1" data-duration="0.4" data-track-index="4" data-layout-ignore>
+    <div data-hf-id="hf-zab3" id="s3-glitch" class="clip" data-start="12.651" data-duration="0.4" data-track-index="4" data-layout-ignore>
       <div data-hf-id="hf-movj" class="s3-bar" id="s3-g1" style="top: 380px"></div>
-      <div data-hf-id="hf-s4dz" class="s3-bar" id="s3-g2" style="top: 820px; height: 120px; background: #a4321f"></div>
+      <div data-hf-id="hf-s4dz" class="s3-bar" id="s3-g2" style="top: 820px; height: 120px; background: #cd5540"></div>
       <div data-hf-id="hf-jdx2" class="s3-bar" id="s3-g3" style="top: 1210px; height: 40px"></div>
     </div>
   </div>
@@ -119,9 +122,9 @@
     const age = { v: 20 };
     const num = document.getElementById("s3-num");
     tl.fromTo(age, { v: 20 }, {
-      v: 50, duration: T(20.7) - T(14.25), ease: "none",
+      v: 50, duration: T(22.789) - T(14.23), ease: "none",
       onUpdate: () => { num.textContent = String(Math.min(50, Math.floor(age.v / 10) * 10)); },
-    }, T(14.25));
+    }, T(14.23));
     tl.fromTo("#s3-age", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0);
 
     // Courbes : les efforts montent, le muscle baisse, au rythme du compteur
@@ -131,28 +134,28 @@
       const len = path.getTotalLength();
       path.setAttribute("stroke-dasharray", `${len} ${len}`);
       tl.fromTo(path, { attr: { "stroke-dashoffset": len * 0.88 } },
-        { attr: { "stroke-dashoffset": 0 }, duration: T(20.7) - T(14.25), ease: "none" }, T(14.25));
+        { attr: { "stroke-dashoffset": 0 }, duration: T(22.789) - T(14.23), ease: "none" }, T(14.23));
     });
     tl.fromTo("#s3-graph", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0);
-    tl.fromTo("#s3-t-effort", { opacity: 0 }, { opacity: 1, duration: 0.2 }, T(22.08));
-    tl.fromTo("#s3-t-muscle", { opacity: 0 }, { opacity: 1, duration: 0.2 }, T(23.46));
+    tl.fromTo("#s3-t-effort", { opacity: 0 }, { opacity: 1, duration: 0.2 }, T(24.151));
+    tl.fromTo("#s3-t-muscle", { opacity: 0 }, { opacity: 1, duration: 0.2 }, T(25.419));
 
     // Textes
-    wordsIn(".s3-aw", [14.21, 14.48, 14.68, 14.89]);
-    out("#s3-a > div", 15.9);
-    wordsIn(".s3-bw", [16.1, 16.43, 16.79, 17.0, 17.29, 17.58]);
-    out("#s3-b > div", 18.1);
-    wordsIn(".s3-cw", [18.33, 18.71, 18.86, 19.14, 19.26, 19.44]);
-    out("#s3-c > div", 20.4);
+    wordsIn(".s3-aw", [14.19, 15.144, 16.097, 16.781, 16.989]);
+    out("#s3-a > div", 17.074);
+    wordsIn(".s3-bw", [17.424, 17.549, 17.694, 17.912, 18.368, 18.513, 18.638, 18.886, 19.155, 19.239, 19.529, 19.798]);
+    out("#s3-b > div", 20.339);
+    wordsIn(".s3-cw", [20.689, 21.125, 21.291, 21.613, 21.747, 21.934]);
+    out("#s3-c > div", 22.489);
     const slam = (sel, g) => tl.fromTo(sel, { opacity: 0, scale: 1.25, transformOrigin: "0% 50%" },
       { opacity: 1, scale: 1, duration: 0.22, ease: "expo.out" }, T(g));
-    slam("#s3-l1", 20.55); slam("#s3-l2", 21.47); slam("#s3-l3", 23.0);
+    slam("#s3-l1", 22.639); slam("#s3-l2", 23.934); slam("#s3-l3", 24.584);
 
-    // Glitch de sortie (24,2 → 24,6 s)
+    // Glitch de sortie (dernières 0,4 s de la scène)
     const jumps = [[-34, 4], [26, -3], [-14, 2], [40, -6], [-8, 1], [0, 0]];
-    jumps.forEach(([x, sk], i) => tl.to("#s3-all", { x, skewX: sk, duration: 0.05, ease: "none" }, T(24.2) + i * 0.05));
+    jumps.forEach(([x, sk], i) => tl.to("#s3-all", { x, skewX: sk, duration: 0.05, ease: "none" }, T(26.751) + i * 0.05));
     ["#s3-g1", "#s3-g2", "#s3-g3"].forEach((sel, i) => {
-      tl.fromTo(sel, { opacity: 0, x: 0 }, { opacity: 1, x: (i % 2 ? -60 : 60), duration: 0.05, ease: "none" }, T(24.22) + i * 0.06);
+      tl.fromTo(sel, { opacity: 0, x: 0 }, { opacity: 1, x: (i % 2 ? -60 : 60), duration: 0.05, ease: "none" }, T(26.771) + i * 0.06);
     });
 
     window.__timelines["s3"] = tl;

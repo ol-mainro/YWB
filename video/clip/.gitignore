@@ -8,3 +8,7 @@ renders/*.mov
 .waveform-cache/
 assets/*.transcript.json
 renders/*.meta.json
+
+# Anciennes prises de voix (scripts/voix.py)
+assets/voix/archives/
+renders/voix-off.wav

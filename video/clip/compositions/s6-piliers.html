@@ -8,12 +8,12 @@
     #root {
       position: absolute;
       inset: 0;
-      background: #0f3d2e; /* fond */
+      background: #0f2044; /* fond */
       font-family: "InterVar", sans-serif;
-      color: #faf6ec;
+      color: #f6eabf;
       overflow: hidden;
     }
-    #s6-head { position: absolute; left: 90px; top: 210px; font-size: 60px; font-weight: 800; color: #d4af37; letter-spacing: 0.04em; }
+    #s6-head { position: absolute; left: 90px; top: 210px; font-size: 60px; font-weight: 800; color: #e5c262; letter-spacing: 0.04em; }
     .s6-block { position: absolute; left: 90px; right: 90px; height: 240px; display: flex; align-items: center; justify-content: space-between; }
     #s6-b1 { top: 300px; }
     #s6-b2 { top: 560px; }
@@ -22,7 +22,7 @@
     .s6-icon { width: 260px; height: 240px; }
     /* Emplacement vidéo (840 → 1310 px) */
     #s6-slot { position: absolute; left: 90px; right: 90px; top: 840px; height: 470px; }
-    .s6-frame { position: absolute; left: 90px; top: 840px; width: 900px; height: 470px; border-radius: 28px; overflow: hidden; background: #141414; }
+    .s6-frame { position: absolute; left: 90px; top: 840px; width: 900px; height: 470px; border-radius: 28px; overflow: hidden; background: #0f2044; }
     .s6-frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
     #s6-ring {
       position: absolute;
@@ -31,7 +31,7 @@
       width: 200px;
       height: 200px;
       margin: -100px 0 0 -100px;
-      border: 6px solid #d4af37;
+      border: 6px solid #e5c262;
       border-radius: 50%;
       opacity: 0;
     }
@@ -47,7 +47,7 @@
     <div data-hf-id="hf-eoff" id="s6-b1" class="clip s6-block" data-start="0" data-duration="4.3" data-track-index="2">
       <div data-hf-id="hf-oy2y" class="s6-title"><span data-hf-id="hf-l1sk" class="s6-w" id="s6-marche">MARCHE</span><br data-hf-id="hf-x5px" /><span data-hf-id="hf-a8x9" class="s6-w" id="s6-taichi">TAI-CHI.</span></div>
       <svg data-hf-id="hf-306i" class="s6-icon" viewBox="0 0 260 240" data-layout-ignore>
-        <g data-hf-id="hf-t8j1" fill="#d4af37">
+        <g data-hf-id="hf-t8j1" fill="#e5c262">
           <ellipse data-hf-id="hf-50cm" class="s6-step" cx="80" cy="200" rx="26" ry="38" />
           <ellipse data-hf-id="hf-fqm0" class="s6-step" cx="170" cy="150" rx="26" ry="38" />
           <ellipse data-hf-id="hf-lgnu" class="s6-step" cx="80" cy="95" rx="26" ry="38" />
@@ -65,7 +65,7 @@
     <!-- Goutte : apparaît à côté du titre, puis tombe dans la vidéo -->
     <div data-hf-id="hf-zw3i" id="s6-drop-clip" class="clip" data-start="0" data-duration="4.3" data-track-index="4" data-layout-ignore>
       <svg data-hf-id="hf-vox0" id="s6-drop-fall" viewBox="0 0 120 160">
-        <path data-hf-id="hf-hc9g" d="M 60 6 C 60 6 12 74 12 104 A 48 48 0 0 0 108 104 C 108 74 60 6 60 6 Z" fill="#d4af37" />
+        <path data-hf-id="hf-hc9g" d="M 60 6 C 60 6 12 74 12 104 A 48 48 0 0 0 108 104 C 108 74 60 6 60 6 Z" fill="#e5c262" />
       </svg>
     </div>
 
@@ -80,31 +80,31 @@
   </div>
 
   <script>
-    const OFF = 46.536;
+    const OFF = 69.425;
     const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
     const blurIn = (sel, g) => tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, T(g));
     const thick = (sel, g) => tl.fromTo(sel, { opacity: 0, fontWeight: 200 }, { opacity: 1, fontWeight: 900, duration: 0.5, ease: "expo.out" }, T(g));
 
-    blurIn("#s6-head", 46.776);
-    thick("#s6-marche", 47.826);
-    thick("#s6-taichi", 48.076);
+    blurIn("#s6-head", 69.665);
+    thick("#s6-marche", 70.715);
+    thick("#s6-taichi", 70.965);
     document.querySelectorAll(".s6-step").forEach((el, i) =>
-      tl.fromTo(el, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, T(48.036) + i * 0.3));
+      tl.fromTo(el, { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, T(70.925) + i * 0.3));
 
     // Vidéos : la marche tai-chi, puis les pleurs sacrés (coupe sur « pleurs »)
     tl.fromTo("#s6-frame", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 0);
     tl.fromTo("#s6-v-marche", { scale: 1.1 }, { scale: 1.02, duration: 3.35, ease: "none" }, 0);
-    tl.fromTo("#s6-v-pleurs", { scale: 1.08 }, { scale: 1.04, duration: 0.95, ease: "none" }, T(49.886));
+    tl.fromTo("#s6-v-pleurs", { scale: 1.08 }, { scale: 1.04, duration: 0.95, ease: "none" }, T(72.775));
 
-    thick("#s6-pleurs", 49.886);
-    thick("#s6-sacres", 50.196);
-    tl.fromTo("#s6-drop-fall", { opacity: 0, y: -30, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "expo.out" }, T(49.886));
+    thick("#s6-pleurs", 72.775);
+    thick("#s6-sacres", 73.085);
+    tl.fromTo("#s6-drop-fall", { opacity: 0, y: -30, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "expo.out" }, T(72.775));
     // La goutte tombe dans la vidéo et crée une onde
-    tl.to("#s6-drop-fall", { y: 375, x: -312, scale: 0.5, duration: 0.3, ease: "power3.in" }, T(50.236));
-    tl.to("#s6-drop-fall", { opacity: 0, duration: 0.05 }, T(50.536));
-    tl.fromTo("#s6-ring", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.08 }, T(50.536));
-    tl.to("#s6-ring", { scale: 2.2, opacity: 0.6, duration: 0.22, ease: "expo.out" }, T(50.596));
+    tl.to("#s6-drop-fall", { y: 375, x: -312, scale: 0.5, duration: 0.3, ease: "power3.in" }, T(73.125));
+    tl.to("#s6-drop-fall", { opacity: 0, duration: 0.05 }, T(73.425));
+    tl.fromTo("#s6-ring", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.08 }, T(73.425));
+    tl.to("#s6-ring", { scale: 2.2, opacity: 0.6, duration: 0.22, ease: "expo.out" }, T(73.485));
 
     window.__timelines["s6"] = tl;
   </script>

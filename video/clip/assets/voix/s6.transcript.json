@@ -1,0 +1,60 @@
+{
+  "audio": "assets/voix/s6.mp3",
+  "language": "fr",
+  "words": [
+    {
+      "text": "Deux",
+      "start": 0.68,
+      "end": 0.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "piliers",
+      "start": 0.86,
+      "end": 1.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": ":",
+      "start": 1.5,
+      "end": 1.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 1.56,
+      "end": 1.62,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "marche",
+      "start": 1.7,
+      "end": 1.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Taïchi,",
+      "start": 1.92,
+      "end": 2.28,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "les",
+      "start": 3.62,
+      "end": 3.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pleurs",
+      "start": 3.78,
+      "end": 4.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sacrés",
+      "start": 4.1,
+      "end": 4.44,
+      "speaker": "speaker_0"
+    }
+  ]
+}

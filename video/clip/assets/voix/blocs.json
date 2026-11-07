@@ -1,0 +1,145 @@
+{
+  "defaut": {
+    "voix": "ecxPjiGTvAfpGEams6ec",
+    "modele": "eleven_multilingual_v2",
+    "vitesse": 1.12,
+    "voice_settings": null,
+    "seed": 4040,
+    "lufs": -19.6,
+    "piste": 2
+  },
+  "blocs": [
+    {
+      "id": "s1",
+      "scene": "s1",
+      "texte": "Depuis l'enfance, on nous répète la même chose. Pour être fort, il faut en faire beaucoup.",
+      "decalage": 0.0,
+      "duree": 6.338,
+      "marges": [
+        0.055,
+        0.448
+      ],
+      "empreinte": "05848e367929"
+    },
+    {
+      "id": "s2",
+      "scene": "s2",
+      "texte": "Pour prendre de la masse, il faut des efforts. Toujours plus d'efforts. Toujours plus de performance.",
+      "decalage": -0.262,
+      "duree": 7.429,
+      "marges": [
+        0.449,
+        0.488
+      ],
+      "empreinte": "f5f52f923bf8"
+    },
+    {
+      "id": "s3",
+      "scene": "s3",
+      "texte": "Influenceurs, animateurs, médecins nous expliquent que les années passent, et que notre corps en demande encore plus… juste pour garder ce qu'il a. L'âge augmente. On augmente les efforts. Pour toujours moins d'effets.",
+      "decalage": -0.333,
+      "duree": 13.281,
+      "marges": [
+        0.486,
+        0.403
+      ],
+      "empreinte": "252308ab174f"
+    },
+    {
+      "id": "s3b",
+      "scene": "s3b",
+      "texte": "Chez Yoga With Balls, on déteste les affirmations balancées comme des évidences. Alors on s'est creusé la tête, fait nos recherches... et on a eu cette intuition. Et si, après quarante ans, pour gagner du muscle, la clé était simplement d'en faire... moins. Tout ce qu'on a fait, c'est redécouvrir ce que le corps humain sait faire depuis des millénaires.",
+      "decalage": -0.103,
+      "duree": 22.2,
+      "marges": [
+        0.403,
+        0.329
+      ],
+      "empreinte": "785662dd67bf"
+    },
+    {
+      "id": "s4a",
+      "scene": "s4a",
+      "texte": "Le corps des plus de 40 ans ne fonctionne plus comme à 20. En vrai, c'est exactement l'inverse.",
+      "decalage": 0.611,
+      "duree": 5.514,
+      "marges": [
+        0.325,
+        0.418
+      ],
+      "empreinte": "7b40ed7f443f"
+    },
+    {
+      "id": "s4",
+      "scene": "s4",
+      "texte": "Chez Yoga With Balls, nous avons changé de mindset. Pour en avoir plus… il faut en faire… moins.",
+      "decalage": -0.211,
+      "duree": 8.19,
+      "marges": [
+        0.418,
+        0.585
+      ],
+      "empreinte": "12d5adef7016"
+    },
+    {
+      "id": "s5",
+      "scene": "s5",
+      "texte": "Nous avons craqué Le code du corps humain. Passé quarante ans, en faire moins, c'est... plus.",
+      "decalage": -0.176,
+      "duree": 8.295,
+      "marges": [
+        0.585,
+        0.622
+      ],
+      "empreinte": "737319b5ee48"
+    },
+    {
+      "id": "s5b",
+      "scene": "s5",
+      "texte": "La mise en place de quelques habitudes simples suffit à enclencher une série de réactions turbo-booster de testostérone dans votre corps, pour un développement musculaire bœuf.",
+      "decalage": 8.119,
+      "duree": 9.797,
+      "marges": [
+        0.15,
+        0.6
+      ],
+      "empreinte": "035954870c9a"
+    },
+    {
+      "id": "s6",
+      "scene": "s6",
+      "texte": "Deux piliers. La marche tai-chi. Les pleurs sacrés.",
+      "decalage": -0.394,
+      "duree": 4.607,
+      "marges": [
+        0.622,
+        0.163
+      ],
+      "empreinte": "6968302be5fc"
+    },
+    {
+      "id": "s7",
+      "scene": "s7",
+      "texte": "Notre méthode unique privilégie d'abord le spirituel. C'est par lui qu'on gagne un physique avantageux et du succès auprès des femmes. Et des gains musculaires titanesques.",
+      "decalage": -0.086,
+      "duree": 9.972,
+      "marges": [
+        0.163,
+        0.609
+      ],
+      "empreinte": "e0fcf8fe2838"
+    },
+    {
+      "id": "s8",
+      "scene": "s8",
+      "texte": "Yoga With Balls. En faire moins. En avoir plus. L'application est disponible.",
+      "decalage": -0.423,
+      "duree": 8.89,
+      "marges": [
+        0.606,
+        0.335
+      ],
+      "empreinte": "1d39e3f10a35"
+    }
+  ]
+}

@@ -8,9 +8,9 @@
     #root {
       position: absolute;
       inset: 0;
-      background: #0f3d2e; /* fond */
+      background: #0f2044; /* fond */
       font-family: "InterVar", sans-serif;
-      color: #faf6ec;
+      color: #f6eabf;
       overflow: hidden;
     }
     #s8-logo {
@@ -22,10 +22,10 @@
       font-weight: 900;
       letter-spacing: -0.05em;
       line-height: 0.92;
-      color: #d4af37;
+      color: #e5c262;
     }
     .s8-w { display: block; }
-    #s8-rule { position: absolute; left: 96px; top: 860px; width: 300px; height: 8px; background: #d4af37; transform-origin: 0% 50%; }
+    #s8-rule { position: absolute; left: 96px; top: 860px; width: 300px; height: 8px; background: #e5c262; transform-origin: 0% 50%; }
     #s8-sig {
       position: absolute;
       left: 90px;
@@ -47,7 +47,7 @@
       font-size: 46px;
       font-weight: 700;
       letter-spacing: 0.06em;
-      color: #e8e4d5;
+      color: #f6eabf;
     }
     #s8-phone { width: 56px; height: 90px; }
   </style>
@@ -72,8 +72,8 @@
     <div data-hf-id="hf-rzk1" id="s8-app-clip" class="clip" data-start="0" data-duration="10.264" data-track-index="4">
       <div data-hf-id="hf-gxde" id="s8-app">
         <svg data-hf-id="hf-3b15" id="s8-phone" viewBox="0 0 56 90">
-          <rect data-hf-id="hf-hrlv" x="4" y="4" width="48" height="82" rx="10" fill="none" stroke="#d4af37" stroke-width="6" />
-          <rect data-hf-id="hf-yj6g" x="20" y="74" width="16" height="5" rx="2" fill="#d4af37" />
+          <rect data-hf-id="hf-hrlv" x="4" y="4" width="48" height="82" rx="10" fill="none" stroke="#e5c262" stroke-width="6" />
+          <rect data-hf-id="hf-yj6g" x="20" y="74" width="16" height="5" rx="2" fill="#e5c262" />
         </svg>
         <span data-hf-id="hf-cill" id="s8-app-txt">APPLICATION DISPONIBLE</span>
       </div>
@@ -81,23 +81,23 @@
   </div>
 
   <script>
-    const OFF = 56.936;
+    const OFF = 79.825;
     const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
     const thick = (sel, g) => tl.fromTo(sel, { opacity: 0, fontWeight: 100 }, { opacity: 1, fontWeight: 900, duration: 0.6, ease: "expo.out" }, T(g));
     const blurIn = (sel, g) => tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, T(g));
 
-    thick("#s8-yoga", 57.136);
-    thick("#s8-with", 57.716);
-    thick("#s8-balls", 57.926);
-    tl.fromTo("#s8-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, T(58.636));
+    thick("#s8-yoga", 80.025);
+    thick("#s8-with", 80.605);
+    thick("#s8-balls", 80.815);
+    tl.fromTo("#s8-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, T(81.525));
 
-    document.querySelectorAll(".s8-a").forEach((el, i) => blurIn(el, [59.546, 59.776, 60.046][i]));
-    tl.to("#s8-moins", { fontWeight: 200, duration: 0.5, ease: "expo.out" }, T(60.236));
-    document.querySelectorAll(".s8-b").forEach((el, i) => blurIn(el, [61.116, 61.366, 61.656][i]));
-    tl.to("#s8-plus", { color: "#d4af37", duration: 0.3 }, T(61.736));
+    document.querySelectorAll(".s8-a").forEach((el, i) => blurIn(el, [82.435, 82.665, 82.935][i]));
+    tl.to("#s8-moins", { fontWeight: 200, duration: 0.5, ease: "expo.out" }, T(83.125));
+    document.querySelectorAll(".s8-b").forEach((el, i) => blurIn(el, [84.005, 84.255, 84.545][i]));
+    tl.to("#s8-plus", { color: "#e5c262", duration: 0.3 }, T(84.625));
 
-    tl.fromTo("#s8-app", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, T(63.156));
+    tl.fromTo("#s8-app", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, T(86.045));
 
     window.__timelines["s8"] = tl;
   </script>

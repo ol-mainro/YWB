@@ -1,0 +1,108 @@
+{
+  "audio": "assets/voix/s1.mp3",
+  "language": "fr",
+  "words": [
+    {
+      "text": "Depuis",
+      "start": 0.08,
+      "end": 0.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "l'enfance,",
+      "start": 0.34,
+      "end": 0.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "on",
+      "start": 1.48,
+      "end": 1.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nous",
+      "start": 1.6,
+      "end": 1.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "répète",
+      "start": 1.72,
+      "end": 2.02,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 2.06,
+      "end": 2.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "même",
+      "start": 2.16,
+      "end": 2.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "chose",
+      "start": 2.38,
+      "end": 2.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": ":",
+      "start": 2.7,
+      "end": 2.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pour",
+      "start": 3.82,
+      "end": 3.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "être",
+      "start": 3.96,
+      "end": 4.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fort,",
+      "start": 4.24,
+      "end": 4.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "il",
+      "start": 4.96,
+      "end": 5.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "faut",
+      "start": 5.12,
+      "end": 5.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 5.3,
+      "end": 5.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "faire",
+      "start": 5.42,
+      "end": 5.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "beaucoup",
+      "start": 5.62,
+      "end": 5.88,
+      "speaker": "speaker_0"
+    }
+  ]
+}

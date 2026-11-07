@@ -214,6 +214,25 @@ Voix retenue : **Paul K** ✅
 - Fichier : `video/clip/assets/voix-off.mp3` (64,6 s, accélérée ×1,12 sans changement de hauteur). La phrase « …changé de mindset » a été régénérée et insérée à la place de « state of mind ». En v0.7, « L'âge augmente… moins d'effets » et « Pourtant… exactement l'inverse » ont été générés d'un seul tenant (même voix, volume ajusté de −1,4 dB) et insérés à 20,55 s, à la place de « Plus d'âge. Plus d'efforts. Pour moins. ». `voix-off-brut.mp3` = première prise (65 s, avec « state of mind »).
 - Minutage mot par mot : `video/clip/assets/voix-off-mots.json` (sert à caler chaque apparition de texte).
 
+### Voix off en blocs (une scène = un bloc)
+
+Depuis la v0.9, la voix n'est plus un seul fichier : chaque scène a son propre bloc audio. Changer une phrase ne régénère que le bloc concerné.
+
+- `video/clip/assets/voix/blocs.json` — texte de chaque bloc et réglages communs (voix Paul K `ecxPjiGTvAfpGEams6ec`, `eleven_multilingual_v2`, vitesse ×1,12, `seed` fixe, volume cible −19,6 LUFS). Un bloc peut surcharger n'importe quel réglage.
+- `assets/voix/<scène>.mp3` — audio du bloc ; `assets/voix/<scène>.mots.json` — minutage mot par mot **en secondes depuis le début de la scène** (directement utilisable dans l'animation).
+- `assets/voix-off-mots.json` — minutage global, régénéré automatiquement.
+
+Pour modifier une phrase (depuis `video/clip/`) :
+
+1. Modifier le `texte` du bloc dans `blocs.json`.
+2. `python3 scripts/voix.py statut` — liste les blocs modifiés.
+3. `python3 scripts/voix.py generer` — génère les seuls blocs modifiés (ajouter `--essai` pour voir sans générer, ou passer des noms de blocs pour forcer une nouvelle prise : `generer s4`).
+4. Recaler les animations de la scène régénérée sur son nouveau `<scène>.mots.json`.
+
+Le script envoie à ElevenLabs le texte des blocs voisins (`previous_text`, `next_text`) pour garder une intonation continue, accélère, normalise le volume, conserve les silences de début et de fin du bloc, puis met à jour `index.html` : si le bloc s'allonge de 0,4 s, sa scène s'allonge de 0,4 s et les suivantes se décalent d'autant. L'ancienne prise est archivée dans `assets/voix/archives/` (non versionné). `python3 scripts/voix.py exporter` produit la piste complète `renders/voix-off.wav`.
+
+`assets/voix-off.mp3` reste la prise complète d'origine, d'où les blocs ont été découpés ; elle n'est plus lue par le clip. Le bloc `s3b` (« Chez Yoga With Balls, on déteste… ») a été inséré sans accélération : il est environ 11 % plus lent que le reste et passera à ×1,12 s'il est régénéré.
+
 ## 5 quater. Projet Hyperframes
 
 ```
@@ -221,7 +240,9 @@ video/clip/
   index.html                       # composition maître (scènes + voix off)
   compositions/s1-dogme.html … s8-signature.html   # les 8 scènes (+ s4a-inverse.html)
   scripts/render-alpha.py          # rendu titres seuls, fond transparent
-  assets/voix-off.mp3, voix-off-mots.json
+  scripts/voix.py                  # voix off en blocs : statut, generer, exporter
+  assets/voix/                     # un bloc de voix par scène (blocs.json, <scène>.mp3, <scène>.mots.json)
+  assets/voix-off-mots.json        # minutage global (généré)
   assets/fonts/inter-var-latin.woff2   # Inter variable (graisse animable 100 → 900)
   assets/vendor/gsap.min.js            # bibliothèque d'animation embarquée
   renders/                         # vidéos rendues
@@ -253,3 +274,4 @@ Rendus :
 - **v0.6** — scènes 3 à 8 codées, « state of mind » remplacé par « mindset » (texte + voix), rendu complet 60 s et version titres sur fond transparent.
 - **v0.7** — acte 1 : « L'âge augmente. On augmente les efforts. Pour toujours moins d'effets. » ; ouverture de l'acte 2 : « Pourtant, le corps des plus de 40 ans ne fonctionne plus comme à 20. En vrai, c'est exactement l'inverse. » (voix, scènes 3 et 4, minutage).
 - **v0.8** — images de `images-sources/` incrustées : scène 1 (formule ancestrale), scène 6 (danse mystique, homme qui pleure), scène 7 (homme qui pleure, testostérone booster), scène 8 (logo illustré à la place du logo typographique). Rendu complet régénéré.
+- **v0.9** — voix off découpée en un bloc par scène (`assets/voix/`, `scripts/voix.py`) : une phrase modifiée ne régénère que son bloc, et les scènes suivantes se recalent automatiquement.

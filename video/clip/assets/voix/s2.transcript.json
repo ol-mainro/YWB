@@ -1,0 +1,102 @@
+{
+  "audio": "assets/voix/s2.mp3",
+  "language": "fr",
+  "words": [
+    {
+      "text": "Pour",
+      "start": 0.46,
+      "end": 0.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "prendre",
+      "start": 0.62,
+      "end": 0.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 0.94,
+      "end": 1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 1.06,
+      "end": 1.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "masse,",
+      "start": 1.18,
+      "end": 1.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "il",
+      "start": 1.92,
+      "end": 2.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "faut",
+      "start": 2.08,
+      "end": 2.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "des",
+      "start": 2.2,
+      "end": 2.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "efforts.",
+      "start": 2.38,
+      "end": 2.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Toujours",
+      "start": 3.68,
+      "end": 4.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "plus",
+      "start": 4.14,
+      "end": 4.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "d'efforts,",
+      "start": 4.32,
+      "end": 4.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "toujours",
+      "start": 5.6,
+      "end": 5.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "plus",
+      "start": 5.9,
+      "end": 6.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 6.1,
+      "end": 6.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "performances",
+      "start": 6.24,
+      "end": 6.9,
+      "speaker": "speaker_0"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "audio": "assets/voix/s5b.mp3",
+  "language": "fr",
+  "words": [
+    {
+      "text": "La",
+      "start": 0.24,
+      "end": 0.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "mise",
+      "start": 0.34,
+      "end": 0.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 0.52,
+      "end": 0.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "place",
+      "start": 0.64,
+      "end": 0.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 0.86,
+      "end": 0.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "quelques",
+      "start": 1,
+      "end": 1.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "habitudes",
+      "start": 1.34,
+      "end": 1.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "simples",
+      "start": 1.78,
+      "end": 2.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "suffit",
+      "start": 2.16,
+      "end": 2.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "à",
+      "start": 2.48,
+      "end": 2.52,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "enclencher",
+      "start": 2.54,
+      "end": 2.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "une",
+      "start": 3,
+      "end": 3.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "série",
+      "start": 3.18,
+      "end": 3.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 3.42,
+      "end": 3.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "réactions",
+      "start": 3.54,
+      "end": 3.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "turbo",
+      "start": 3.96,
+      "end": 4.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "booster",
+      "start": 4.24,
+      "end": 4.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 4.6,
+      "end": 4.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "testostérone",
+      "start": 4.78,
+      "end": 5.4,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "dans",
+      "start": 5.42,
+      "end": 5.52,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "votre",
+      "start": 5.54,
+      "end": 5.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "corps",
+      "start": 5.84,
+      "end": 6.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pour",
+      "start": 6.4,
+      "end": 6.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 6.56,
+      "end": 6.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "développement",
+      "start": 6.68,
+      "end": 7.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "musculaire",
+      "start": 7.16,
+      "end": 7.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "bœuf.",
+      "start": 7.68,
+      "end": 7.96,
+      "speaker": "speaker_0"
+    }
+  ]
+}
