@@ -3,99 +3,165 @@
   "language": "fr",
   "words": [
     {
-      "text": "Pour",
-      "start": 0.46,
-      "end": 0.58,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "prendre",
-      "start": 0.62,
-      "end": 0.9,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "de",
-      "start": 0.94,
-      "end": 1,
+      "text": "Dans",
+      "start": 0.54,
+      "end": 0.66,
       "speaker": "speaker_0"
     },
     {
       "text": "la",
-      "start": 1.06,
-      "end": 1.14,
+      "start": 0.7,
+      "end": 0.8,
       "speaker": "speaker_0"
     },
     {
-      "text": "masse,",
-      "start": 1.18,
-      "end": 1.46,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "il",
-      "start": 1.92,
-      "end": 2.04,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "faut",
-      "start": 2.08,
-      "end": 2.18,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "des",
-      "start": 2.2,
-      "end": 2.32,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "efforts.",
-      "start": 2.38,
-      "end": 2.76,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "Toujours",
-      "start": 3.68,
-      "end": 4.1,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "plus",
-      "start": 4.14,
-      "end": 4.3,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "d'efforts,",
-      "start": 4.32,
-      "end": 4.78,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "toujours",
-      "start": 5.6,
-      "end": 5.86,
-      "speaker": "speaker_0"
-    },
-    {
-      "text": "plus",
-      "start": 5.9,
-      "end": 6.06,
+      "text": "salle",
+      "start": 0.84,
+      "end": 1,
       "speaker": "speaker_0"
     },
     {
       "text": "de",
-      "start": 6.1,
-      "end": 6.2,
+      "start": 1.04,
+      "end": 1.12,
       "speaker": "speaker_0"
     },
     {
-      "text": "performances",
-      "start": 6.24,
-      "end": 6.9,
+      "text": "sport,",
+      "start": 1.16,
+      "end": 1.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "c'est",
+      "start": 1.46,
+      "end": 1.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pareil.",
+      "start": 1.62,
+      "end": 1.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Pour",
+      "start": 3.32,
+      "end": 3.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "prendre",
+      "start": 3.48,
+      "end": 3.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "du",
+      "start": 3.78,
+      "end": 3.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "muscle,",
+      "start": 3.92,
+      "end": 4.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "on",
+      "start": 4.56,
+      "end": 4.62,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nous",
+      "start": 4.66,
+      "end": 4.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "met",
+      "start": 4.8,
+      "end": 4.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "dans",
+      "start": 4.96,
+      "end": 5.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 5.08,
+      "end": 5.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tête",
+      "start": 5.22,
+      "end": 5.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "qu'il",
+      "start": 5.4,
+      "end": 5.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "faut",
+      "start": 5.6,
+      "end": 5.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "faire",
+      "start": 5.76,
+      "end": 5.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "des",
+      "start": 5.92,
+      "end": 6.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "efforts.",
+      "start": 6.08,
+      "end": 6.42,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Toujours",
+      "start": 7.8,
+      "end": 8.16,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "plus",
+      "start": 8.2,
+      "end": 8.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "d'efforts,",
+      "start": 8.38,
+      "end": 8.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "toujours",
+      "start": 10.22,
+      "end": 10.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "plus",
+      "start": 10.52,
+      "end": 10.76,
       "speaker": "speaker_0"
     }
   ]

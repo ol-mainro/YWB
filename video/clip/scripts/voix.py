@@ -192,7 +192,7 @@ def tts(cfg, i):
     if r.get("seed") is not None:
         corps["seed"] = r["seed"]
     req = urllib.request.Request(
-        f"https://api.elevenlabs.io/v1/text-to-speech/{r['voix']}/with-timestamps?output_format=mp3_44100_192",
+        f"https://api.elevenlabs.io/v1/text-to-speech/{r['voix']}/with-timestamps?output_format=mp3_44100_128",
         data=json.dumps(corps).encode(), method="POST",
         headers={"xi-api-key": cle_api(), "Content-Type": "application/json"})
     try:

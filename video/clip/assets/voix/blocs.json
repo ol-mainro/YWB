@@ -12,26 +12,26 @@
     {
       "id": "s1",
       "scene": "s1",
-      "texte": "Depuis l'enfance, on nous répète la même chose. Pour être fort, il faut en faire beaucoup.",
+      "texte": "Depuis tout petit, on nous martèle qu'il faut toujours en faire plus. Plus à l'école, avoir son diplôme. Avoir plus de diplômes, pour avoir un travail. Passer plus d'heures au travail, pour avoir un bon job.",
       "decalage": 0.0,
-      "duree": 6.338,
+      "duree": 13.839,
       "marges": [
         0.055,
         0.448
       ],
-      "empreinte": "05848e367929"
+      "empreinte": "7fcf3c82cf14"
     },
     {
       "id": "s2",
       "scene": "s2",
-      "texte": "Pour prendre de la masse, il faut des efforts. Toujours plus d'efforts. Toujours plus de performance.",
+      "texte": "Dans la salle de sport, c'est pareil. Pour prendre du muscle, on nous met dans la tête qu'il faut faire des efforts. Toujours plus d'efforts. Toujours plus.",
       "decalage": -0.262,
-      "duree": 7.429,
+      "duree": 11.305,
       "marges": [
         0.449,
         0.488
       ],
-      "empreinte": "f5f52f923bf8"
+      "empreinte": "50fd2af20838"
     },
     {
       "id": "s3",
@@ -72,14 +72,14 @@
     {
       "id": "s4",
       "scene": "s4",
-      "texte": "Chez Yoga With Balls, nous avons changé de mindset. Pour en avoir plus… il faut en faire… moins.",
+      "texte": "Chez Yoga With Balls, nous avons changé de mindset. Et si, ton problème n'était pas que tu n'en fais pas assez… mais que tu n'en fais pas assez… peu ? Pour en avoir plus… il faut en faire… moins.",
       "decalage": -0.211,
-      "duree": 8.19,
+      "duree": 12.182,
       "marges": [
         0.418,
         0.585
       ],
-      "empreinte": "12d5adef7016"
+      "empreinte": "95497b6bb245"
     },
     {
       "id": "s5",

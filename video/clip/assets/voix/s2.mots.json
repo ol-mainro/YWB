@@ -1,82 +1,137 @@
 [
  {
-  "w": "Pour",
-  "start": 0.148,
-  "end": 0.304
- },
- {
-  "w": "prendre",
-  "start": 0.346,
-  "end": 0.625
- },
- {
-  "w": "de",
-  "start": 0.656,
-  "end": 0.739
+  "w": "Dans",
+  "start": 0.187,
+  "end": 0.384
  },
  {
   "w": "la",
-  "start": 0.78,
-  "end": 0.843
+  "start": 0.415,
+  "end": 0.488
  },
  {
-  "w": "masse,",
-  "start": 0.905,
-  "end": 1.382
- },
- {
-  "w": "il",
-  "start": 1.589,
-  "end": 1.734
- },
- {
-  "w": "faut",
-  "start": 1.796,
-  "end": 1.911
- },
- {
-  "w": "des",
-  "start": 1.942,
-  "end": 2.046
- },
- {
-  "w": "efforts.",
-  "start": 2.107,
-  "end": 2.657
- },
- {
-  "w": "Toujours",
-  "start": 3.341,
-  "end": 3.807
- },
- {
-  "w": "plus",
-  "start": 3.838,
-  "end": 4.036
- },
- {
-  "w": "d'efforts.",
-  "start": 4.067,
-  "end": 4.709
- },
- {
-  "w": "Toujours",
-  "start": 5.29,
-  "end": 5.59
- },
- {
-  "w": "plus",
-  "start": 5.612,
-  "end": 5.787
+  "w": "salle",
+  "start": 0.54,
+  "end": 0.736
  },
  {
   "w": "de",
-  "start": 5.829,
-  "end": 5.891
+  "start": 0.767,
+  "end": 0.84
  },
  {
-  "w": "performance.",
-  "start": 5.943,
-  "end": 6.813
+  "w": "sport,",
+  "start": 0.882,
+  "end": 1.131
+ },
+ {
+  "w": "c'est",
+  "start": 1.151,
+  "end": 1.296
+ },
+ {
+  "w": "pareil.",
+  "start": 1.316,
+  "end": 1.804
+ },
+ {
+  "w": "Pour",
+  "start": 3.007,
+  "end": 3.151
+ },
+ {
+  "w": "prendre",
+  "start": 3.193,
+  "end": 3.463
+ },
+ {
+  "w": "du",
+  "start": 3.504,
+  "end": 3.587
+ },
+ {
+  "w": "muscle,",
+  "start": 3.629,
+  "end": 4.075
+ },
+ {
+  "w": "on",
+  "start": 4.209,
+  "end": 4.354
+ },
+ {
+  "w": "nous",
+  "start": 4.396,
+  "end": 4.509
+ },
+ {
+  "w": "met",
+  "start": 4.531,
+  "end": 4.655
+ },
+ {
+  "w": "dans",
+  "start": 4.686,
+  "end": 4.8
+ },
+ {
+  "w": "la",
+  "start": 4.821,
+  "end": 4.883
+ },
+ {
+  "w": "tête",
+  "start": 4.925,
+  "end": 5.111
+ },
+ {
+  "w": "qu'il",
+  "start": 5.132,
+  "end": 5.266
+ },
+ {
+  "w": "faut",
+  "start": 5.318,
+  "end": 5.433
+ },
+ {
+  "w": "faire",
+  "start": 5.463,
+  "end": 5.629
+ },
+ {
+  "w": "des",
+  "start": 5.66,
+  "end": 5.764
+ },
+ {
+  "w": "efforts.",
+  "start": 5.806,
+  "end": 6.251
+ },
+ {
+  "w": "Toujours",
+  "start": 7.454,
+  "end": 7.879
+ },
+ {
+  "w": "plus",
+  "start": 7.909,
+  "end": 8.075
+ },
+ {
+  "w": "d'efforts.",
+  "start": 8.117,
+  "end": 8.698
+ },
+ {
+  "w": "Toujours",
+  "start": 9.9,
+  "end": 10.211
+ },
+ {
+  "w": "plus.",
+  "start": 10.232,
+  "end": 11.714
  }
 ]
