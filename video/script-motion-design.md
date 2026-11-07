@@ -70,6 +70,8 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 
 ### Voix off (v3, ~170 mots ≈ 64 s)
 
+Texte de référence partagé : doc « [Texte principal du clip](https://claude.ai/artifact/R5vVSxQML5ACzgtRCbcW3a) » (voix off + textes à l'écran). À tenir à jour à chaque modification du texte.
+
 > **[Acte 1 — Le dogme]**
 > Depuis l'enfance, on nous répète la même chose.
 > Pour être fort, il faut en faire beaucoup.

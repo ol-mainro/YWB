@@ -45,6 +45,13 @@ Chaque mini-app vit dans son propre sous-dossier de `public/apps/` sous forme d'
   - `firebase use --add`
   - `firebase deploy --only hosting`
 
+## Clip vidéo (motion design)
+
+- Script complet : `video/script-motion-design.md`. Projet Hyperframes : `video/clip/`.
+- **Texte de référence du clip** (voix off et textes à l'écran) : doc Claude Docs « Texte principal du clip » — https://claude.ai/artifact/R5vVSxQML5ACzgtRCbcW3a
+- Avant de créer ou de modifier le clip, lire ce doc : il fait foi pour le texte.
+- Après tout changement de texte (voix off, titres, signature), mettre à jour ce doc en même temps que `video/script-motion-design.md` et les compositions, pour que les trois restent identiques.
+
 ## Pour les agents
 
 - Toujours conserver le ton de marque décrit ci-dessus, y compris dans les commits, la documentation et les textes d'interface.
