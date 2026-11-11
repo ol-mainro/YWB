@@ -2,51 +2,51 @@
  {
   "w": "Yoga",
   "start": 0.183,
-  "end": 0.536
+  "end": 0.545
  },
  {
   "w": "With",
-  "start": 0.577,
-  "end": 0.732
+  "start": 0.597,
+  "end": 0.754
  },
  {
   "w": "Balls",
-  "start": 0.774,
-  "end": 1.085
+  "start": 0.795,
+  "end": 1.127
  },
  {
   "w": ":",
   "start": 1.251,
-  "end": 1.271
+  "end": 1.293
  },
  {
-  "w": "moins,",
-  "start": 2.308,
-  "end": 2.661
+  "w": "moin,",
+  "start": 2.33,
+  "end": 2.713
  },
  {
   "w": "c'est",
-  "start": 2.764,
-  "end": 2.951
+  "start": 2.773,
+  "end": 2.959
  },
  {
   "w": "plus.",
-  "start": 2.971,
-  "end": 3.448
+  "start": 2.981,
+  "end": 3.53
  },
  {
   "w": "L'application",
   "start": 4.485,
-  "end": 5.138
+  "end": 5.127
  },
  {
   "w": "est",
-  "start": 5.2,
-  "end": 5.262
+  "start": 5.179,
+  "end": 5.241
  },
  {
   "w": "disponible.",
-  "start": 5.294,
-  "end": 6.237
+  "start": 5.262,
+  "end": 6.226
  }
 ]

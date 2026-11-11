@@ -36,26 +36,26 @@
     {
       "id": "s3",
       "scene": "s3",
-      "texte": "Influenceurs, animateurs, médecins nous expliquent que les années passent, et que notre corps en demande encore plus… juste pour garder ce qu'il a. L'âge augmente. On augmente les efforts. Pour toujours moins d'effets.",
+      "texte": "Influenceurs, animateurs, médecins nous expliquent que les années passent, et que notre cor en demande encore plus… juste pour garder ce qu'il a. L'âge augmente. On augmente les efforts. Pour toujours moins d'effets.",
       "decalage": -0.333,
-      "duree": 13.281,
+      "duree": 13.505,
       "marges": [
         0.486,
         0.403
       ],
-      "empreinte": "252308ab174f"
+      "empreinte": "2e1b0565490f"
     },
     {
       "id": "s3b",
       "scene": "s3b",
-      "texte": "Chez Yoga With Balls, on déteste les affirmations balancées comme des évidences. Alors on s'est creusé la tête, fait nos recherches... et on a eu cette intuition. Et si, après quarante ans, pour gagner du muscle, la clé était simplement d'en faire... moins. Tout ce qu'on a fait, c'est redécouvrir ce que le corps humain sait faire depuis des millénaires.",
+      "texte": "Chez Yoga With Balls, on déteste les affirmations balancées comme des évidences. Alors on s'est creusé la tête, fait nos recherches... et on a eu cette intuition. Et si, après quarante ans, pour gagner du muscle, la clé était simplement d'en faire... moins. Tout ce qu'on a fait, c'est redécouvrir ce que le cor humain sait faire depuis des millénaires.",
       "decalage": -0.103,
-      "duree": 22.2,
+      "duree": 22.021,
       "marges": [
         0.403,
         0.329
       ],
-      "empreinte": "785662dd67bf"
+      "empreinte": "19336ca7500c"
     },
     {
       "id": "s4a",
@@ -84,20 +84,20 @@
     {
       "id": "s5",
       "scene": "s5",
-      "texte": "Nous avons craqué Le code du corps humain.",
+      "texte": "Nous avons craqué Le code du cor humain.",
       "decalage": -0.176,
-      "duree": 3.004,
+      "duree": 3.213,
       "marges": [
         0.585,
         0.622
       ],
-      "empreinte": "69d242a21b65"
+      "empreinte": "60249875e30b"
     },
     {
       "id": "s5b",
       "scene": "s5",
       "texte": "La mise en place de quelques habitudes simples suffit à enclencher une série de réactions turbo-booster de testostérone dans votre corps, pour un développement musculaire bœuf.",
-      "decalage": 3.0,
+      "decalage": 3.105,
       "duree": 9.797,
       "marges": [
         0.15,
@@ -120,26 +120,26 @@
     {
       "id": "s7",
       "scene": "s7",
-      "texte": "Notre méthode unique s'appuie sur l'esprit pour obtenir un physique avantageux, du succès auprès des femmes et des gains musculaires titanesques.",
+      "texte": "Notre méthode unique s'appuie sur l'esprit pour obtenir un physique avantageux, du succès auprès dé femmes et des gains musculaires titanesques.",
       "decalage": -0.086,
-      "duree": 8.098,
+      "duree": 8.02,
       "marges": [
         0.163,
         0.609
       ],
-      "empreinte": "a8a08e8d6ae0"
+      "empreinte": "c7c7dcdad153"
     },
     {
       "id": "s8",
       "scene": "s8",
-      "texte": "Yoga With Balls : moins, c'est plus. L'application est disponible.",
+      "texte": "Yoga With Balls : moin, c'est plus. L'application est disponible.",
       "decalage": -0.423,
-      "duree": 6.766,
+      "duree": 6.713,
       "marges": [
         0.606,
         0.335
       ],
-      "empreinte": "2e04f98845f7"
+      "empreinte": "bcf2e112437c"
     }
   ]
 }
