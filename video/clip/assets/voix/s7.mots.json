@@ -2,111 +2,106 @@
  {
   "w": "Notre",
   "start": 0.077,
-  "end": 0.378
+  "end": 0.347
  },
  {
   "w": "méthode",
-  "start": 0.43,
-  "end": 0.751
+  "start": 0.388,
+  "end": 0.689
  },
  {
   "w": "unique",
-  "start": 0.781,
-  "end": 1.021
+  "start": 0.709,
+  "end": 0.927
  },
  {
   "w": "s'appuie",
-  "start": 1.041,
-  "end": 1.331
+  "start": 0.948,
+  "end": 1.248
  },
  {
   "w": "sur",
-  "start": 1.352,
-  "end": 1.476
+  "start": 1.269,
+  "end": 1.393
  },
  {
   "w": "l'esprit",
-  "start": 1.507,
-  "end": 1.871
+  "start": 1.424,
+  "end": 1.766
  },
  {
   "w": "pour",
-  "start": 1.912,
-  "end": 2.067
+  "start": 1.788,
+  "end": 1.953
  },
  {
   "w": "obtenir",
-  "start": 2.098,
-  "end": 2.44
+  "start": 1.974,
+  "end": 2.357
  },
  {
   "w": "un",
-  "start": 2.482,
-  "end": 2.523
+  "start": 2.399,
+  "end": 2.44
  },
  {
   "w": "physique",
-  "start": 2.564,
-  "end": 2.886
+  "start": 2.482,
+  "end": 2.814
  },
  {
-  "w": "avantageux",
-  "start": 2.907,
-  "end": 3.446
- },
- {
-  "w": "et",
-  "start": 3.612,
-  "end": 3.726
+  "w": "avantageux,",
+  "start": 2.834,
+  "end": 3.394
  },
  {
   "w": "du",
-  "start": 3.767,
-  "end": 3.861
+  "start": 3.529,
+  "end": 3.664
  },
  {
   "w": "succès",
-  "start": 3.902,
-  "end": 4.327
+  "start": 3.705,
+  "end": 4.12
  },
  {
   "w": "auprès",
-  "start": 4.348,
-  "end": 4.68
+  "start": 4.14,
+  "end": 4.503
  },
  {
   "w": "des",
-  "start": 4.7,
-  "end": 4.794
+  "start": 4.534,
+  "end": 4.617
  },
  {
-  "w": "femmes.",
-  "start": 4.835,
-  "end": 5.249
+  "w": "femmes",
+  "start": 4.659,
+  "end": 4.949
  },
  {
-  "w": "Et",
-  "start": 5.447,
-  "end": 5.571
+  "w": "et",
+  "start": 5.084,
+  "end": 5.229
  },
  {
   "w": "des",
-  "start": 5.613,
-  "end": 5.716
+  "start": 5.271,
+  "end": 5.384
  },
  {
   "w": "gains",
-  "start": 5.757,
-  "end": 5.913
+  "start": 5.426,
+  "end": 5.581
  },
  {
   "w": "musculaires",
-  "start": 5.934,
-  "end": 6.431
+  "start": 5.602,
+  "end": 6.089
  },
  {
   "w": "titanesques.",
-  "start": 6.452,
-  "end": 7.664
+  "start": 6.11,
+  "end": 7.374
  }
 ]
