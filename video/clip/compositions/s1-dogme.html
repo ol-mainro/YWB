@@ -41,15 +41,6 @@
     .s1-mid { margin-top: 26px; font-size: 66px; font-weight: 400; line-height: 1.1; }
     .s1-big { margin-top: 10px; font-size: 168px; font-weight: 900; letter-spacing: -0.05em; line-height: 1; }
     #s1-job { color: #b30062; }
-    /* Cadre vidéo (820 → 1310 px) */
-    .s1-frame {
-      position: absolute;
-      left: 90px; top: 820px; width: 900px; height: 490px;
-      border-radius: 28px;
-      overflow: hidden;
-      background: #000000;
-    }
-    .s1-frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
     /* Escalier du « toujours plus » : une marche par étape de la vie */
     #s1-stairs { position: absolute; left: 90px; top: 820px; width: 900px; height: 490px; }
     .s1-step {
@@ -142,12 +133,6 @@
       </div>
     </div>
 
-    <!-- Vidéos : le quadra épuisé par le « toujours plus » (cadre non minuté : chaque <video> porte son propre timing) -->
-    <div data-hf-id="hf-rqjn" id="s1-frame" class="s1-frame" data-layout-allow-overflow>
-      <video data-hf-id="hf-pahy" id="s1-v-a" src="assets/videos/s1-cuisine-a.mp4" data-start="0" data-duration="3.6" data-track-index="4" muted playsinline></video>
-      <video data-hf-id="hf-6k6u" id="s1-v-b" src="assets/videos/s1-cuisine-b.mp4" data-start="10.97" data-duration="3.13" data-track-index="4" muted playsinline></video>
-    </div>
-
     <!-- Escalier : école → diplôme → diplômes → travail -->
     <div data-hf-id="hf-s1sc" id="s1-stairs-clip" class="clip" data-start="3.6" data-duration="7.37" data-track-index="2" data-layout-ignore>
       <div data-hf-id="hf-s1st" id="s1-stairs">
@@ -162,7 +147,7 @@
       </div>
     </div>
 
-    <!-- Le « + » s'imprime par-dessus la dernière vidéo et annonce la scène suivante -->
+    <!-- Le « + » s'imprime sous le « bon job » et annonce la scène suivante -->
     <div data-hf-id="hf-wkf1" id="s1-slot" class="clip" data-start="10.97" data-duration="3.131" data-track-index="3" data-layout-ignore>
       <div data-hf-id="hf-x0lz" id="s1-plus">+</div>
     </div>
@@ -184,10 +169,6 @@
     tl.fromTo("#s1-plus-a", { opacity: 0, fontWeight: 300, scale: 0.92, transformOrigin: "0% 50%" },
       { opacity: 1, fontWeight: 900, scale: 1, duration: 0.45, ease: "expo.out" }, 2.6);
     out("#s1-a > div", 3.8);
-
-    // Vidéo 1 : lent zoom avant, puis le cadre s'efface pour laisser place à l'escalier
-    tl.fromTo("#s1-v-a", { scale: 1.08 }, { scale: 1, duration: 3.6, ease: "none" }, 0);
-    tl.to("#s1-frame", { opacity: 0, duration: 0.25, ease: "power2.in" }, 3.35);
 
     // Escalier : chaque marche pousse sur son mot, un « + » claque au-dessus
     const step = (n, t) => {
@@ -213,11 +194,8 @@
     tl.fromTo("#s1-w-job", { opacity: 0, fontWeight: 300, scale: 0.9, transformOrigin: "0% 50%" },
       { opacity: 1, fontWeight: 900, scale: 1, duration: 0.45, ease: "expo.out" }, 13.08);
 
-    // Vidéo 2 : le « bon job », lent zoom, puis assombrie sous le « + »
-    tl.to("#s1-frame", { opacity: 1, duration: 0.2, ease: "power2.out" }, 10.9);
-    tl.fromTo("#s1-v-b", { scale: 1.08 }, { scale: 1, duration: 3.13, ease: "none" }, 10.97);
-    tl.to("#s1-v-b", { filter: "saturate(0.3) brightness(0.45)", duration: 0.6, ease: "power2.out" }, 13.0);
-    tl.fromTo("#s1-plus", { opacity: 0, fontWeight: 100, color: "#ffffff" }, { opacity: 0.9, duration: 0.3 }, 13.0);
+    // Le « + » s'imprime sous le « bon job » et annonce la scène suivante
+    tl.fromTo("#s1-plus", { opacity: 0, fontWeight: 100, color: "#000000" }, { opacity: 0.9, duration: 0.3 }, 13.0);
     tl.to("#s1-plus", { fontWeight: 900, duration: 0.9, ease: "power2.inOut" }, 13.1);
     tl.to("#s1-plus", { color: "#e6007e", duration: 0.4 }, 13.6);
 

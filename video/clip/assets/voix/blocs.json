@@ -60,14 +60,14 @@
     {
       "id": "s4a",
       "scene": "s4a",
-      "texte": "Le corps des plus de 40 ans ne fonctionne plus comme à 20. En vrai, c'est exactement l'inverse.",
+      "texte": "Le corps des plus de 40 ans ne fonctionne plus comme à 20. En fait, c'est exactement le contraire. Votre métabolisme est inversé.",
       "decalage": 0.611,
-      "duree": 5.514,
+      "duree": 9.561,
       "marges": [
         0.325,
         0.418
       ],
-      "empreinte": "7b40ed7f443f"
+      "empreinte": "f1d84119202e"
     },
     {
       "id": "s4",
@@ -84,20 +84,20 @@
     {
       "id": "s5",
       "scene": "s5",
-      "texte": "Nous avons craqué Le code du corps humain. Passé quarante ans, en faire moins, c'est... plus.",
+      "texte": "Nous avons craqué Le code du corps humain.",
       "decalage": -0.176,
-      "duree": 8.295,
+      "duree": 3.004,
       "marges": [
         0.585,
         0.622
       ],
-      "empreinte": "737319b5ee48"
+      "empreinte": "69d242a21b65"
     },
     {
       "id": "s5b",
       "scene": "s5",
       "texte": "La mise en place de quelques habitudes simples suffit à enclencher une série de réactions turbo-booster de testostérone dans votre corps, pour un développement musculaire bœuf.",
-      "decalage": 8.119,
+      "decalage": 3.0,
       "duree": 9.797,
       "marges": [
         0.15,
@@ -132,14 +132,14 @@
     {
       "id": "s8",
       "scene": "s8",
-      "texte": "Yoga With Balls. En faire moins. En avoir plus. L'application est disponible.",
+      "texte": "Yoga With Balls : moins, c'est plus. L'application est disponible.",
       "decalage": -0.423,
-      "duree": 8.89,
+      "duree": 6.766,
       "marges": [
         0.606,
         0.335
       ],
-      "empreinte": "1d39e3f10a35"
+      "empreinte": "2e04f98845f7"
     }
   ]
 }

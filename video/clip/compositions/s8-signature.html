@@ -31,7 +31,7 @@
       left: 90px;
       right: 90px;
       top: 910px;
-      font-size: 84px;
+      font-size: 110px;
       font-weight: 900;
       letter-spacing: -0.03em;
       line-height: 1.1;
@@ -40,7 +40,7 @@
     #s8-app {
       position: absolute;
       left: 90px;
-      top: 1170px;
+      top: 1210px;
       display: flex;
       align-items: center;
       gap: 26px;
@@ -53,23 +53,23 @@
   </style>
 
   <div data-hf-id="hf-iyfs" id="root" data-composition-id="s8" data-width="1080" data-height="1920">
-    <div data-hf-id="hf-vntm" id="s8-logo-clip" class="clip" data-start="0" data-duration="10.264" data-track-index="1">
+    <div data-hf-id="hf-vntm" id="s8-logo-clip" class="clip" data-start="0" data-duration="8.14" data-track-index="1">
       <div data-hf-id="hf-ts10" id="s8-logo">
         <span data-hf-id="hf-wtvk" class="s8-w" id="s8-yoga">YOGA</span>
         <span data-hf-id="hf-yrio" class="s8-w" id="s8-with">WITH</span>
         <span data-hf-id="hf-rkj8" class="s8-w" id="s8-balls">BALLS</span>
       </div>
     </div>
-    <div data-hf-id="hf-ze3t" id="s8-rule-clip" class="clip" data-start="0" data-duration="10.264" data-track-index="2" data-layout-ignore>
+    <div data-hf-id="hf-ze3t" id="s8-rule-clip" class="clip" data-start="0" data-duration="8.14" data-track-index="2" data-layout-ignore>
       <div data-hf-id="hf-epw7" id="s8-rule"></div>
     </div>
-    <div data-hf-id="hf-zw5y" id="s8-sig-clip" class="clip" data-start="0" data-duration="10.264" data-track-index="3">
+    <div data-hf-id="hf-zw5y" id="s8-sig-clip" class="clip" data-start="0" data-duration="8.14" data-track-index="3">
       <div data-hf-id="hf-hz90" id="s8-sig">
-        <span data-hf-id="hf-ekk1" class="s8-sw s8-a">En</span> <span data-hf-id="hf-4tnr" class="s8-sw s8-a">faire</span> <span data-hf-id="hf-n0qg" class="s8-sw s8-a" id="s8-moins">moins.</span><br data-hf-id="hf-x5px" />
-        <span data-hf-id="hf-sira" class="s8-sw s8-b">En</span> <span data-hf-id="hf-lzfs" class="s8-sw s8-b">avoir</span> <span data-hf-id="hf-6fhb" class="s8-sw s8-b" id="s8-plus">plus.</span>
+        <span data-hf-id="hf-n0qg" class="s8-sw" id="s8-moins">Moins,</span><br data-hf-id="hf-x5px" />
+        <span data-hf-id="hf-sira" class="s8-sw" id="s8-cest">c'est</span> <span data-hf-id="hf-6fhb" class="s8-sw" id="s8-plus">plus.</span>
       </div>
     </div>
-    <div data-hf-id="hf-rzk1" id="s8-app-clip" class="clip" data-start="0" data-duration="10.264" data-track-index="4">
+    <div data-hf-id="hf-rzk1" id="s8-app-clip" class="clip" data-start="0" data-duration="8.14" data-track-index="4">
       <div data-hf-id="hf-gxde" id="s8-app">
         <svg data-hf-id="hf-3b15" id="s8-phone" viewBox="0 0 56 90">
           <rect data-hf-id="hf-hrlv" x="4" y="4" width="48" height="82" rx="10" fill="none" stroke="#e6007e" stroke-width="6" />
@@ -81,23 +81,22 @@
   </div>
 
   <script>
-    const OFF = 79.825;
-    const T = (g) => +(g - OFF).toFixed(3);
     const tl = gsap.timeline({ paused: true });
-    const thick = (sel, g) => tl.fromTo(sel, { opacity: 0, fontWeight: 100 }, { opacity: 1, fontWeight: 900, duration: 0.6, ease: "expo.out" }, T(g));
-    const blurIn = (sel, g) => tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, T(g));
+    const thick = (sel, g) => tl.fromTo(sel, { opacity: 0, fontWeight: 100 }, { opacity: 1, fontWeight: 900, duration: 0.6, ease: "expo.out" }, g);
+    const blurIn = (sel, g) => tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, g);
 
-    thick("#s8-yoga", 80.025);
-    thick("#s8-with", 80.605);
-    thick("#s8-balls", 80.815);
-    tl.fromTo("#s8-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, T(81.525));
+    // Temps en secondes depuis le début de la scène (assets/voix/s8.mots.json)
+    thick("#s8-yoga", 0.183);
+    thick("#s8-with", 0.577);
+    thick("#s8-balls", 0.774);
+    tl.fromTo("#s8-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 1.25);
 
-    document.querySelectorAll(".s8-a").forEach((el, i) => blurIn(el, [82.435, 82.665, 82.935][i]));
-    tl.to("#s8-moins", { fontWeight: 200, duration: 0.5, ease: "expo.out" }, T(83.125));
-    document.querySelectorAll(".s8-b").forEach((el, i) => blurIn(el, [84.005, 84.255, 84.545][i]));
-    tl.to("#s8-plus", { color: "#e6007e", duration: 0.3 }, T(84.625));
+    // « Moins, c'est plus. » : « moins » s'affine, « plus » s'épaissit en fuchsia
+    tl.fromTo("#s8-moins", { opacity: 0, fontWeight: 900 }, { opacity: 1, fontWeight: 200, duration: 0.55, ease: "expo.out" }, 2.308);
+    blurIn("#s8-cest", 2.764);
+    tl.fromTo("#s8-plus", { opacity: 0, fontWeight: 200 }, { opacity: 1, fontWeight: 900, color: "#e6007e", duration: 0.6, ease: "expo.out" }, 2.971);
 
-    tl.fromTo("#s8-app", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, T(86.045));
+    tl.fromTo("#s8-app", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 4.485);
 
     window.__timelines["s8"] = tl;
   </script>
