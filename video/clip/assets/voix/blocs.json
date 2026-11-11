@@ -12,14 +12,14 @@
     {
       "id": "s1",
       "scene": "s1",
-      "texte": "Depuis tout petit, on nous martèle qu'il faut toujours en faire plus. Plus à l'école, avoir son diplôme. Avoir plus de diplômes, pour avoir un travail. Passer plus d'heures au travail, pour avoir un bon job.",
+      "texte": "Depuis tout petit, on nous martèle qu'il faut toujours en faire plus. Plus à l'école pour avoir son diplôme. Avoir plus de diplômes, pour avoir un travail. Passer plus d'heures au travail, pour avoir un bon job.",
       "decalage": 0.0,
-      "duree": 13.839,
+      "duree": 13.453,
       "marges": [
         0.055,
         0.448
       ],
-      "empreinte": "7fcf3c82cf14"
+      "empreinte": "36ed1a946bc4"
     },
     {
       "id": "s2",
