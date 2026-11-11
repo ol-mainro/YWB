@@ -8,9 +8,9 @@
     #root {
       position: absolute;
       inset: 0;
-      background: #e5c262; /* fond */
+      background: #d6d6d6; /* fond */
       font-family: "InterVar", sans-serif;
-      color: #0f2044;
+      color: #000000;
       overflow: hidden;
     }
     #s3-all { position: absolute; inset: 0; }
@@ -24,7 +24,7 @@
       gap: 24px;
     }
     #s3-num { font-size: 230px; font-weight: 900; letter-spacing: -0.06em; line-height: 1; font-variant-numeric: tabular-nums; }
-    #s3-ans { font-size: 72px; font-weight: 800; color: #2f7bbf; }
+    #s3-ans { font-size: 72px; font-weight: 800; color: #6e6e6e; }
     /* Graphique (450 → 960 px) */
     #s3-graph { position: absolute; left: 90px; top: 450px; width: 900px; height: 510px; }
     #s3-graph text { font-family: "InterVar", sans-serif; font-weight: 800; font-size: 40px; }
@@ -44,16 +44,16 @@
     .s3-w { display: inline-block; }
     .s3-label {
       display: inline-block;
-      background: #0f2044;
-      color: #f6eabf;
+      background: #000000;
+      color: #ffffff;
       font-size: 64px;
       font-weight: 900;
       letter-spacing: -0.02em;
       padding: 8px 22px 12px;
       margin: 6px 0;
     }
-    .s3-label.red { background: #cd5540; }
-    .s3-bar { position: absolute; left: 0; right: 0; height: 60px; background: #0f2044; opacity: 0; }
+    .s3-label.red { background: #e6007e; }
+    .s3-bar { position: absolute; left: 0; right: 0; height: 60px; background: #000000; opacity: 0; }
   </style>
 
   <div data-hf-id="hf-vizh" id="root" data-composition-id="s3" data-width="1080" data-height="1920">
@@ -64,12 +64,12 @@
 
       <div data-hf-id="hf-vp35" id="s3-graph-clip" class="clip" data-start="0" data-duration="13.051" data-track-index="2" data-layout-ignore>
         <svg data-hf-id="hf-d81h" id="s3-graph" viewBox="0 0 900 510">
-          <line data-hf-id="hf-cxgi" x1="0" y1="500" x2="900" y2="500" stroke="#0f2044" stroke-width="4" />
-          <line data-hf-id="hf-8g9k" x1="2" y1="0" x2="2" y2="500" stroke="#0f2044" stroke-width="4" />
-          <path data-hf-id="hf-uqll" id="s3-effort" d="M 0 430 C 220 420 380 330 520 230 S 760 40 880 20" fill="none" stroke="#cd5540" stroke-width="16" stroke-linecap="butt" />
-          <path data-hf-id="hf-u2ar" id="s3-muscle" d="M 0 300 C 200 280 360 270 480 290 S 740 420 880 455" fill="none" stroke="#2f7bbf" stroke-width="16" stroke-linecap="butt" />
-          <text data-hf-id="hf-0w6z" id="s3-t-effort" x="300" y="60" fill="#cd5540" opacity="0">EFFORTS ↑</text>
-          <text data-hf-id="hf-5na8" id="s3-t-muscle" x="560" y="430" fill="#2f7bbf" opacity="0">MUSCLE ↓</text>
+          <line data-hf-id="hf-cxgi" x1="0" y1="500" x2="900" y2="500" stroke="#000000" stroke-width="4" />
+          <line data-hf-id="hf-8g9k" x1="2" y1="0" x2="2" y2="500" stroke="#000000" stroke-width="4" />
+          <path data-hf-id="hf-uqll" id="s3-effort" d="M 0 430 C 220 420 380 330 520 230 S 760 40 880 20" fill="none" stroke="#e6007e" stroke-width="16" stroke-linecap="butt" />
+          <path data-hf-id="hf-u2ar" id="s3-muscle" d="M 0 300 C 200 280 360 270 480 290 S 740 420 880 455" fill="none" stroke="#6e6e6e" stroke-width="16" stroke-linecap="butt" />
+          <text data-hf-id="hf-0w6z" id="s3-t-effort" x="300" y="60" fill="#e6007e" opacity="0">EFFORTS ↑</text>
+          <text data-hf-id="hf-5na8" id="s3-t-muscle" x="560" y="430" fill="#6e6e6e" opacity="0">MUSCLE ↓</text>
         </svg>
       </div>
 
@@ -84,7 +84,7 @@
         <div data-hf-id="hf-9zxh" class="s3-line">
           <span data-hf-id="hf-6ck6" class="s3-w s3-bw">que</span> <span data-hf-id="hf-blkn" class="s3-w s3-bw">les</span> <span data-hf-id="hf-oqen" class="s3-w s3-bw">années</span> <span data-hf-id="hf-vqhz" class="s3-w s3-bw">passent,</span><br data-hf-id="hf-sldv" />
           <span data-hf-id="hf-4thc" class="s3-w s3-bw">et</span> <span data-hf-id="hf-jc3e" class="s3-w s3-bw">que</span> <span data-hf-id="hf-dqo3" class="s3-w s3-bw">notre</span> <span data-hf-id="hf-zmxq" class="s3-w s3-bw">corps</span><br data-hf-id="hf-qluq" />
-          <span data-hf-id="hf-qfji" class="s3-w s3-bw">en</span> <span data-hf-id="hf-pj7x" class="s3-w s3-bw">demande</span> <span data-hf-id="hf-c73l" class="s3-w s3-bw">encore</span> <span data-hf-id="hf-dbvu" class="s3-w s3-bw" style="color: #cd5540">plus…</span>
+          <span data-hf-id="hf-qfji" class="s3-w s3-bw">en</span> <span data-hf-id="hf-pj7x" class="s3-w s3-bw">demande</span> <span data-hf-id="hf-c73l" class="s3-w s3-bw">encore</span> <span data-hf-id="hf-dbvu" class="s3-w s3-bw" style="color: #e6007e">plus…</span>
         </div>
       </div>
       <div data-hf-id="hf-sif5" id="s3-c" class="clip s3-stage" data-start="6.389" data-duration="2.05" data-track-index="3">
@@ -105,7 +105,7 @@
     <!-- Barres de glitch pour la sortie -->
     <div data-hf-id="hf-zab3" id="s3-glitch" class="clip" data-start="12.651" data-duration="0.4" data-track-index="4" data-layout-ignore>
       <div data-hf-id="hf-movj" class="s3-bar" id="s3-g1" style="top: 380px"></div>
-      <div data-hf-id="hf-s4dz" class="s3-bar" id="s3-g2" style="top: 820px; height: 120px; background: #cd5540"></div>
+      <div data-hf-id="hf-s4dz" class="s3-bar" id="s3-g2" style="top: 820px; height: 120px; background: #e6007e"></div>
       <div data-hf-id="hf-jdx2" class="s3-bar" id="s3-g3" style="top: 1210px; height: 40px"></div>
     </div>
   </div>

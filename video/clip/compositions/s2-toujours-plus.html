@@ -8,9 +8,9 @@
     #root {
       position: absolute;
       inset: 0;
-      background: #e5c262; /* fond */
+      background: #d6d6d6; /* fond */
       font-family: "InterVar", sans-serif;
-      color: #0f2044;
+      color: #000000;
       overflow: hidden;
     }
     #s2-shake { position: absolute; inset: 0; }
@@ -31,7 +31,7 @@
     #s2-flood {
       position: absolute;
       inset: 0;
-      background: #cd5540;
+      background: #e6007e;
       clip-path: circle(0% at 50% 50%);
     }
     /* Textes : bande lisible 300 → 1200 px */
@@ -50,11 +50,11 @@
     .s2-big { margin-top: 16px; font-size: 200px; font-weight: 900; letter-spacing: -0.05em; line-height: 0.95; }
     .s2-label {
       display: inline-block;
-      background: #0f2044;
-      color: #f6eabf;
+      background: #000000;
+      color: #ffffff;
       padding: 14px 26px 18px;
     }
-    .s2-label.red { background: #cd5540; }
+    .s2-label.red { background: #e6007e; }
     .s2-word { display: inline-block; }
     #s2-pareil { font-size: 170px; }
     #s2-muscle { font-weight: 200; font-size: 190px; }
@@ -167,7 +167,7 @@
     order.forEach((cellIndex, rank) => {
       const r = rank / N;
       const t = 2.9 + 7.3 * Math.sqrt(r);
-      const color = r < 0.4 ? "#0f2044" : "#cd5540";
+      const color = r < 0.4 ? "#000000" : "#e6007e";
       tl.fromTo(cells[cellIndex], { opacity: 0, scale: 0.3, color },
         { opacity: r < 0.4 ? 0.16 : 0.32, scale: 1, color, duration: 0.14, ease: "back.out(2)" }, t);
     });
@@ -183,7 +183,7 @@
     // --- Saturation : l'écran vire au rouge sur le dernier « plus »
     tl.fromTo("#s2-flood", { clipPath: "circle(0% at 50% 50%)" },
       { clipPath: "circle(120% at 50% 50%)", duration: 0.45, ease: "power2.inOut" }, 10.3);
-    tl.to("#s2-e-plus", { backgroundColor: "#0f2044", duration: 0.2 }, 10.5);
+    tl.to("#s2-e-plus", { backgroundColor: "#000000", duration: 0.2 }, 10.5);
 
     // --- Phase A : DANS LA SALLE DE SPORT, / C'EST PAREIL.
     wordsIn(words(".s2-aw"), [0.17, 0.39, 0.52, 0.75, 0.86]);

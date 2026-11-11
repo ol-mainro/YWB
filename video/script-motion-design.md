@@ -23,20 +23,21 @@
 
 ## 2. Direction artistique
 
-### Palette (charte du site)
+### Palette du clip (noir, blanc, gris, fuchsia)
 
 | Rôle | Couleur |
 |---|---|
-| Vert profond (fond principal) | `#0f3d2e` / `#0a2a20` |
-| Or (accents, mots-clés, symboles) | `#d4af37` |
-| Crème (texte courant, fonds clairs de l'acte 1) | `#faf6ec` / `#e8e4d5` |
-| Rouge (saturation, alerte « toujours plus ») | `#a4321f` |
-| Gris olive (texte secondaire) | `#6b6b5a` |
+| Noir (fond principal, texte de l'acte 1) | `#000000` |
+| Blanc (texte courant sur noir) | `#ffffff` |
+| Gris clair (fond de l'acte 1) | `#d6d6d6` |
+| Gris (courbe muscle, texte secondaire) | `#6e6e6e` / `#8c8c8c` |
+| Fuchsia (accents, mots-clés, symboles) | `#e6007e` / `#b30062` (foncé) |
+| Or (touches ponctuelles : cadenas 40+, cadres vidéo, icônes des piliers, filet du logo) | `#e5c262` |
 
 **Logique couleur par acte :**
-- **Acte 1 — Le dogme :** fond crème, texte noir/rouge. Ambiance salle de sport, pression, saturation.
-- **Acte 2 — La rupture :** bascule sur le vert profond, silence visuel, l'or apparaît.
-- **Acte 3 — La méthode :** vert profond + or dominant. Ambiance laboratoire premium.
+- **Acte 1 — Le dogme :** fond gris clair, texte noir, accents fuchsia. Ambiance salle de sport, pression, saturation.
+- **Acte 2 — La rupture :** bascule sur le noir, silence visuel, le fuchsia apparaît.
+- **Acte 3 — La méthode :** noir + fuchsia dominant, quelques touches d'or. Ambiance laboratoire premium.
 
 ### Typographie
 
@@ -120,7 +121,7 @@ Nous aimerions expliquer que depuis que nous sommes jeunes et dans cette sociét
 
 #### Scène 2 — Toujours plus (00:06 – 00:15)
 - **Texte :** « TOUJOURS PLUS D'EFFORTS » puis « TOUJOURS PLUS DE PERFORMANCE ».
-- **Symboles :** des `+` apparaissent en rythme, de plus en plus vite, jusqu'à couvrir tout l'écran. Leur couleur vire du noir au rouge `#a4321f`.
+- **Symboles :** des `+` apparaissent en rythme, de plus en plus vite, jusqu'à couvrir tout l'écran. Leur couleur vire du noir au fuchsia `#b30062`.
 - **Animation :** léger tremblement de caméra qui s'accentue.
 - **Son :** rythme qui accélère, bruit de compteur.
 
