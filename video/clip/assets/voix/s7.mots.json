@@ -2,131 +2,111 @@
  {
   "w": "Notre",
   "start": 0.077,
-  "end": 0.356
+  "end": 0.378
  },
  {
   "w": "méthode",
-  "start": 0.398,
-  "end": 0.678
+  "start": 0.43,
+  "end": 0.751
  },
  {
   "w": "unique",
-  "start": 0.699,
-  "end": 0.906
+  "start": 0.781,
+  "end": 1.021
  },
  {
-  "w": "privilégie",
-  "start": 0.927,
-  "end": 1.373
+  "w": "s'appuie",
+  "start": 1.041,
+  "end": 1.331
  },
  {
-  "w": "d'abord",
-  "start": 1.414,
-  "end": 1.684
+  "w": "sur",
+  "start": 1.352,
+  "end": 1.476
  },
  {
-  "w": "le",
-  "start": 1.705,
-  "end": 1.777
+  "w": "l'esprit",
+  "start": 1.507,
+  "end": 1.871
  },
  {
-  "w": "spirituel.",
-  "start": 1.808,
-  "end": 2.648
+  "w": "pour",
+  "start": 1.912,
+  "end": 2.067
  },
  {
-  "w": "C'est",
-  "start": 3.85,
-  "end": 4.057
- },
- {
-  "w": "par",
-  "start": 4.078,
-  "end": 4.223
- },
- {
-  "w": "lui",
-  "start": 4.255,
-  "end": 4.41
- },
- {
-  "w": "qu'on",
-  "start": 4.462,
-  "end": 4.597
- },
- {
-  "w": "gagne",
-  "start": 4.638,
-  "end": 4.856
+  "w": "obtenir",
+  "start": 2.098,
+  "end": 2.44
  },
  {
   "w": "un",
-  "start": 4.876,
-  "end": 4.918
+  "start": 2.482,
+  "end": 2.523
  },
  {
   "w": "physique",
-  "start": 4.939,
-  "end": 5.26
+  "start": 2.564,
+  "end": 2.886
  },
  {
   "w": "avantageux",
-  "start": 5.281,
-  "end": 5.799
+  "start": 2.907,
+  "end": 3.446
  },
  {
   "w": "et",
-  "start": 5.934,
-  "end": 6.069
+  "start": 3.612,
+  "end": 3.726
  },
  {
   "w": "du",
-  "start": 6.11,
-  "end": 6.203
+  "start": 3.767,
+  "end": 3.861
  },
  {
   "w": "succès",
-  "start": 6.245,
-  "end": 6.69
+  "start": 3.902,
+  "end": 4.327
  },
  {
   "w": "auprès",
-  "start": 6.742,
-  "end": 6.949
+  "start": 4.348,
+  "end": 4.68
  },
  {
   "w": "des",
-  "start": 6.971,
-  "end": 7.064
+  "start": 4.7,
+  "end": 4.794
  },
  {
   "w": "femmes.",
-  "start": 7.106,
-  "end": 7.509
+  "start": 4.835,
+  "end": 5.249
  },
  {
   "w": "Et",
-  "start": 7.675,
-  "end": 7.789
+  "start": 5.447,
+  "end": 5.571
  },
  {
   "w": "des",
-  "start": 7.831,
-  "end": 7.924
+  "start": 5.613,
+  "end": 5.716
  },
  {
   "w": "gains",
-  "start": 7.965,
-  "end": 8.121
+  "start": 5.757,
+  "end": 5.913
  },
  {
   "w": "musculaires",
-  "start": 8.142,
-  "end": 8.629
+  "start": 5.934,
+  "end": 6.431
  },
  {
   "w": "titanesques.",
-  "start": 8.649,
-  "end": 10.65
+  "start": 6.452,
+  "end": 7.664
  }
 ]
