@@ -1,0 +1,61 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "InterVar";
+      src: url("assets/fonts/inter-var-latin.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #000000; /* fond */
+      font-family: "InterVar", sans-serif;
+      color: #ffffff;
+      overflow: hidden;
+    }
+    /* Carton muet, visible dès la frame 0 : il sert aussi de vignette (zone sûre 168 → 1330 px) */
+    .s0-stage {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      top: 200px;
+      height: 1100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    #s0-quote {
+      font-size: 112px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.02;
+    }
+    .s0-g { color: #e6007e; }
+    #s0-rule { width: 220px; height: 8px; background: #e5c262; margin: 64px 0 44px; }
+    #s0-sub {
+      font-size: 54px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: #bdbdbd;
+    }
+  </style>
+
+  <div data-hf-id="hf-s0rt" id="root" data-composition-id="s0" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-s0st" id="s0-card" class="clip s0-stage" data-start="0" data-duration="3.5" data-track-index="1">
+      <div data-hf-id="hf-s0in">
+        <div data-hf-id="hf-s0qt" id="s0-quote"><span data-hf-id="hf-s0g1" class="s0-g">«</span>T’as pris cher&nbsp;! Tu devrais prendre soin de toi…<span data-hf-id="hf-s0g2" class="s0-g">»</span></div>
+        <div data-hf-id="hf-s0rl" id="s0-rule"></div>
+        <div data-hf-id="hf-s0sb" id="s0-sub">C’est ce que vous entendez dire de vous en ce moment&nbsp;?</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Aucun son, aucune entrée animée : tout est lisible dès la première image (vignette des réseaux)
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s0-card > div", { opacity: 1 }, { opacity: 1, duration: 0.01 }, 0);
+    tl.to("#s0-card > div", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 3.28);
+    window.__timelines["s0"] = tl;
+  </script>
+</template>
