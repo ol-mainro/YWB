@@ -1,0 +1,234 @@
+{
+  "audio": "assets/voix/s4.mp3",
+  "language": "fr",
+  "words": [
+    {
+      "text": "Chez",
+      "start": 0.5,
+      "end": 0.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Yoga",
+      "start": 0.7,
+      "end": 0.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "With",
+      "start": 0.98,
+      "end": 1.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Balls,",
+      "start": 1.16,
+      "end": 1.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nous",
+      "start": 1.66,
+      "end": 1.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "avons",
+      "start": 1.82,
+      "end": 2.02,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "changé",
+      "start": 2.06,
+      "end": 2.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 2.36,
+      "end": 2.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "mindset.",
+      "start": 2.48,
+      "end": 2.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Et",
+      "start": 3.24,
+      "end": 3.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "si",
+      "start": 3.4,
+      "end": 3.52,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ton",
+      "start": 3.82,
+      "end": 3.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "problème",
+      "start": 3.98,
+      "end": 4.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "n'était",
+      "start": 4.28,
+      "end": 4.54,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pas",
+      "start": 4.56,
+      "end": 4.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 4.7,
+      "end": 4.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 4.84,
+      "end": 4.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "n'en",
+      "start": 4.94,
+      "end": 5.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fais",
+      "start": 5.1,
+      "end": 5.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pas",
+      "start": 5.24,
+      "end": 5.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "assez,",
+      "start": 5.42,
+      "end": 5.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "mais",
+      "start": 6.1,
+      "end": 6.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 6.24,
+      "end": 6.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 6.4,
+      "end": 6.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "n'en",
+      "start": 6.5,
+      "end": 6.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fais",
+      "start": 6.68,
+      "end": 6.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pas",
+      "start": 6.82,
+      "end": 6.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "assez",
+      "start": 7.02,
+      "end": 7.28,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "peu",
+      "start": 7.8,
+      "end": 7.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Pour",
+      "start": 9.02,
+      "end": 9.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 9.14,
+      "end": 9.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "avoir",
+      "start": 9.28,
+      "end": 9.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "plus,",
+      "start": 9.58,
+      "end": 9.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "il",
+      "start": 10.3,
+      "end": 10.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "faut",
+      "start": 10.46,
+      "end": 10.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 10.6,
+      "end": 10.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "faire",
+      "start": 10.78,
+      "end": 10.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "moins",
+      "start": 11.38,
+      "end": 11.58,
+      "speaker": "speaker_0"
+    }
+  ]
+}

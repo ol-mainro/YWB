@@ -1,0 +1,204 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "InterVar";
+      src: url("assets/fonts/inter-var-latin.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #d6d6d6; /* fond */
+      font-family: "InterVar", sans-serif;
+      color: #000000;
+      overflow: hidden;
+    }
+    /* Scène de texte : moitié haute de la zone sûre (168 → 780 px) */
+    .s1-stage {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      top: 200px;
+      height: 580px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .s1-word { display: inline-block; }
+    #s1-petit { font-size: 104px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    #s1-martele { margin-top: 34px; font-size: 66px; font-weight: 400; line-height: 1.15; }
+    #s1-plus-a {
+      margin-top: 14px;
+      font-size: 210px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: #b30062;
+    }
+    .s1-line { font-size: 84px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+    .s1-red { color: #b30062; }
+    .s1-mid { margin-top: 26px; font-size: 66px; font-weight: 400; line-height: 1.1; }
+    .s1-big { margin-top: 10px; font-size: 168px; font-weight: 900; letter-spacing: -0.05em; line-height: 1; }
+    #s1-job { color: #b30062; }
+    /* Escalier du « toujours plus » : une marche par étape de la vie */
+    #s1-stairs { position: absolute; left: 90px; top: 820px; width: 900px; height: 490px; }
+    .s1-step {
+      position: absolute;
+      bottom: 0;
+      width: 210px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 18px 18px 0 0;
+      display: flex;
+      justify-content: center;
+      padding-top: 22px;
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      transform-origin: 50% 100%;
+    }
+    .s1-step.last { background: #e6007e; }
+    .s1-step-plus {
+      position: absolute;
+      width: 210px;
+      text-align: center;
+      font-size: 90px;
+      font-weight: 900;
+      line-height: 1;
+      color: #e6007e;
+    }
+    #s1-slot {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      top: 820px;
+      height: 490px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #s1-plus {
+      position: relative;
+      font-size: 520px;
+      font-weight: 100;
+      line-height: 1;
+      opacity: 0;
+    }
+  </style>
+
+  <div data-hf-id="hf-qmpn" id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <!-- Phase A : « Depuis tout petit, on nous martèle qu'il faut toujours en faire plus. » -->
+    <div data-hf-id="hf-u9nl" id="s1-a" class="clip s1-stage" data-start="0" data-duration="4" data-track-index="1" data-layout-allow-overlap>
+      <div data-hf-id="hf-yeow">
+        <div data-hf-id="hf-lqsz" id="s1-petit">DEPUIS TOUT PETIT,</div>
+        <div data-hf-id="hf-faph" id="s1-martele">
+          <span data-hf-id="hf-z6rv" class="s1-word s1-mw">on</span>
+          <span data-hf-id="hf-6e0t" class="s1-word s1-mw">nous</span>
+          <span data-hf-id="hf-w120" class="s1-word s1-mw">martèle</span>
+          <span data-hf-id="hf-nmxt" class="s1-word s1-mw">qu'il</span>
+          <span data-hf-id="hf-nw87" class="s1-word s1-mw">faut</span>
+          <span data-hf-id="hf-6bd8" class="s1-word s1-mw">toujours</span>
+          <span data-hf-id="hf-a1m2" class="s1-word s1-mw">en</span>
+          <span data-hf-id="hf-a1m3" class="s1-word s1-mw">faire</span>
+        </div>
+        <div data-hf-id="hf-a1m4" id="s1-plus-a">PLUS.</div>
+      </div>
+    </div>
+
+    <!-- Phase B : « Plus à l'école pour avoir son diplôme. » -->
+    <div data-hf-id="hf-qxok" id="s1-b" class="clip s1-stage" data-start="4" data-duration="2.85" data-track-index="1">
+      <div data-hf-id="hf-y7yw">
+        <div data-hf-id="hf-b1l1" class="s1-line"><span data-hf-id="hf-b1w1" class="s1-word s1-bw s1-red">PLUS</span> <span data-hf-id="hf-b1w2" class="s1-word s1-bw">À</span> <span data-hf-id="hf-b1w3" class="s1-word s1-bw">L'ÉCOLE</span></div>
+        <div data-hf-id="hf-b1l2" class="s1-mid"><span data-hf-id="hf-b1w6" class="s1-word s1-bw">pour</span> <span data-hf-id="hf-b1w4" class="s1-word s1-bw">avoir</span> <span data-hf-id="hf-b1w5" class="s1-word s1-bw">son</span></div>
+        <div data-hf-id="hf-b1l3" class="s1-big" id="s1-diplome">DIPLÔME.</div>
+      </div>
+    </div>
+
+    <!-- Phase C : « Avoir plus de diplômes, pour avoir un travail. » -->
+    <div data-hf-id="hf-zd2e" id="s1-c" class="clip s1-stage" data-start="6.85" data-duration="3.4" data-track-index="1">
+      <div data-hf-id="hf-x11t">
+        <div data-hf-id="hf-c1l1" class="s1-line"><span data-hf-id="hf-c1w1" class="s1-word s1-cw">AVOIR</span> <span data-hf-id="hf-c1w2" class="s1-word s1-cw s1-red">PLUS</span> <span data-hf-id="hf-c1w3" class="s1-word s1-cw">DE</span><br data-hf-id="hf-c1br" /><span data-hf-id="hf-c1w4" class="s1-word s1-cw">DIPLÔMES,</span></div>
+        <div data-hf-id="hf-c1l2" class="s1-mid"><span data-hf-id="hf-c1w5" class="s1-word s1-cw">pour</span> <span data-hf-id="hf-c1w6" class="s1-word s1-cw">avoir</span> <span data-hf-id="hf-c1w7" class="s1-word s1-cw">un</span></div>
+        <div data-hf-id="hf-c1l3" class="s1-big" id="s1-travail">TRAVAIL.</div>
+      </div>
+    </div>
+
+    <!-- Phase D : « Passer plus d'heures au travail, pour avoir un bon job. » -->
+    <div data-hf-id="hf-d1st" id="s1-d" class="clip s1-stage" data-start="10.25" data-duration="3.465" data-track-index="1">
+      <div data-hf-id="hf-d1in">
+        <div data-hf-id="hf-d1l1" class="s1-line"><span data-hf-id="hf-d1w1" class="s1-word s1-dw">PASSER</span> <span data-hf-id="hf-d1w2" class="s1-word s1-dw s1-red">PLUS</span><br data-hf-id="hf-d1br" /><span data-hf-id="hf-d1w3" class="s1-word s1-dw">D'HEURES</span><br data-hf-id="hf-d1bs" /><span data-hf-id="hf-d1w4" class="s1-word s1-dw">AU</span> <span data-hf-id="hf-d1w5" class="s1-word s1-dw">TRAVAIL,</span></div>
+        <div data-hf-id="hf-d1l2" class="s1-mid"><span data-hf-id="hf-d1w6" class="s1-word s1-dw">pour</span> <span data-hf-id="hf-d1w7" class="s1-word s1-dw">avoir</span> <span data-hf-id="hf-d1w8" class="s1-word s1-dw">un</span></div>
+        <div data-hf-id="hf-d1l3" class="s1-big" id="s1-job"><span data-hf-id="hf-d1w9" class="s1-word" id="s1-w-bon">BON</span> <span data-hf-id="hf-d1wa" class="s1-word" id="s1-w-job">JOB.</span></div>
+      </div>
+    </div>
+
+    <!-- Escalier : école → diplôme → diplômes → travail -->
+    <div data-hf-id="hf-s1sc" id="s1-stairs-clip" class="clip" data-start="3.6" data-duration="6.9" data-track-index="2" data-layout-ignore>
+      <div data-hf-id="hf-s1st" id="s1-stairs">
+        <div data-hf-id="hf-s1p1" class="s1-step" id="s1-st1" style="left: 0px; height: 110px;">ÉCOLE</div>
+        <div data-hf-id="hf-s1p2" class="s1-step" id="s1-st2" style="left: 230px; height: 200px;">DIPLÔME</div>
+        <div data-hf-id="hf-s1p3" class="s1-step" id="s1-st3" style="left: 460px; height: 290px;">DIPLÔMES</div>
+        <div data-hf-id="hf-s1p4" class="s1-step last" id="s1-st4" style="left: 690px; height: 380px;">TRAVAIL</div>
+        <div data-hf-id="hf-s1q1" class="s1-step-plus" id="s1-sp1" style="left: 0px; top: 270px;">+</div>
+        <div data-hf-id="hf-s1q2" class="s1-step-plus" id="s1-sp2" style="left: 230px; top: 180px;">+</div>
+        <div data-hf-id="hf-s1q3" class="s1-step-plus" id="s1-sp3" style="left: 460px; top: 90px;">+</div>
+        <div data-hf-id="hf-s1q4" class="s1-step-plus" id="s1-sp4" style="left: 690px; top: 0px;">+</div>
+      </div>
+    </div>
+
+    <!-- Le « + » s'imprime sous le « bon job » et annonce la scène suivante -->
+    <div data-hf-id="hf-wkf1" id="s1-slot" class="clip" data-start="10.5" data-duration="3.215" data-track-index="3" data-layout-ignore>
+      <div data-hf-id="hf-x0lz" id="s1-plus">+</div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const wordsIn = (els, times) => els.forEach((el, i) =>
+      tl.fromTo(el, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, times[i]));
+    const out = (sel, t) => tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, t);
+    const words = (sel) => [...document.querySelectorAll(sel)];
+
+    // Phase A — accroche déjà à l'écran à la frame 0, les mots se colorent sur la voix
+    tl.fromTo("#s1-petit", { opacity: 1 }, { opacity: 1, duration: 0.01 }, 0);
+    const mart = [1.08, 1.24, 1.37, 1.73, 1.91, 2.08, 2.38, 2.46];
+    words(".s1-mw").forEach((el, i) => {
+      tl.fromTo(el, { color: "#8c8c8c" }, { color: "#000000", duration: 0.12, ease: "none" }, mart[i]);
+    });
+    tl.fromTo("#s1-plus-a", { opacity: 0, fontWeight: 300, scale: 0.92, transformOrigin: "0% 50%" },
+      { opacity: 1, fontWeight: 900, scale: 1, duration: 0.45, ease: "expo.out" }, 2.62);
+    out("#s1-a > div", 3.8);
+
+    // Escalier : chaque marche pousse sur son mot, un « + » claque au-dessus
+    const step = (n, t) => {
+      tl.fromTo(`#s1-st${n}`, { scaleY: 0 }, { scaleY: 1, duration: 0.35, ease: "expo.out" }, t);
+      tl.fromTo(`#s1-sp${n}`, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.18, ease: "back.out(2)" }, t + 0.1);
+    };
+    step(1, 4.54); step(2, 5.46); step(3, 7.65); step(4, 8.84);
+    tl.to("#s1-stairs", { opacity: 0, duration: 0.2, ease: "power2.in" }, 10.25);
+
+    // Phase B — PLUS À L'ÉCOLE / avoir son / DIPLÔME.
+    wordsIn(words(".s1-bw"), [4.24, 4.48, 4.54, 4.9, 5.05, 5.3]);
+    tl.fromTo("#s1-diplome", { opacity: 0, fontWeight: 300 }, { opacity: 1, fontWeight: 900, duration: 0.45, ease: "expo.out" }, 5.46);
+    out("#s1-b > div", 6.7);
+
+    // Phase C — AVOIR PLUS DE DIPLÔMES, / pour avoir un / TRAVAIL.
+    wordsIn(words(".s1-cw"), [6.98, 7.33, 7.55, 7.65, 8.31, 8.5, 8.74]);
+    tl.fromTo("#s1-travail", { opacity: 0, fontWeight: 300 }, { opacity: 1, fontWeight: 900, duration: 0.45, ease: "expo.out" }, 8.84);
+    out("#s1-c > div", 10.1);
+
+    // Phase D — PASSER PLUS D'HEURES AU TRAVAIL, / pour avoir un / BON JOB.
+    wordsIn(words(".s1-dw"), [10.43, 10.76, 10.95, 11.24, 11.31, 12.01, 12.18, 12.42]);
+    tl.fromTo("#s1-w-bon", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, 12.52);
+    tl.fromTo("#s1-w-job", { opacity: 0, fontWeight: 300, scale: 0.9, transformOrigin: "0% 50%" },
+      { opacity: 1, fontWeight: 900, scale: 1, duration: 0.45, ease: "expo.out" }, 12.71);
+
+    // Le « + » s'imprime sous le « bon job » et annonce la scène suivante
+    tl.fromTo("#s1-plus", { opacity: 0, fontWeight: 100, color: "#000000" }, { opacity: 0.9, duration: 0.3 }, 12.7);
+    tl.to("#s1-plus", { fontWeight: 900, duration: 0.9, ease: "power2.inOut" }, 12.8);
+    tl.to("#s1-plus", { color: "#e6007e", duration: 0.4 }, 13.3);
+
+    window.__timelines["s1"] = tl;
+  </script>
+</template>

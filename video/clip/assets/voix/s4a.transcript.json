@@ -1,0 +1,114 @@
+{
+  "audio": "assets/voix/s4a.mp3",
+  "language": "fr",
+  "words": [
+    {
+      "text": "Le",
+      "start": 0.32,
+      "end": 0.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "corps",
+      "start": 0.38,
+      "end": 0.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "des",
+      "start": 0.54,
+      "end": 0.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "plus",
+      "start": 0.68,
+      "end": 0.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 0.82,
+      "end": 0.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "40",
+      "start": 1.16,
+      "end": 1.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ans",
+      "start": 1.36,
+      "end": 1.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ne",
+      "start": 1.5,
+      "end": 1.6,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fonctionne",
+      "start": 1.66,
+      "end": 1.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "plus",
+      "start": 2.06,
+      "end": 2.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "comme",
+      "start": 2.22,
+      "end": 2.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "à",
+      "start": 2.4,
+      "end": 2.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "20.",
+      "start": 2.56,
+      "end": 2.62,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "En",
+      "start": 3.18,
+      "end": 3.28,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "vrai,",
+      "start": 3.32,
+      "end": 3.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "c'est",
+      "start": 3.84,
+      "end": 3.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "exactement",
+      "start": 4.04,
+      "end": 4.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "l'inverse",
+      "start": 4.6,
+      "end": 5.08,
+      "speaker": "speaker_0"
+    }
+  ]
+}

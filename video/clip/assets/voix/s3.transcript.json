@@ -1,0 +1,204 @@
+{
+  "audio": "assets/voix/s3.mp3",
+  "language": "fr",
+  "words": [
+    {
+      "text": "Influenceurs,",
+      "start": 0.52,
+      "end": 1.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "animateurs,",
+      "start": 1.44,
+      "end": 2.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "médecins",
+      "start": 2.38,
+      "end": 2.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nous",
+      "start": 3.08,
+      "end": 3.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "expliquent",
+      "start": 3.22,
+      "end": 3.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 3.68,
+      "end": 3.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "les",
+      "start": 3.78,
+      "end": 3.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "années",
+      "start": 3.92,
+      "end": 4.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "passent",
+      "start": 4.18,
+      "end": 4.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "et",
+      "start": 4.66,
+      "end": 4.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 4.76,
+      "end": 4.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "notre",
+      "start": 4.88,
+      "end": 5.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "corps",
+      "start": 5.14,
+      "end": 5.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 5.38,
+      "end": 5.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "demande",
+      "start": 5.48,
+      "end": 5.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "encore",
+      "start": 5.76,
+      "end": 6.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "plus.",
+      "start": 6.08,
+      "end": 6.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Juste",
+      "start": 7.02,
+      "end": 7.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pour",
+      "start": 7.38,
+      "end": 7.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "garder",
+      "start": 7.54,
+      "end": 7.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ce",
+      "start": 7.88,
+      "end": 7.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "qu'il",
+      "start": 8,
+      "end": 8.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "a.",
+      "start": 8.18,
+      "end": 8.24,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "L'âge",
+      "start": 8.92,
+      "end": 9.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "augmente,",
+      "start": 9.34,
+      "end": 9.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "on",
+      "start": 10.24,
+      "end": 10.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "augmente",
+      "start": 10.36,
+      "end": 10.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "les",
+      "start": 10.72,
+      "end": 10.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "efforts",
+      "start": 10.88,
+      "end": 11.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pour",
+      "start": 11.76,
+      "end": 11.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "toujours",
+      "start": 11.94,
+      "end": 12.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "moins",
+      "start": 12.4,
+      "end": 12.54,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "d'effets",
+      "start": 12.58,
+      "end": 12.94,
+      "speaker": "speaker_0"
+    }
+  ]
+}

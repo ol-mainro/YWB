@@ -1,0 +1,145 @@
+{
+  "defaut": {
+    "voix": "ecxPjiGTvAfpGEams6ec",
+    "modele": "eleven_multilingual_v2",
+    "vitesse": 1.12,
+    "voice_settings": null,
+    "seed": 4040,
+    "lufs": -19.6,
+    "piste": 2
+  },
+  "blocs": [
+    {
+      "id": "s1",
+      "scene": "s1",
+      "texte": "Depuis tout petit, on nous martèle qu'il faut toujours en faire plus. Plus à l'école pour avoir son diplôme. Avoir plus de diplômes, pour avoir un travail. Passer plus d'heures au travail, pour avoir un bon job.",
+      "decalage": 0.0,
+      "duree": 13.453,
+      "marges": [
+        0.055,
+        0.448
+      ],
+      "empreinte": "36ed1a946bc4"
+    },
+    {
+      "id": "s2",
+      "scene": "s2",
+      "texte": "Dans la salle de sport, c'est pareil. Pour prendre du muscle, on nous met dans la tête qu'il faut faire des efforts. Toujours plus d'efforts. Toujours plus.",
+      "decalage": -0.262,
+      "duree": 11.305,
+      "marges": [
+        0.449,
+        0.488
+      ],
+      "empreinte": "50fd2af20838"
+    },
+    {
+      "id": "s3",
+      "scene": "s3",
+      "texte": "Influenceurs, animateurs, médecins nous expliquent que les années passent, et que notre cor en demande encore plus… juste pour garder ce qu'il a. L'âge augmente. On augmente les efforts. Pour toujours moins d'effets.",
+      "decalage": -0.333,
+      "duree": 13.505,
+      "marges": [
+        0.486,
+        0.403
+      ],
+      "empreinte": "2e1b0565490f"
+    },
+    {
+      "id": "s3b",
+      "scene": "s3b",
+      "texte": "Chez Yoga With Balls, on déteste les affirmations balancées comme des évidences. Alors on s'est creusé la tête, fait nos recherches... et on a eu cette intuition. Et si, après quarante ans, pour gagner du muscle, la clé était simplement d'en faire... moins. Tout ce qu'on a fait, c'est redécouvrir ce que le cor humain sait faire depuis des millénaires.",
+      "decalage": -0.103,
+      "duree": 22.021,
+      "marges": [
+        0.403,
+        0.329
+      ],
+      "empreinte": "19336ca7500c"
+    },
+    {
+      "id": "s4a",
+      "scene": "s4a",
+      "texte": "Le corps des plus de 40 ans ne fonctionne plus comme à 20. En fait, c'est exactement le contraire. Votre métabolisme est inversé.",
+      "decalage": 0.611,
+      "duree": 9.561,
+      "marges": [
+        0.325,
+        0.418
+      ],
+      "empreinte": "f1d84119202e"
+    },
+    {
+      "id": "s4",
+      "scene": "s4",
+      "texte": "Chez Yoga With Balls, nous avons changé de mindset. Et si, ton problème n'était pas que tu n'en fais pas assez… mais que tu n'en fais pas assez… peu. Pour en avoir plus… il faut en faire… moins.",
+      "decalage": -0.211,
+      "duree": 13.74,
+      "marges": [
+        0.418,
+        0.585
+      ],
+      "empreinte": "c6afdb309876"
+    },
+    {
+      "id": "s5",
+      "scene": "s5",
+      "texte": "Nous avons craqué Le code du cor humain.",
+      "decalage": -0.176,
+      "duree": 3.213,
+      "marges": [
+        0.585,
+        0.622
+      ],
+      "empreinte": "60249875e30b"
+    },
+    {
+      "id": "s5b",
+      "scene": "s5",
+      "texte": "La mise en place de quelques habitudes simples suffit à enclencher une série de réactions turbo-booster de testostérone dans votre corps, pour un développement musculaire bœuf.",
+      "decalage": 3.105,
+      "duree": 9.797,
+      "marges": [
+        0.15,
+        0.6
+      ],
+      "empreinte": "035954870c9a"
+    },
+    {
+      "id": "s6",
+      "scene": "s6",
+      "texte": "Deux piliers. La marche tai-chi. Les pleurs sacrés.",
+      "decalage": -0.394,
+      "duree": 4.607,
+      "marges": [
+        0.622,
+        0.163
+      ],
+      "empreinte": "6968302be5fc"
+    },
+    {
+      "id": "s7",
+      "scene": "s7",
+      "texte": "Notre méthode unique s'appuie sur l'esprit pour obtenir un physique avantageux, du succès auprès dé femmes et des gains musculaires titanesques.",
+      "decalage": -0.086,
+      "duree": 8.02,
+      "marges": [
+        0.163,
+        0.609
+      ],
+      "empreinte": "c7c7dcdad153"
+    },
+    {
+      "id": "s8",
+      "scene": "s8",
+      "texte": "Yoga With Balls : moin, c'est plus. L'application est disponible.",
+      "decalage": -0.423,
+      "duree": 6.713,
+      "marges": [
+        0.606,
+        0.335
+      ],
+      "empreinte": "bcf2e112437c"
+    }
+  ]
+}

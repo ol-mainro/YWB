@@ -1,0 +1,305 @@
+{
+  "main": {
+    "id": "e2d40e708cfe4d4c",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec7145894fc09023",
+        "type": "split",
+        "children": [
+          {
+            "id": "cd6b2d412d053d9d",
+            "type": "split",
+            "dimension": 61.58392434988179,
+            "children": [
+              {
+                "id": "67a7122289043ec0",
+                "type": "tabs",
+                "dimension": 63.60424028268551,
+                "children": [
+                  {
+                    "id": "92e148285cc587f3",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "video/script-motion-design.md",
+                        "mode": "source",
+                        "source": false
+                      },
+                      "icon": "lucide-file",
+                      "title": "script-motion-design"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "760c8cf1af278ed5",
+                "type": "tabs",
+                "dimension": 36.39575971731448,
+                "children": [
+                  {
+                    "id": "df4a16fb3a266a8d",
+                    "type": "leaf",
+                    "state": {
+                      "type": "video",
+                      "state": {
+                        "file": "video/clip/renders/ywb-clip.mp4"
+                      },
+                      "icon": "lucide-file",
+                      "title": "ywb-clip"
+                    }
+                  }
+                ]
+              }
+            ],
+            "direction": "vertical"
+          },
+          {
+            "id": "90d39c90eba88781",
+            "type": "tabs",
+            "dimension": 38.4160756501182,
+            "children": [
+              {
+                "id": "1ea90063cca215fa",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/ROMAIN/Sites/YWB",
+                      "focus": false,
+                      "profile": {
+                        "args": [
+                          "--login"
+                        ],
+                        "environment": [],
+                        "executable": "/bin/zsh",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "win32Backend": "conpty"
+                      },
+                      "profileSourceId": "darwinIntegratedDefault",
+                      "serial": null,
+                      "userTitle": ""
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal:tab-bezel",
+                  "title": "Claude Code"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "24f13a9cfc5e7441",
+    "type": "split",
+    "children": [
+      {
+        "id": "0f3c4dbc007c42ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "68b14c00c413c257",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorateur de fichiers"
+            }
+          },
+          {
+            "id": "ba440c43dcd98c77",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Rechercher"
+            }
+          },
+          {
+            "id": "3dbfc7400f8e4185",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Signets"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bc2fdb8afea43ca3",
+    "type": "split",
+    "children": [
+      {
+        "id": "812638bb55bad7b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79f1a958e0d71af2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "video/clip/renders/ywb-clip.mp4",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rétroliens"
+            }
+          },
+          {
+            "id": "46e595e5a7794bd9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "video/clip/renders/ywb-clip.mp4",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Liens sortants"
+            }
+          },
+          {
+            "id": "af007043bc3b9fb9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Mots-clés"
+            }
+          },
+          {
+            "id": "450a9603e8caa321",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Toutes les propriétés"
+            }
+          },
+          {
+            "id": "fa8836697dc68e6c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "video/clip/renders/ywb-clip.mp4",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Plan"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer un nouveau canvas": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false,
+      "bases:Créer une nouvelle base": false,
+      "workspaces:Gérer les dispositions des espaces de travail": false,
+      "terminal:Open terminal": false
+    }
+  },
+  "active": "68b14c00c413c257",
+  "lastOpenFiles": [
+    "video/clip/assets/voix/archives/s5-20261107-115808.mots.json",
+    "video/clip/assets/voix/archives/s5-20261107-115808.mp3",
+    "video/clip/assets/voix/archives/s7-20261107-115547.mots.json",
+    "video/clip/assets/voix/archives/s7-20261107-115547.mp3",
+    "video/clip/assets/voix/archives/s3b-20261107-115009.mots.json",
+    "video/clip/assets/voix/archives/s3b-20261107-115009.mp3",
+    "video/clip/assets/voix/archives/s7-20261107-114743.mots.json",
+    "video/clip/assets/voix/archives/s7-20261107-114743.mp3",
+    "video/clip/assets/voix/s5b.transcript.json",
+    "video/clip/assets/voix/s5b.mots.json",
+    "video/clip/assets/voix/s5b.mp3",
+    "sources/homme-qui-pleure.png",
+    "sources/danse-mystique.png",
+    "sources/testosterone-booster.png",
+    "sources/logo.png",
+    "sources/formule-ancestrale.png",
+    "video/clip/assets/images/testosterone-booster.jpg",
+    "video/clip/assets/images/logo.jpg",
+    "video/clip/assets/images/homme-qui-pleure.jpg",
+    "video/clip/assets/images/formule-ancestrale.jpg",
+    "video/clip/assets/images/danse-mystique.jpg",
+    "video/script-motion-design.md"
+  ]
+}

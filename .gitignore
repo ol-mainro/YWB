@@ -1,1 +1,6 @@
 .claude/settings.json
+.DS_Store
+
+# Vidéos trop lourdes pour GitHub (> 100 Mo), gardées en local
+sources/batifolages.mp4
+video/clip/assets/batifolages.mp4

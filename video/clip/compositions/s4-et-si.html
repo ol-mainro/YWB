@@ -1,0 +1,159 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "InterVar";
+      src: url("assets/fonts/inter-var-latin.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #000000; /* fond */
+      font-family: "InterVar", sans-serif;
+      color: #ffffff;
+      overflow: hidden;
+    }
+    .s4-stage {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      top: 200px;
+      height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .s4-w { display: inline-block; }
+    .s4-small { font-size: 64px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; }
+    .s4-big { margin-top: 14px; font-size: 176px; font-weight: 900; letter-spacing: -0.05em; line-height: 0.95; color: #e6007e; }
+    #s4-plus { font-size: 190px; color: #e6007e; }
+    #s4-moins { font-size: 190px; }
+    #s4-assez1, #s4-assez2 { font-size: 168px; }
+    #s4-peu { font-size: 230px; color: #ffffff; font-weight: 200; margin-top: 0; }
+    /* Grand « ? » en décor pendant la question */
+    #s4-q { position: absolute; left: 0; right: 0; top: 820px; height: 490px; display: flex; align-items: center; justify-content: center; }
+    #s4-q span { font-size: 520px; font-weight: 100; line-height: 1; color: #e6007e; opacity: 0; }
+    /* Flèche dorée : vers le haut sur « plus », se retourne vers le bas pour « moins » */
+    #s4-sym { position: absolute; left: 50%; top: 1270px; width: 0; height: 0; }
+    #s4-arrow { position: absolute; left: -200px; top: -250px; width: 400px; height: 500px; overflow: visible; }
+  </style>
+
+  <div data-hf-id="hf-q5j8" id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <!-- « Chez Yoga With Balls, nous avons changé de mindset. » -->
+    <div data-hf-id="hf-r20f" id="s4-a" class="clip s4-stage" data-start="0" data-duration="3.8" data-track-index="1">
+      <div data-hf-id="hf-yeow">
+        <div data-hf-id="hf-vg7r" class="s4-small">
+          <span data-hf-id="hf-q7b6" class="s4-w s4-aw">Chez</span> <span data-hf-id="hf-haxu" class="s4-w s4-aw">Yoga</span> <span data-hf-id="hf-pcjy" class="s4-w s4-aw">With</span> <span data-hf-id="hf-mcsk" class="s4-w s4-aw">Balls,</span><br data-hf-id="hf-x5px" />
+          <span data-hf-id="hf-x8a5" class="s4-w s4-aw">nous</span> <span data-hf-id="hf-688x" class="s4-w s4-aw">avons</span> <span data-hf-id="hf-33yy" class="s4-w s4-aw">changé</span> <span data-hf-id="hf-zh05" class="s4-w s4-aw">de</span>
+        </div>
+        <div data-hf-id="hf-hjmh" class="s4-big" id="s4-som">MINDSET.</div>
+      </div>
+    </div>
+
+    <!-- « Et si, ton problème n'était pas que tu n'en fais pas assez… » -->
+    <div data-hf-id="hf-e4a1" id="s4-q1" class="clip s4-stage" data-start="3.8" data-duration="2.95" data-track-index="1">
+      <div data-hf-id="hf-e4a2">
+        <div data-hf-id="hf-e4a3" class="s4-small">
+          <span data-hf-id="hf-e4w1" class="s4-w s4-q1w">Et</span> <span data-hf-id="hf-e4w2" class="s4-w s4-q1w">si,</span> <span data-hf-id="hf-e4w3" class="s4-w s4-q1w">ton</span> <span data-hf-id="hf-e4w4" class="s4-w s4-q1w">problème</span><br data-hf-id="hf-e4b1" />
+          <span data-hf-id="hf-e4w5" class="s4-w s4-q1w">n'était</span> <span data-hf-id="hf-e4w6" class="s4-w s4-q1w">pas</span> <span data-hf-id="hf-e4w7" class="s4-w s4-q1w">que</span> <span data-hf-id="hf-e4w8" class="s4-w s4-q1w">tu</span><br data-hf-id="hf-e4b2" />
+          <span data-hf-id="hf-e4w9" class="s4-w s4-q1w">n'en</span> <span data-hf-id="hf-e4wa" class="s4-w s4-q1w">fais</span> <span data-hf-id="hf-e4wb" class="s4-w s4-q1w">pas</span>
+        </div>
+        <div data-hf-id="hf-e4a4" class="s4-big" id="s4-assez1">ASSEZ…</div>
+      </div>
+    </div>
+
+    <!-- « mais que tu n'en fais pas assez… peu. » -->
+    <div data-hf-id="hf-e4c1" id="s4-q2" class="clip s4-stage" data-start="6.75" data-duration="3.0" data-track-index="1">
+      <div data-hf-id="hf-e4c2">
+        <div data-hf-id="hf-e4c3" class="s4-small">
+          <span data-hf-id="hf-e4x1" class="s4-w s4-q2w">mais</span> <span data-hf-id="hf-e4x2" class="s4-w s4-q2w">que</span> <span data-hf-id="hf-e4x3" class="s4-w s4-q2w">tu</span> <span data-hf-id="hf-e4x4" class="s4-w s4-q2w">n'en</span><br data-hf-id="hf-e4b3" />
+          <span data-hf-id="hf-e4x5" class="s4-w s4-q2w">fais</span> <span data-hf-id="hf-e4x6" class="s4-w s4-q2w">pas</span>
+        </div>
+        <div data-hf-id="hf-e4c4" class="s4-big" id="s4-assez2">ASSEZ…</div>
+        <div data-hf-id="hf-e4c5" class="s4-big" id="s4-peu">PEU.</div>
+      </div>
+    </div>
+
+    <div data-hf-id="hf-e4q1" id="s4-q-clip" class="clip" data-start="3.8" data-duration="5.95" data-track-index="3" data-layout-ignore>
+      <div data-hf-id="hf-e4q2" id="s4-q"><span data-hf-id="hf-e4q3">?</span></div>
+    </div>
+
+    <!-- « Pour en avoir plus… » -->
+    <div data-hf-id="hf-y4xk" id="s4-b" class="clip s4-stage" data-start="9.75" data-duration="1.6" data-track-index="1">
+      <div data-hf-id="hf-y7yw">
+        <div data-hf-id="hf-869d" class="s4-small">
+          <span data-hf-id="hf-493h" class="s4-w s4-bw">Pour</span> <span data-hf-id="hf-un4c" class="s4-w s4-bw">en</span> <span data-hf-id="hf-228i" class="s4-w s4-bw">avoir</span>
+        </div>
+        <div data-hf-id="hf-ooti" class="s4-big" id="s4-plus">PLUS…</div>
+      </div>
+    </div>
+
+    <!-- « il faut en faire… moins. » -->
+    <div data-hf-id="hf-skh4" id="s4-c" class="clip s4-stage" data-start="11.35" data-duration="2.355" data-track-index="1">
+      <div data-hf-id="hf-x11t">
+        <div data-hf-id="hf-jtg7" class="s4-small">
+          <span data-hf-id="hf-vz6d" class="s4-w s4-cw">il</span> <span data-hf-id="hf-puw5" class="s4-w s4-cw">faut</span> <span data-hf-id="hf-unzn" class="s4-w s4-cw">en</span> <span data-hf-id="hf-ksu1" class="s4-w s4-cw">faire…</span>
+        </div>
+        <div data-hf-id="hf-xjil" class="s4-big" id="s4-moins">MOINS.</div>
+      </div>
+    </div>
+
+    <div data-hf-id="hf-b366" id="s4-sym-clip" class="clip" data-start="9.75" data-duration="3.955" data-track-index="2" data-layout-ignore>
+      <div data-hf-id="hf-9jkq" id="s4-sym">
+        <svg data-hf-id="hf-arff" id="s4-arrow" viewBox="0 0 400 500" overflow="visible">
+          <path data-hf-id="hf-6fk7" d="M 200 20 L 380 220 L 258 220 L 258 480 L 142 480 L 142 220 L 20 220 Z" fill="#e6007e" stroke="#e6007e" stroke-width="24" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Temps en secondes depuis le début de la scène (voir assets/voix/s4.mots.json)
+    const tl = gsap.timeline({ paused: true });
+    const wordsIn = (sel, times) => document.querySelectorAll(sel).forEach((el, i) =>
+      tl.fromTo(el, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, times[i]));
+    const out = (sel, t) => tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power3.in" }, t);
+    const pop = (sel, t, from = 200, to = 900) => tl.fromTo(sel, { opacity: 0, fontWeight: from, scale: 1.06, transformOrigin: "0% 50%" },
+      { opacity: 1, fontWeight: to, scale: 1, duration: 0.6, ease: "expo.out" }, t);
+
+    // « Chez Yoga With Balls, nous avons changé de MINDSET. »
+    wordsIn(".s4-aw", [0.207, 0.466, 0.736, 0.922, 1.368, 1.576, 1.793, 2.114]);
+    pop("#s4-som", 2.228);
+    out("#s4-a > div", 3.6);
+
+    // « Et si, ton problème n'était pas que tu n'en fais pas ASSEZ… »
+    wordsIn(".s4-q1w", [3.877, 4.074, 4.468, 4.695, 5.079, 5.328, 5.473, 5.608, 5.732, 5.887, 6.043]);
+    pop("#s4-assez1", 6.251);
+    out("#s4-q1 > div", 6.6);
+
+    // « mais que tu n'en fais pas ASSEZ… PEU. » : « peu » tombe, affirmatif
+    wordsIn(".s4-q2w", [6.789, 6.986, 7.121, 7.245, 7.38, 7.536]);
+    pop("#s4-assez2", 7.743);
+    tl.fromTo("#s4-peu", { opacity: 0, y: -60, fontWeight: 300, transformOrigin: "0% 50%" },
+      { opacity: 1, y: 0, fontWeight: 900, duration: 0.35, ease: "power3.in" }, 8.884);
+    out("#s4-q2 > div", 9.6);
+
+    // Grand « ? » : apparaît sur « Et si », s'épaissit, puis s'efface quand « peu » tombe
+    tl.fromTo("#s4-q span", { opacity: 0, fontWeight: 100 }, { opacity: 0.85, duration: 0.4 }, 3.877);
+    tl.to("#s4-q span", { fontWeight: 900, duration: 4.6, ease: "power1.in" }, 4.0);
+    tl.to("#s4-q span", { opacity: 0, scale: 0.8, duration: 0.3, ease: "power2.in" }, 8.6);
+
+    // « Pour en avoir PLUS… »
+    wordsIn(".s4-bw", [10.137, 10.324, 10.449]);
+    pop("#s4-plus", 10.697);
+    out("#s4-b > div", 11.2);
+
+    // La flèche dorée monte (« plus »), puis se retourne pendant « faire… » :
+    // elle pointe vers le bas quand la voix dit « moins »
+    tl.fromTo("#s4-sym", { scale: 0.6, opacity: 0, y: 60 }, { scale: 1, opacity: 1, y: 0, duration: 0.7, ease: "expo.out" }, 10.137);
+    tl.to("#s4-sym", { y: -30, duration: 0.5, ease: "power2.out" }, 10.697);
+    tl.fromTo("#s4-sym", { rotation: 0 }, { rotation: 180, y: 30, duration: 0.6, ease: "back.inOut(1.4)" }, 12.035);
+
+    wordsIn(".s4-cw", [11.464, 11.724, 11.92, 12.035]);
+    tl.fromTo("#s4-moins", { opacity: 0, fontWeight: 900, scale: 1.1, transformOrigin: "0% 50%" },
+      { opacity: 1, fontWeight: 200, scale: 1, duration: 0.6, ease: "expo.out" }, 12.636);
+
+    window.__timelines["s4"] = tl;
+  </script>
+</template>
