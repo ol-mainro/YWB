@@ -12,3 +12,4 @@ renders/*.meta.json
 # Anciennes prises de voix (scripts/voix.py)
 assets/voix/archives/
 renders/voix-off.wav
+__pycache__/
