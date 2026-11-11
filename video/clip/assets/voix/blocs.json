@@ -72,14 +72,14 @@
     {
       "id": "s4",
       "scene": "s4",
-      "texte": "Chez Yoga With Balls, nous avons changé de mindset. Et si, ton problème n'était pas que tu n'en fais pas assez… mais que tu n'en fais pas assez… peu ? Pour en avoir plus… il faut en faire… moins.",
+      "texte": "Chez Yoga With Balls, nous avons changé de mindset. Et si, ton problème n'était pas que tu n'en fais pas assez… mais que tu n'en fais pas assez… peu. Pour en avoir plus… il faut en faire… moins.",
       "decalage": -0.211,
-      "duree": 12.182,
+      "duree": 13.74,
       "marges": [
         0.418,
         0.585
       ],
-      "empreinte": "95497b6bb245"
+      "empreinte": "c6afdb309876"
     },
     {
       "id": "s5",
